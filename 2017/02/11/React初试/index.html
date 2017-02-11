@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/11/React初试/index.html">
 <meta property="og:site_name" content="择一人">
 <meta property="og:description" content="前几天学习了React.js(我其实连jQuery还没有学好)，我就先随便写点，目前就会用React写出Hello，World！（大大的尴尬）">
-<meta property="og:updated_time" content="2017-02-11T08:26:19.856Z">
+<meta property="og:updated_time" content="2017-02-11T08:37:04.746Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React初试">
 <meta name="twitter:description" content="前几天学习了React.js(我其实连jQuery还没有学好)，我就先随便写点，目前就会用React写出Hello，World！（大大的尴尬）">
@@ -377,13 +377,12 @@
 
       
         <p>前几天学习了React.js(我其实连jQuery还没有学好)，我就先随便写点，目前就会用React写出Hello，World！（大大的尴尬）<br><a id="more"></a></p>
-<p>####1.1 CDN引用<br>React需要引入三个库:<br>react.min.js - React 的核心库<br>react-dom.min.js - 提供与 DOM 相关的功能<br>browser.min.js - 用于将 JSX 语法转为 JavaScript 语法</p>
+<h4 id="1-1-CDN引用"><a href="#1-1-CDN引用" class="headerlink" title="1.1 CDN引用"></a>1.1 CDN引用</h4><p>React需要引入三个库:<br>react.min.js - React 的核心库<br>react-dom.min.js - 提供与 DOM 相关的功能<br>browser.min.js - 用于将 JSX 语法转为 JavaScript 语法</p>
 <p>两个React库<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"//cdn.bootcss.com/react/15.4.2/react.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script src=<span class="string">"//cdn.bootcss.com/react/15.4.2/react-dom.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p>和一个jsx语法解析库<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"//cdn.bootcss.com/babel-core/6.1.19/browser.min.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>####1.2 Heool,world!<br>script部分代码，必须在script后面加上 type=”text/babel”<br>下面是React版的Hello，World!<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(</div><div class="line">        &lt;h1&gt;Hello, world!&lt;/h1&gt;, </div><div class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>) </div><div class="line">        );</div></pre></td></tr></table></figure></p>
+<h4 id="1-2-Heool-world"><a href="#1-2-Heool-world" class="headerlink" title="1.2 Heool,world!"></a>1.2 Heool,world!</h4><p>script部分代码，必须在script后面加上 type=”text/babel”<br>下面是React版的Hello，World!<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ReactDOM.render(</div><div class="line">        &lt;h1&gt;Hello, world!&lt;/h1&gt;, </div><div class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'example'</span>) </div><div class="line">        );</div></pre></td></tr></table></figure></p>
 <p>Html代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>###以下内容摘抄自菜鸟教程，纯属凑字，我按照教程实验并没有起到任何作用，不知道哪里写的不对，希望有会得同学教一教我！</p>
-<p>####1.3 通过NPM安装React<br>第一步、安装全局包<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install babel -g</div><div class="line">$ npm install webpack -g</div><div class="line">$ npm install webpack-dev-server --save-dev | npm install webpack -g</div></pre></td></tr></table></figure></p>
+<h3 id="以下内容摘抄自菜鸟教程，纯属凑字，我按照教程实验并没有起到任何作用，不知道哪里写的不对，希望有会得同学教一教我！"><a href="#以下内容摘抄自菜鸟教程，纯属凑字，我按照教程实验并没有起到任何作用，不知道哪里写的不对，希望有会得同学教一教我！" class="headerlink" title="以下内容摘抄自菜鸟教程，纯属凑字，我按照教程实验并没有起到任何作用，不知道哪里写的不对，希望有会得同学教一教我！"></a>以下内容摘抄自菜鸟教程，纯属凑字，我按照教程实验并没有起到任何作用，不知道哪里写的不对，希望有会得同学教一教我！</h3><h4 id="1-3-通过NPM安装React"><a href="#1-3-通过NPM安装React" class="headerlink" title="1.3 通过NPM安装React"></a>1.3 通过NPM安装React</h4><p>第一步、安装全局包<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install babel -g</div><div class="line">$ npm install webpack -g</div><div class="line">$ npm install webpack-dev-server --save-dev | npm install webpack -g</div></pre></td></tr></table></figure></p>
 <p>第二步、创建根目录<br>创建一个根目录，目录名为：reactApp，再使用 npm init 初始化，生成 package.json 文件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">$ mkdir reactApp</div><div class="line">$ cd reactApp/</div><div class="line">$ npm init</div><div class="line"></div><div class="line">name: (react) zhengzhiyuu</div><div class="line">version: (<span class="number">1.0</span><span class="number">.0</span>)</div><div class="line">description: 测试</div><div class="line">entry point: (index.js)</div><div class="line">test command:</div><div class="line">git repository:</div><div class="line">keywords:</div><div class="line">author:</div><div class="line">license: (ISC)</div><div class="line">About to write to D:\react\package.json:</div><div class="line"></div><div class="line">&#123;</div><div class="line">  <span class="string">"name"</span>: <span class="string">"zhengzhiyuu"</span>,</div><div class="line">  <span class="string">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="string">"description"</span>: <span class="string">"测试"</span>,</div><div class="line">  <span class="string">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line">  <span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"author"</span>: <span class="string">""</span>,</div><div class="line">  <span class="string">"license"</span>: <span class="string">"ISC"</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">Is <span class="keyword">this</span> ok? (yes)</div></pre></td></tr></table></figure></p>
 <p>第三步、添加依赖包及插件<br>因为要使用 React, 所以需要先安装它，–save 命令用于将包添加至 package.json 文件。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm install react --save</div><div class="line">$ npm install react-dom --save</div></pre></td></tr></table></figure></p>
 <p>同时我们也要安装一些 babel 插件<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm install babel-core</div><div class="line">$ npm install babel-loader</div><div class="line">$ npm install babel-preset-react</div><div class="line">$ npm install babel-preset-es2015</div></pre></td></tr></table></figure></p>
@@ -518,8 +517,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/h.png"
@@ -543,7 +551,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -568,6 +576,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-CDN引用"><span class="nav-number">1.</span> <span class="nav-text">1.1 CDN引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-Heool-world"><span class="nav-number">2.</span> <span class="nav-text">1.2 Heool,world!</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以下内容摘抄自菜鸟教程，纯属凑字，我按照教程实验并没有起到任何作用，不知道哪里写的不对，希望有会得同学教一教我！"><span class="nav-number"></span> <span class="nav-text">以下内容摘抄自菜鸟教程，纯属凑字，我按照教程实验并没有起到任何作用，不知道哪里写的不对，希望有会得同学教一教我！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-通过NPM安装React"><span class="nav-number">1.</span> <span class="nav-text">1.3 通过NPM安装React</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
