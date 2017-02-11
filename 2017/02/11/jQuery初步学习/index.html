@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="随笔," />
+  <meta name="keywords" content="jQuery," />
 
 
 
@@ -87,16 +87,22 @@
 
 
 
-<meta name="description" content="今天是我拥有博客的第二天，然而我还依然是一个小白。">
+<meta name="description" content="jQuery是javascript的一个子集，jQuery使人们不用顾虑浏览器的兼容性（我说的就是IE）。
+引入jQuery库：1&amp;lt;script src=&quot;https://code.jquery.com/jquery-3.1.1.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+jQuery版的Hello，World！12345&amp;lt;script&amp;gt;        $(docume">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017年的元宵节">
-<meta property="og:url" content="http://yoursite.com/2017/02/11/2017年的元宵节/index.html">
+<meta property="og:title" content="jQuery初步学习">
+<meta property="og:url" content="http://yoursite.com/2017/02/11/jQuery初步学习/index.html">
 <meta property="og:site_name" content="择一人">
-<meta property="og:description" content="今天是我拥有博客的第二天，然而我还依然是一个小白。">
-<meta property="og:updated_time" content="2017-02-11T02:57:23.170Z">
+<meta property="og:description" content="jQuery是javascript的一个子集，jQuery使人们不用顾虑浏览器的兼容性（我说的就是IE）。
+引入jQuery库：1&amp;lt;script src=&quot;https://code.jquery.com/jquery-3.1.1.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+jQuery版的Hello，World！12345&amp;lt;script&amp;gt;        $(docume">
+<meta property="og:updated_time" content="2017-02-11T12:21:18.928Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017年的元宵节">
-<meta name="twitter:description" content="今天是我拥有博客的第二天，然而我还依然是一个小白。">
+<meta name="twitter:title" content="jQuery初步学习">
+<meta name="twitter:description" content="jQuery是javascript的一个子集，jQuery使人们不用顾虑浏览器的兼容性（我说的就是IE）。
+引入jQuery库：1&amp;lt;script src=&quot;https://code.jquery.com/jquery-3.1.1.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+jQuery版的Hello，World！12345&amp;lt;script&amp;gt;        $(docume">
 
 
 
@@ -124,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/11/2017年的元宵节/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/11/jQuery初步学习/"/>
 
 
 
 
 
-  <title> 2017年的元宵节 | 择一人 </title>
+  <title> jQuery初步学习 | 择一人 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +286,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/11/2017年的元宵节/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/11/jQuery初步学习/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="清风">
@@ -304,7 +310,7 @@
             
             
               
-                2017年的元宵节
+                jQuery初步学习
               
             
           </h1>
@@ -319,7 +325,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-11T10:57:04+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-11T19:12:25+08:00">
                 2017-02-11
               </time>
             
@@ -338,8 +344,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/11/2017年的元宵节/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/11/2017年的元宵节/" itemprop="commentCount"></span>
+                <a href="/2017/02/11/jQuery初步学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/11/jQuery初步学习/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -347,7 +353,7 @@
 
           
           
-             <span id="/2017/02/11/2017年的元宵节/" class="leancloud_visitors" data-flag-title="2017年的元宵节">
+             <span id="/2017/02/11/jQuery初步学习/" class="leancloud_visitors" data-flag-title="jQuery初步学习">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -376,7 +382,35 @@
       
 
       
-        <p>今天是我拥有博客的第二天，然而我还依然是一个小白。<br><a id="more"></a><br>昨天匆匆搭建完博客就草草了事了，然后发现我的博客没有评论和阅读统计，这个怎么可以，所以我就照着NexT的指导用了第三方插件，由于有了昨天的基础，所以今天的人任务十分的顺利，没有丝毫意外的有了在我看起来可以装X的东西（在其他人眼里这就是渣渣一样的）。不管怎么说，自己做的东西总是觉得是好的，即便它是别人没有要的了已经。<br>我做博客其实是想写一些笔记什么的，但是我发现我没有什么可以写的(连Markdown语法还没有学会)，我这个人堪称无聊至极，还是一个什么都不会的笨蛋，并且一无所有。<br>我学习javascript已经很长时间了，可是到现在我都没有学到皮毛，只是懂了一些最基础的知识，可能真的是因为我是一个差等生吧，从小到大一直如此。也是一个彻头彻尾的loser，无论生活与爱情。<br>谨此纪念我二十多年的失败人生，另外今天是元宵节，某人~元宵节快乐！</p>
+        <p>jQuery是javascript的一个子集，jQuery使人们不用顾虑浏览器的兼容性（我说的就是IE）。</p>
+<h4 id="引入jQuery库："><a href="#引入jQuery库：" class="headerlink" title="引入jQuery库："></a>引入jQuery库：</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"https://code.jquery.com/jquery-3.1.1.min.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h4 id="jQuery版的Hello，World！"><a href="#jQuery版的Hello，World！" class="headerlink" title="jQuery版的Hello，World！"></a>jQuery版的Hello，World！</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">        $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            $(<span class="string">"div"</span>).html(<span class="string">"Hello,world!"</span>);</div><div class="line">        &#125;)</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="Query中的页面加载后-“监听事件”的方法："><a href="#Query中的页面加载后-“监听事件”的方法：" class="headerlink" title="Query中的页面加载后 “监听事件”的方法："></a>Query中的页面加载后 “监听事件”的方法：</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);</div></pre></td></tr></table></figure>
+<p>等同于<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div></pre></td></tr></table></figure></p>
+<p>但ready事件优先于onload事件执行</p>
+<h4 id="简单的jQuery选择器"><a href="#简单的jQuery选择器" class="headerlink" title="简单的jQuery选择器"></a>简单的jQuery选择器</h4><p>jQuery基本选择器</p>
+<ul>
+<li><p>ID选择器：$(“#id”) </p>
+</li>
+<li><p>Class选择器：$(“.Class”)</p>
+</li>
+</ul>
+<ul>
+<li><p>标签选择器：$(“tagname”)</p>
+</li>
+<li><p>通配选择器：$(“ * “)</p>
+</li>
+<li><p>组选择器：$(“seletor1,seletor2,~N”)</p>
+</li>
+<li><p>层级选择器：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//子选择器</span></div><div class="line">        <span class="comment">//$('div &gt; p') 选择所有div元素里面的子元素P</span></div><div class="line">        $(<span class="string">'div&gt;p'</span>).css(<span class="string">"border"</span>, <span class="string">"1px groove red"</span>);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//后代选择器</span></div><div class="line">        <span class="comment">//$('div  p') 选择所有div元素里面的p元素</span></div><div class="line">        $(<span class="string">'div p'</span>).css(<span class="string">"border"</span>, <span class="string">"1px groove red"</span>);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//相邻兄弟选择器</span></div><div class="line">        <span class="comment">//选取prev后面的第一个的div兄弟节点</span></div><div class="line">        $(<span class="string">'div+span'</span>).css(<span class="string">"border"</span>, <span class="string">"3px groove red"</span>);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//一般相邻选择器</span></div><div class="line">        <span class="comment">//选取prev后面的所有的div兄弟节点</span></div><div class="line">        $(<span class="string">'.prev~div'</span>).css(<span class="string">"border"</span>, <span class="string">"3px groove green"</span>);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>基本筛选选择器：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//找到第一个div</span></div><div class="line">        $(<span class="string">".div:first"</span>).css(<span class="string">"color"</span>, <span class="string">"#CD00CD"</span>);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//找到最后一个div</span></div><div class="line">        $(<span class="string">".div:last"</span>).css(<span class="string">"color"</span>, <span class="string">"#CD00CD"</span>);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//:even 选择所引值为偶数的元素，从 0 开始计数</span></div><div class="line">        $(<span class="string">".div:even"</span>).css(<span class="string">"border"</span>, <span class="string">"3px groove red"</span>);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//:odd 选择所引值为奇数的元素，从 0 开始计数</span></div><div class="line">        $(<span class="string">".div:odd"</span>).css(<span class="string">"border"</span>, <span class="string">"3px groove blue"</span>);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//:eq</span></div><div class="line">        <span class="comment">//选择单个</span></div><div class="line">        $(<span class="string">".aaron:eq(2)"</span>).css(<span class="string">"border"</span>, <span class="string">"3px groove blue"</span>);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//:gt 选择匹配集合中所有索引值大于给定index参数的元素</span></div><div class="line">        $(<span class="string">"aaron:gt(3)"</span>).css(<span class="string">"border"</span>, <span class="string">"3px groove blue"</span>);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//:lt 选择匹配集合中所有索引值小于给定index参数的元素</span></div><div class="line">        <span class="comment">//与:gt相反</span></div><div class="line">        $(<span class="string">".aaron:lt(2)"</span>).css(<span class="string">"color"</span>, <span class="string">"#CD00CD"</span>);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">        <span class="comment">//:not 选择所有元素去除不匹配给定的选择器的元素</span></div><div class="line">        <span class="comment">//选中所有紧接着没有checked属性的input元素后的p元素，赋予颜色</span></div><div class="line">        $(<span class="string">"input:not(:checked)+p"</span>).css(<span class="string">"background-color"</span>, <span class="string">"#CD00CD"</span>);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Dom对象转换jQuery对象"><a href="#Dom对象转换jQuery对象" class="headerlink" title="Dom对象转换jQuery对象"></a>Dom对象转换jQuery对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>); <span class="comment">//dom对象</span></div><div class="line">        div[<span class="number">1</span>].style.color = <span class="string">"blue"</span>;</div><div class="line">        <span class="comment">//将dom节点div转化为$div的jquery对象</span></div><div class="line">        <span class="keyword">var</span> $div = $(div);</div><div class="line"></div><div class="line">        <span class="comment">// var $first = $div.first(); //找到第一个div元素</span></div><div class="line">        <span class="comment">// $first.css('color', 'red'); //给第一个元素设置颜色</span></div><div class="line">        $div.get(<span class="number">0</span>).style.color = <span class="string">"red"</span>;</div><div class="line">        $(<span class="string">"div"</span>).get($div.length <span class="number">-1</span>).style.color = <span class="string">"pink"</span>;</div></pre></td></tr></table></figure>
+<h4 id="jQuery对象转换Dom对象"><a href="#jQuery对象转换Dom对象" class="headerlink" title="jQuery对象转换Dom对象"></a>jQuery对象转换Dom对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $div = $(<span class="string">'div'</span>); <span class="comment">//jQuery对象</span></div><div class="line">		<span class="keyword">var</span> div = $div.get(<span class="number">0</span>);</div><div class="line">		div.style.color = <span class="string">'red'</span>; <span class="comment">//操作dom对象的属性</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -400,7 +434,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag"># 随笔</a>
+            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
           
         </div>
       
@@ -413,8 +447,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/10/我的第一篇文章/" rel="next" title="我的第一篇文章 ">
-                <i class="fa fa-chevron-left"></i> 我的第一篇文章 
+              <a href="/2017/02/11/JavaScript面向对象初步学习/" rel="next" title="JavaScript面向对象初步学习">
+                <i class="fa fa-chevron-left"></i> JavaScript面向对象初步学习
               </a>
             
           </div>
@@ -422,10 +456,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/11/React初试/" rel="prev" title="React初试">
-                React初试 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -474,8 +504,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/11/2017年的元宵节/"
-           data-title="2017年的元宵节" data-url="http://yoursite.com/2017/02/11/2017年的元宵节/">
+      <div class="ds-thread" data-thread-key="2017/02/11/jQuery初步学习/"
+           data-title="jQuery初步学习" data-url="http://yoursite.com/2017/02/11/jQuery初步学习/">
       </div>
     
   </div>
@@ -499,8 +529,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/h.png"
@@ -549,6 +588,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#引入jQuery库："><span class="nav-number">1.</span> <span class="nav-text">引入jQuery库：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jQuery版的Hello，World！"><span class="nav-number">2.</span> <span class="nav-text">jQuery版的Hello，World！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Query中的页面加载后-“监听事件”的方法："><span class="nav-number">3.</span> <span class="nav-text">Query中的页面加载后 “监听事件”的方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简单的jQuery选择器"><span class="nav-number">4.</span> <span class="nav-text">简单的jQuery选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dom对象转换jQuery对象"><span class="nav-number">5.</span> <span class="nav-text">Dom对象转换jQuery对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jQuery对象转换Dom对象"><span class="nav-number">6.</span> <span class="nav-text">jQuery对象转换Dom对象</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
