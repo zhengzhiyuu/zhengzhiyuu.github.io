@@ -3,6 +3,55 @@
   
     
     <entry>
+      <title><![CDATA[jQuery中的prependTo()方法]]></title>
+      <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%AD%E7%9A%84prependTo-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[.prepend()和.prependTo()实现同样的功能，主要的不同是语法，插入的内容和目标的位置不同对于.prependTo() 而言，将要被插入的内容写在方法的前面，可以是选择器表达式或动态创建的标记，待插入内容的容器作为参数1234567&lt;script type="text/javascript"&gt; $("#bt2").on('click', function() &#123; //找到class="aaron2"的div节点 //然后通过prependTo内部的首位置添加一个新的p节点 $('&lt;p&gt;prependTo增加的p元素&lt;/p&gt;').prependTo($('.aaron2')) &#125;)&lt;/script&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery中的prepend()方法]]></title>
+      <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%AD%E7%9A%84prepend-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[prepend()方法将指定元素插入到匹配元素里面作为它的第一个子元素 (如果要作为最后一个子元素插入用.append())对于.prepend() 而言，选择器表达式写在方法的前面，作为待插入内容的容器，将要被插入的内容作为方法的参数1234567&lt;script type="text/javascript"&gt; $("#bt1").on('click', function() &#123; //找到class="aaron1"的div节点 //然后通过prepend在内部的首位置添加一个新的p节点 $('.aaron1').prepend('&lt;p&gt;prepend增加的p元素&lt;/p&gt;') &#125;)&lt;/script&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery中的befor()方法]]></title>
+      <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%AD%E7%9A%84befor-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[befor()前面是要插入的元素内容，而后面是被插入的对象 注意：before向元素的前边添加html代码，如果元素前面有元素了，那将前面的元素前移，然后将html代码插入123456&lt;script type="text/javascript"&gt; $("#bt1").on('click', function() &#123; //在匹配test1元素集合中的每个元素前面插入p元素 $(".test1").before('&lt;p style="color:red"&gt;before,在匹配元素之前增加&lt;/p&gt;', '&lt;p style="color:red"&gt;多参数&lt;/p&gt;') &#125;)&lt;/script&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery中的after()方法]]></title>
+      <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%AD%E7%9A%84after-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[after()前面是被插入的对象，后面是要在对象内插入的元素内容 注意：after向元素的后边添加html代码，如果元素后面有元素了，那将后面的元素后移，然后将html代码插入1234567&lt;script type="text/javascript"&gt; $("#bt1").on('click', function() &#123; //在匹配test1元素集合中的每个元素后面插入p元素 $(".test2").after('&lt;p style="color:blue"&gt;after,在匹配元素之后增加&lt;/p&gt;', '&lt;p style="color:blue"&gt;多参数&lt;/p&gt;') &#125;)&lt;/script&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery中的appendTo()方法]]></title>
+      <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%AD%E7%9A%84appendTo-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[appendTo：实际上，使用这个方法是颠倒了常规的$(A).append(B)的操作，即不是把B追加到A中，而是把A追加到B中appendTo()前面是要插入的元素内容，而后面是被插入的对象12345678910&lt;script type="text/javascript"&gt; $("#bt2").on('click', function() &#123; //.appendTo()刚好相反，内容在方法前面， //无论是一个选择器表达式 或创建作为标记上的标记 //它都将被插入到目标容器的末尾。 $('&lt;div class="appendTo"&gt;通过appendTo方法添加的元素&lt;/div&gt;').appendTo($(".content")) &#125;)&lt;/script&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery中的append()方法]]></title>
+      <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%AD%E7%9A%84append-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[append：这个操作与对指定的元素执行原生的appendChild方法，将它们添加到文档中的情况类似append()前面是被插入的对象，后面是要在对象内插入的元素内容12345678 &lt;script type="text/javascript"&gt; $("#bt1").on('click', function() &#123; //.append(), 内容在方法的后面， //参数是将要插入的内容。 $(".content").append('&lt;div class="append"&gt;通过append方法添加的元素&lt;/div&gt;') &#125;)&lt;/script&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery中DOM操作]]></title>
+      <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%ADDOM%E6%93%8D%E4%BD%9C%2F</url>
+      <content type="text"><![CDATA[大神都是从DOM开始的 JavaScript中的一点原生方法： 创建元素：document.createElement 设置属性：setAttribute 添加文本：innerHTML 加入文档：appendChildjQuery节点创建1234567891011&lt;script type="text/javascript"&gt; var $body = $('body'); $body.on("click",function() &#123; //通过jQuery生成div元素节点 var div = $("&lt;div&gt;动态创建DIV元素节点&lt;/div&gt;") //通过jQuery生成div属性节点 var div1 = $("&lt;div id='test' class='aaron'&gt;创建为属性节点&lt;/div&gt;") $body.append(div) $body.append(div1) &#125;)&lt;/script&gt; DOM内部插入append() 与 appendTo() DOM外部插入after() 与 before() DOM内部插入prepend() 与 prependTo()]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[jQuery中的data()方法]]></title>
       <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%AD%E7%9A%84data-%E6%96%B9%E6%B3%95%2F</url>
       <content type="text"><![CDATA[定义和用法data() 方法向被选元素附加数据，或者从被选元素获取数据。 向元素附加数据向被选元素附加数据 语法1$(selector).data(name,value) 参数 描述name : 必需;规定要设置的数据的名称value : 必需;规定要设置的数据的值 从元素返回数据从被选元素中返回附加的数据 语法1$(selector).data(name) 参数 描述name ： 可选。规定要取回的数据的名称如果没有规定名称，则该方法将以对象的形式从元素中返回所有存储的数据 学习代码：1234567891011121314151617&lt;script&gt; $(document).ready(function () &#123; /* ** 向p元素添加数据 a */ $("#btn1").click(function () &#123; $("p").data("a", "Hello! &lt;/br&gt;"); &#125;) /* ** 把p元素数据a取出，添加到div标签 */ $("#btn2").click(function () &#123; var a = $("p").data("a"); $("div").append(a); &#125;) &#125;)&lt;/script&gt; 123456&lt;body&gt; &lt;button id="btn1"&gt;赋值&lt;/button&gt; &lt;button id="btn2"&gt;取值&lt;/button&gt; &lt;p&gt;&lt;/p&gt; &lt;div&gt;&lt;/div&gt;&lt;/body&gt; 使用对象向元素附加数据使用带有名称/值对的对象向被选元素添加数据。 语法1$(selector).data(object) 参数 描述object : 必需;规定包含名称/值对的对象 学习代码：12345678910111213&lt;script type="text/javascript"&gt;$(document).ready(function()&#123; testObj=new Object(); testObj.greetingMorn="Good Morning!"; testObj.greetingEve="Good Evening!"; $("#btn1").click(function()&#123; $("div").data(testObj); &#125;); $("#btn2").click(function()&#123; alert($("div").data("greetingEve")); &#125;); // Good Evening!&#125;);&lt;/script&gt;]]></content>
