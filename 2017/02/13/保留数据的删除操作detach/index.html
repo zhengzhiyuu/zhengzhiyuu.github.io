@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/13/保留数据的删除操作detach/index.html">
 <meta property="og:site_name" content="择一人">
 <meta property="og:description" content="如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理">
-<meta property="og:updated_time" content="2017-02-13T06:00:03.261Z">
+<meta property="og:updated_time" content="2017-02-13T06:05:03.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="保留数据的删除操作detach()">
 <meta name="twitter:description" content="如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理">
@@ -411,7 +411,7 @@
 
       
         <p>如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理<br><a id="more"></a></p>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>detach方法是JQuery特有的，所以它只能处理通过JQuery的方法绑定的事件或者数据<br>```js</p>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>detach方法是JQuery特有的，所以它只能处理通过JQuery的方法绑定的事件或者数据<br>```html</p>
 <p><body><br>    <p>P元素1，默认给绑定一个点击事件</p><br>    <p>P元素2，默认给绑定一个点击事件</p><br>    <button id="bt1">点击删除 p 元素</button><br>    <button id="bt2">点击移动 p 元素</button><br>    <script type="text/javascript"><br>    var p;<br>    $(“#bt1”).click(function() {<br>        if (!$(“p”).length) return; //去重<br>        //通过detach方法删除元素<br>        //只是页面不可见，但是这个节点还是保存在内存中<br>        //数据与事件都不会丢失<br>        p = $(“p”).detach()<br>    });</p>
 <pre><code>$(&quot;#bt2&quot;).click(function() {
     //把p元素在添加到页面中
