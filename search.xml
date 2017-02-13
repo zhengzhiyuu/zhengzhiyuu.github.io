@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Angular2初试]]></title>
+      <url>%2F2017%2F02%2F13%2FAngular2%E5%88%9D%E8%AF%95%2F</url>
+      <content type="text"><![CDATA[Angular2初试之利用angular-cli先说一说我在NPM angular-cli包时候遇到的小白问题在NPM安装的时候出现了Python环境配置错误问题解决办法：下载Python2.7版本，在安装界面(windows)下如下配置，然后重启电脑即可另外在 npm install 遇到其他Python问题可以参考这篇文章 创建工程Angular2为我们提供一个便捷的工程构建工具angular-cli，可以快速的搭建需要的开发环境 最新版的npm安装命令：1$ npm install -g angular-cli@latest 旧版本的更新命令：123$ npm uninstall -g angular-cli //卸载$ npm cache clean //清空缓存$ npm install -g angular-cli@latest //安装最新版本 创建工程文件命令：12$ ng new project-name //建立新项目$ cd project-nam //进入工程目录 本地端浏览：1$ ng server || $ ng s 指定端口：1$ ng server --ng server --host 0.0.0.0 --port 4000 项目打包：```js$ ng build || $ ng d]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[jQuery中的prependTo()方法]]></title>
       <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%AD%E7%9A%84prependTo-%E6%96%B9%E6%B3%95%2F</url>
       <content type="text"><![CDATA[.prepend()和.prependTo()实现同样的功能，主要的不同是语法，插入的内容和目标的位置不同对于.prependTo() 而言，将要被插入的内容写在方法的前面，可以是选择器表达式或动态创建的标记，待插入内容的容器作为参数1234567&lt;script type="text/javascript"&gt; $("#bt2").on('click', function() &#123; //找到class="aaron2"的div节点 //然后通过prependTo内部的首位置添加一个新的p节点 $('&lt;p&gt;prependTo增加的p元素&lt;/p&gt;').prependTo($('.aaron2')) &#125;)&lt;/script&gt;]]></content>
