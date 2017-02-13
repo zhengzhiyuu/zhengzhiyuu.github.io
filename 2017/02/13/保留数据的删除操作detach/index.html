@@ -89,16 +89,16 @@
 
 
 
-<meta name="description" content=".after()和.insertAfter() 实现同样的功能。主要的不同是语法——特别是（插入）内容和目标的位置。 对于after()选择表达式在函数的前面，参数是将要插入的内容。对于 .insertAfter(), 刚好相反，内容在方法前面，它将被放在参数里元素的后面">
+<meta name="description" content="如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery中的insertAfter()方法">
-<meta property="og:url" content="http://yoursite.com/2017/02/13/jQuery中的insertAfter-方法/index.html">
+<meta property="og:title" content="保留数据的删除操作detach()">
+<meta property="og:url" content="http://yoursite.com/2017/02/13/保留数据的删除操作detach/index.html">
 <meta property="og:site_name" content="择一人">
-<meta property="og:description" content=".after()和.insertAfter() 实现同样的功能。主要的不同是语法——特别是（插入）内容和目标的位置。 对于after()选择表达式在函数的前面，参数是将要插入的内容。对于 .insertAfter(), 刚好相反，内容在方法前面，它将被放在参数里元素的后面">
-<meta property="og:updated_time" content="2017-02-13T04:57:37.834Z">
+<meta property="og:description" content="如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理">
+<meta property="og:updated_time" content="2017-02-13T06:00:03.261Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery中的insertAfter()方法">
-<meta name="twitter:description" content=".after()和.insertAfter() 实现同样的功能。主要的不同是语法——特别是（插入）内容和目标的位置。 对于after()选择表达式在函数的前面，参数是将要插入的内容。对于 .insertAfter(), 刚好相反，内容在方法前面，它将被放在参数里元素的后面">
+<meta name="twitter:title" content="保留数据的删除操作detach()">
+<meta name="twitter:description" content="如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/13/jQuery中的insertAfter-方法/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/13/保留数据的删除操作detach/"/>
 
 
 
 
 
-  <title> jQuery中的insertAfter()方法 | 择一人 </title>
+  <title> 保留数据的删除操作detach() | 择一人 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -292,7 +292,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/13/jQuery中的insertAfter-方法/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/13/保留数据的删除操作detach/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不古">
@@ -316,7 +316,7 @@
             
             
               
-                jQuery中的insertAfter()方法
+                保留数据的删除操作detach()
               
             
           </h1>
@@ -331,7 +331,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T12:43:23+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T13:55:59+08:00">
                 2017-02-13
               </time>
             
@@ -372,8 +372,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/13/jQuery中的insertAfter-方法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/jQuery中的insertAfter-方法/" itemprop="commentCount"></span>
+                <a href="/2017/02/13/保留数据的删除操作detach/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/保留数据的删除操作detach/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -381,7 +381,7 @@
 
           
           
-             <span id="/2017/02/13/jQuery中的insertAfter-方法/" class="leancloud_visitors" data-flag-title="jQuery中的insertAfter()方法">
+             <span id="/2017/02/13/保留数据的删除操作detach/" class="leancloud_visitors" data-flag-title="保留数据的删除操作detach()">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -410,8 +410,17 @@
       
 
       
-        <p>.after()和.insertAfter() 实现同样的功能。主要的不同是语法——特别是（插入）内容和目标的位置。 对于after()选择表达式在函数的前面，参数是将要插入的内容。对于 .insertAfter(), 刚好相反，内容在方法前面，它将被放在参数里元素的后面<br><a id="more"></a><br>insertAfter将JQuery封装好的元素插入到指定元素的后面，如果元素后面有元素了，那将后面的元素后移，然后将JQuery对象插入<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">$(<span class="string">"#btn1"</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//在box元素前后插入集合中每个匹配的元素</span></div><div class="line">    <span class="comment">//不支持多参数</span></div><div class="line">    $(<span class="string">'&lt;p style="color:red"&gt;测试insertAfter方法增加&lt;/p&gt;'</span>).insertAfter($(<span class="string">".box"</span>))</div><div class="line">&#125;)</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
-
+        <p>如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理<br><a id="more"></a></p>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>detach方法是JQuery特有的，所以它只能处理通过JQuery的方法绑定的事件或者数据<br>```js</p>
+<p><body><br>    <p>P元素1，默认给绑定一个点击事件</p><br>    <p>P元素2，默认给绑定一个点击事件</p><br>    <button id="bt1">点击删除 p 元素</button><br>    <button id="bt2">点击移动 p 元素</button><br>    <script type="text/javascript"><br>    var p;<br>    $(“#bt1”).click(function() {<br>        if (!$(“p”).length) return; //去重<br>        //通过detach方法删除元素<br>        //只是页面不可见，但是这个节点还是保存在内存中<br>        //数据与事件都不会丢失<br>        p = $(“p”).detach()<br>    });</p>
+<pre><code>$(&quot;#bt2&quot;).click(function() {
+    //把p元素在添加到页面中
+    //事件还是存在
+    $(&quot;body&quot;).append(p);
+});
+&lt;/script&gt;
+</code></pre><p></body><br>``</p>
+</script></body></p>
       
     </div>
 
@@ -441,8 +450,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/13/Angular2初试/" rel="next" title="Angular2初试">
-                <i class="fa fa-chevron-left"></i> Angular2初试
+              <a href="/2017/02/13/remove-的有参用法和无参用法/" rel="next" title="remove()的有参用法和无参用法">
+                <i class="fa fa-chevron-left"></i> remove()的有参用法和无参用法
               </a>
             
           </div>
@@ -450,10 +459,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/13/jQuery中的insertBefore-方法/" rel="prev" title="jQuery中的insertBefore()方法">
-                jQuery中的insertBefore()方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -502,8 +507,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/13/jQuery中的insertAfter-方法/"
-           data-title="jQuery中的insertAfter()方法" data-url="http://yoursite.com/2017/02/13/jQuery中的insertAfter-方法/">
+      <div class="ds-thread" data-thread-key="2017/02/13/保留数据的删除操作detach/"
+           data-title="保留数据的删除操作detach()" data-url="http://yoursite.com/2017/02/13/保留数据的删除操作detach/">
       </div>
     
   </div>
@@ -527,8 +532,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/h.png"
@@ -591,6 +605,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意："><span class="nav-number">1.</span> <span class="nav-text">注意：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
