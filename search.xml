@@ -3,23 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[DOM拷贝clone()]]></title>
+      <url>%2F2017%2F02%2F13%2FDOM%E6%8B%B7%E8%B4%9Dclone%2F</url>
+      <content type="text"><![CDATA[.clone()方法深度 复制所有匹配的元素集合，包括所有匹配元素、匹配元素的下级元素、文字节点。.clone(true) true可选 ：克隆附带的事件与数据 clone方法比较简单就是克隆节点，但是需要注意，如果节点有事件或者数据之类的其他处理，我们需要通过clone(ture)传递一个布尔值ture用来指定，这样不仅仅只是克隆单纯的节点结构，还要把附带的事件与数据给一并克隆了Html代码：1234567&lt;body&gt;&lt;h2&gt;通过clone克隆元素&lt;/h2&gt; &lt;div class="left"&gt; &lt;div class="aaron1"&gt;点击,clone浅拷贝&lt;/div&gt; &lt;div class="aaron2"&gt;点击,clone深拷贝,可以继续触发创建&lt;/div&gt; &lt;/div&gt;&lt;/body&gt; javascript代码：12345678910111213141516&lt;script type="text/javascript"&gt; //只克隆节点 //不克隆事件 $(".aaron1").on('click', function() &#123; $(".left").append( $(this).clone().css('color','red') ) &#125;)&lt;/script&gt;&lt;script type="text/javascript"&gt; //克隆节点 //克隆事件 $(".aaron2").on('click', function() &#123; console.log(1) $(".left").append( $(this).clone(true).css('color','blue') ) &#125;)&lt;/script&gt;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[保留数据的删除操作detach()]]></title>
       <url>%2F2017%2F02%2F13%2F%E4%BF%9D%E7%95%99%E6%95%B0%E6%8D%AE%E7%9A%84%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9Cdetach%2F</url>
-      <content type="text"><![CDATA[如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理 注意：detach方法是JQuery特有的，所以它只能处理通过JQuery的方法绑定的事件或者数据```html P元素1，默认给绑定一个点击事件 P元素2，默认给绑定一个点击事件 点击删除 p 元素 点击移动 p 元素 var p; $(“#bt1”).click(function() { if (!$(“p”).length) return; //去重 //通过detach方法删除元素 //只是页面不可见，但是这个节点还是保存在内存中 //数据与事件都不会丢失 p = $(“p”).detach() }); $(&quot;#bt2&quot;).click(function() { //把p元素在添加到页面中 //事件还是存在 $(&quot;body&quot;).append(p); }); &lt;/script&gt; ``]]></content>
+      <content type="text"><![CDATA[如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理 注意：detach方法是JQuery特有的，所以它只能处理通过JQuery的方法绑定的事件或者数据Html代码：123456&lt;body&gt; &lt;p&gt;P元素1，默认给绑定一个点击事件&lt;/p&gt; &lt;p&gt;P元素2，默认给绑定一个点击事件&lt;/p&gt; &lt;button id="bt1"&gt;点击删除 p 元素&lt;/button&gt; &lt;button id="bt2"&gt;点击移动 p 元素&lt;/button&gt;&lt;/body&gt; JavaScript代码：12345678910111213141516&lt;script type="text/javascript"&gt; var p; $("#bt1").click(function() &#123; if (!$("p").length) return; //去重 //通过detach方法删除元素 //只是页面不可见，但是这个节点还是保存在内存中 //数据与事件都不会丢失 p = $("p").detach() &#125;); $("#bt2").click(function() &#123; //把p元素在添加到页面中 //事件还是存在 $("body").append(p); &#125;);&lt;/script&gt;]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[remove()的有参用法和无参用法]]></title>
       <url>%2F2017%2F02%2F13%2Fremove-%E7%9A%84%E6%9C%89%E5%8F%82%E7%94%A8%E6%B3%95%E5%92%8C%E6%97%A0%E5%8F%82%E7%94%A8%E6%B3%95%2F</url>
-      <content type="text"><![CDATA[emove与empty一样，都是移除元素的方法，但是remove会将元素自身移除，同时也会移除元素内部的一切，包括绑定的事件及与该元素相关的jQuery数据 1234567891011121314151617181920212223242526272829&lt;body&gt; &lt;h2&gt;通过jQuery remove方法移除元素&lt;/h2&gt; &lt;div class="test1"&gt; &lt;p&gt;p元素1&lt;/p&gt; &lt;p&gt;p元素2&lt;/p&gt; &lt;/div&gt; &lt;div class="test2"&gt; &lt;p&gt;p元素3&lt;/p&gt; &lt;p&gt;p元素4&lt;/p&gt; &lt;/div&gt; &lt;button&gt;通过点击jQuery的empty移除元素&lt;/button&gt; &lt;button&gt;通过点击jQuery的empty移除指定元素&lt;/button&gt; &lt;script type="text/javascript"&gt; $("button:first").on('click', function() &#123; //删除整个 class=test1的div节点 $(".test1").remove() &#125;) $("button:last").on('click', function() &#123; //找到所有p元素中，包含了3的元素 //这个也是一个过滤器的处理 $("p").remove(":contains('3')") &#125;) &lt;/script&gt;&lt;/body&gt;]]></content>
+      <content type="text"><![CDATA[emove与empty一样，都是移除元素的方法，但是remove会将元素自身移除，同时也会移除元素内部的一切，包括绑定的事件及与该元素相关的jQuery数据Html代码： 12345678910111213&lt;body&gt; &lt;h2&gt;通过jQuery remove方法移除元素&lt;/h2&gt; &lt;div class="test1"&gt; &lt;p&gt;p元素1&lt;/p&gt; &lt;p&gt;p元素2&lt;/p&gt; &lt;/div&gt; &lt;div class="test2"&gt; &lt;p&gt;p元素3&lt;/p&gt; &lt;p&gt;p元素4&lt;/p&gt; &lt;/div&gt; &lt;button&gt;通过点击jQuery的empty移除元素&lt;/button&gt; &lt;button&gt;通过点击jQuery的empty移除指定元素&lt;/button&gt;&lt;/body&gt; JavaScript代码： 123456789101112&lt;script type="text/javascript"&gt; $("button:first").on('click', function() &#123; //删除整个 class=test1的div节点 $(".test1").remove() &#125;) $("button:last").on('click', function() &#123; //找到所有p元素中，包含了3的元素 //这个也是一个过滤器的处理 $("p").remove(":contains('3')") &#125;)&lt;/script&gt;]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[DOM节点删除之empty()的基本用法]]></title>
       <url>%2F2017%2F02%2F13%2FDOM%E8%8A%82%E7%82%B9%E5%88%A0%E9%99%A4%E4%B9%8Bempty-%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95%2F</url>
-      <content type="text"><![CDATA[empty()不仅移除子元素（和其他后代元素），同样移除元素里的文本如果我们通过empty方法移除里面div的所有元素，它只是清空内部的html代码，但是标记仍然留在DOM中123456789101112131415&lt;body&gt; &lt;h2&gt;通过empty移除元素&lt;/h2&gt; &lt;div id="test"&gt; &lt;p&gt;p元素1&lt;/p&gt; &lt;p&gt;p元素2&lt;/p&gt; &lt;/div&gt; &lt;button&gt;点击通过jQuery的empty移除元素&lt;/button&gt; &lt;script type="text/javascript"&gt; $("button").on('click', function() &#123; //通过empty移除了当前div元素下的所有p元素 //但是本身id=test的div元素没有被删除 $("#test").empty() &#125;) &lt;/script&gt;&lt;/body&gt;]]></content>
+      <content type="text"><![CDATA[empty()不仅移除子元素（和其他后代元素），同样移除元素里的文本如果我们通过empty方法移除里面div的所有元素，它只是清空内部的html代码，但是标记仍然留在DOM中Html代码：1234567&lt;body&gt; &lt;h2&gt;通过empty移除元素&lt;/h2&gt; &lt;div id="test"&gt; &lt;p&gt;p元素1&lt;/p&gt; &lt;p&gt;p元素2&lt;/p&gt; &lt;/div&gt;&lt;/body&gt; JavaScript代码：12345678&lt;button&gt;点击通过jQuery的empty移除元素&lt;/button&gt; &lt;script type="text/javascript"&gt; $("button").on('click', function() &#123; //通过empty移除了当前div元素下的所有p元素 //但是本身id=test的div元素没有被删除 $("#test").empty() &#125;)&lt;/script&gt;]]></content>
     </entry>
 
     
@@ -40,7 +47,7 @@
     <entry>
       <title><![CDATA[Angular2初试]]></title>
       <url>%2F2017%2F02%2F13%2FAngular2%E5%88%9D%E8%AF%95%2F</url>
-      <content type="text"><![CDATA[Angular2初试之利用angular-cli先说一说我在NPM angular-cli包时候遇到的小白问题在NPM安装的时候出现了Python环境配置错误问题解决办法：下载Python2.7版本，在安装界面(windows)下如下配置，然后重启电脑即可另外在 npm install 遇到其他Python问题可以参考这篇文章 创建工程Angular2为我们提供一个便捷的工程构建工具angular-cli，可以快速的搭建需要的开发环境 最新版的npm安装命令：1$ npm install -g angular-cli@latest 旧版本的更新命令：123$ npm uninstall -g angular-cli //卸载$ npm cache clean //清空缓存$ npm install -g angular-cli@latest //安装最新版本 创建工程文件命令：12$ ng new project-name //建立新项目$ cd project-nam //进入工程目录 本地端浏览：1$ ng server || $ ng s 指定端口：1$ ng server --ng server --host 0.0.0.0 --port 4000 项目打包：1$ ng build || $ ng d]]></content>
+      <content type="text"><![CDATA[Angular2初试之利用angular-cli先说一说我在NPM angular-cli包时候遇到的小白问题在NPM安装的时候出现了Python环境配置错误问题解决办法：下载Python2.7版本，在安装界面(windows)下如下配置，然后重启电脑即可另外在 npm install 遇到其他Python问题可以参考这篇文章 创建工程Angular2为我们提供一个便捷的工程构建工具angular-cli，可以快速的搭建需要的开发环境 最新版的npm安装命令：1$ npm install -g angular-cli@latest 旧版本的更新命令：123$ npm uninstall -g angular-cli //卸载$ npm cache clean //清空缓存$ npm install -g angular-cli@latest //安装最新版本 创建工程文件命令：12$ ng new project-name //建立新项目$ cd project-nam //进入工程目录 本地端浏览：1$ ng server || $ ng s 指定端口：1$ ng server --ng server --host 0.0.0.0 --port 4000 项目打包：1$ ng build]]></content>
     </entry>
 
     
@@ -89,7 +96,7 @@
     <entry>
       <title><![CDATA[jQuery中DOM操作]]></title>
       <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%ADDOM%E6%93%8D%E4%BD%9C%2F</url>
-      <content type="text"><![CDATA[大神都是从DOM开始的 JavaScript中的一点原生方法： 创建元素：document.createElement 设置属性：setAttribute 添加文本：innerHTML 加入文档：appendChildDOM节点的创建1234567891011&lt;script type="text/javascript"&gt; var $body = $('body'); $body.on("click",function() &#123; //通过jQuery生成div元素节点 var div = $("&lt;div&gt;动态创建DIV元素节点&lt;/div&gt;") //通过jQuery生成div属性节点 var div1 = $("&lt;div id='test' class='aaron'&gt;创建为属性节点&lt;/div&gt;") $body.append(div) $body.append(div1) &#125;)&lt;/script&gt; DOM节点的插入 DOM内部插入append() 与 appendTo() append(content):向每一个匹配的元素内部追加内容 appendTo(content):把所有匹配的元素追加到另一个指定的元素集合中DOM外部插入after() 与 before() after(content):在匹配元素集合在中的每一个元素后面插入参数所制定的内容作为其兄弟元素 before(content):根据参数设定，在匹配元素的前面插入内容DOM内部插入prepend() 与 prependTo() prepend(content):向每个匹配的元素内部前置内容 prependTo(content):把所有匹配的元素前置到另一个指定的元素集合中DOM内部插入insertAfter() 与 insertBefore() insertAfter():在目标元素前面插入集合中每个匹配的元素 insertBefore():在目标元素后面插入集合中每个匹配的元素DOM节点的删除DOM节点删除之empty()的基本用法remove()的有参用法和无参用法保留数据的删除操作detach()]]></content>
+      <content type="text"><![CDATA[大神都是从DOM开始的 JavaScript中的一点原生方法： 创建元素：document.createElement 设置属性：setAttribute 添加文本：innerHTML 加入文档：appendChildDOM节点的创建1234567891011&lt;script type="text/javascript"&gt; var $body = $('body'); $body.on("click",function() &#123; //通过jQuery生成div元素节点 var div = $("&lt;div&gt;动态创建DIV元素节点&lt;/div&gt;") //通过jQuery生成div属性节点 var div1 = $("&lt;div id='test' class='aaron'&gt;创建为属性节点&lt;/div&gt;") $body.append(div) $body.append(div1) &#125;)&lt;/script&gt; DOM节点的插入 DOM内部插入append() 与 appendTo() append(content):向每一个匹配的元素内部追加内容 appendTo(content):把所有匹配的元素追加到另一个指定的元素集合中DOM外部插入after() 与 before() after(content):在匹配元素集合在中的每一个元素后面插入参数所制定的内容作为其兄弟元素 before(content):根据参数设定，在匹配元素的前面插入内容DOM内部插入prepend() 与 prependTo() prepend(content):向每个匹配的元素内部前置内容 prependTo(content):把所有匹配的元素前置到另一个指定的元素集合中DOM内部插入insertAfter() 与 insertBefore() insertAfter():在目标元素前面插入集合中每个匹配的元素 insertBefore():在目标元素后面插入集合中每个匹配的元素DOM节点的删除DOM节点删除之empty()的基本用法remove()的有参用法和无参用法保留数据的删除操作detach()DOM节点的复制与替换DOM拷贝clone()]]></content>
     </entry>
 
     

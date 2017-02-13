@@ -89,16 +89,16 @@
 
 
 
-<meta name="description" content="如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理">
+<meta name="description" content=".clone()方法深度 复制所有匹配的元素集合，包括所有匹配元素、匹配元素的下级元素、文字节点。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="保留数据的删除操作detach()">
-<meta property="og:url" content="http://yoursite.com/2017/02/13/保留数据的删除操作detach/index.html">
+<meta property="og:title" content="DOM拷贝clone()">
+<meta property="og:url" content="http://yoursite.com/2017/02/13/DOM拷贝clone/index.html">
 <meta property="og:site_name" content="择一人">
-<meta property="og:description" content="如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理">
-<meta property="og:updated_time" content="2017-02-13T06:12:25.112Z">
+<meta property="og:description" content=".clone()方法深度 复制所有匹配的元素集合，包括所有匹配元素、匹配元素的下级元素、文字节点。">
+<meta property="og:updated_time" content="2017-02-13T06:53:50.289Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="保留数据的删除操作detach()">
-<meta name="twitter:description" content="如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理">
+<meta name="twitter:title" content="DOM拷贝clone()">
+<meta name="twitter:description" content=".clone()方法深度 复制所有匹配的元素集合，包括所有匹配元素、匹配元素的下级元素、文字节点。">
 
 
 
@@ -126,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/13/保留数据的删除操作detach/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/13/DOM拷贝clone/"/>
 
 
 
 
 
-  <title> 保留数据的删除操作detach() | 择一人 </title>
+  <title> DOM拷贝clone() | 择一人 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -292,7 +292,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/13/保留数据的删除操作detach/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/13/DOM拷贝clone/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="不古">
@@ -316,7 +316,7 @@
             
             
               
-                保留数据的删除操作detach()
+                DOM拷贝clone()
               
             
           </h1>
@@ -331,7 +331,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T13:55:59+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-13T14:17:19+08:00">
                 2017-02-13
               </time>
             
@@ -372,8 +372,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/13/保留数据的删除操作detach/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/保留数据的删除操作detach/" itemprop="commentCount"></span>
+                <a href="/2017/02/13/DOM拷贝clone/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/DOM拷贝clone/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -381,7 +381,7 @@
 
           
           
-             <span id="/2017/02/13/保留数据的删除操作detach/" class="leancloud_visitors" data-flag-title="保留数据的删除操作detach()">
+             <span id="/2017/02/13/DOM拷贝clone/" class="leancloud_visitors" data-flag-title="DOM拷贝clone()">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -410,9 +410,9 @@
       
 
       
-        <p>如果我们希望临时删除页面上的节点，但是又不希望节点上的数据与事件丢失，并且能在下一个时间段让这个删除的节点显示到页面，这时候就可以使用detach方法来处理<br><a id="more"></a></p>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>detach方法是JQuery特有的，所以它只能处理通过JQuery的方法绑定的事件或者数据<br>Html代码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;p&gt;P元素1，默认给绑定一个点击事件&lt;/p&gt;</div><div class="line">    &lt;p&gt;P元素2，默认给绑定一个点击事件&lt;/p&gt;</div><div class="line">    &lt;button id="bt1"&gt;点击删除 p 元素&lt;/button&gt;</div><div class="line">    &lt;button id="bt2"&gt;点击移动 p 元素&lt;/button&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
-<p>JavaScript代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">    <span class="keyword">var</span> p;</div><div class="line">    $(<span class="string">"#bt1"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (!$(<span class="string">"p"</span>).length) <span class="keyword">return</span>; <span class="comment">//去重</span></div><div class="line">        <span class="comment">//通过detach方法删除元素</span></div><div class="line">        <span class="comment">//只是页面不可见，但是这个节点还是保存在内存中</span></div><div class="line">        <span class="comment">//数据与事件都不会丢失</span></div><div class="line">        p = $(<span class="string">"p"</span>).detach()</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    $(<span class="string">"#bt2"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">//把p元素在添加到页面中</span></div><div class="line">        <span class="comment">//事件还是存在</span></div><div class="line">        $(<span class="string">"body"</span>).append(p);</div><div class="line">    &#125;);</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
+        <p>.clone()方法深度 复制所有匹配的元素集合，包括所有匹配元素、匹配元素的下级元素、文字节点。<br><a id="more"></a><br>.clone(true) true可选 ：克隆附带的事件与数据</p>
+<p>clone方法比较简单就是克隆节点，但是需要注意，如果节点有事件或者数据之类的其他处理，我们需要通过clone(ture)传递一个布尔值ture用来指定，这样不仅仅只是克隆单纯的节点结构，还要把附带的事件与数据给一并克隆了<br>Html代码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">&lt;h2&gt;通过clone克隆元素&lt;/h2&gt;</div><div class="line">    &lt;div class="left"&gt;</div><div class="line">        &lt;div class="aaron1"&gt;点击,clone浅拷贝&lt;/div&gt;</div><div class="line">        &lt;div class="aaron2"&gt;点击,clone深拷贝,可以继续触发创建&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
+<p>javascript代码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;script type="text/javascript"&gt;</div><div class="line">        //只克隆节点</div><div class="line">    	//不克隆事件</div><div class="line">	    $(".aaron1").on('click', function() &#123;</div><div class="line">	        $(".left").append( $(this).clone().css('color','red') )</div><div class="line">	    &#125;)</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type="text/javascript"&gt;</div><div class="line">    	//克隆节点</div><div class="line">    	//克隆事件</div><div class="line">	    $(".aaron2").on('click', function() &#123;</div><div class="line">            console.log(1)</div><div class="line">	        $(".left").append( $(this).clone(true).css('color','blue') )</div><div class="line">	    &#125;)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -443,8 +443,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/13/remove-的有参用法和无参用法/" rel="next" title="remove()的有参用法和无参用法">
-                <i class="fa fa-chevron-left"></i> remove()的有参用法和无参用法
+              <a href="/2017/02/13/保留数据的删除操作detach/" rel="next" title="保留数据的删除操作detach()">
+                <i class="fa fa-chevron-left"></i> 保留数据的删除操作detach()
               </a>
             
           </div>
@@ -452,10 +452,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/13/DOM拷贝clone/" rel="prev" title="DOM拷贝clone()">
-                DOM拷贝clone() <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -504,8 +500,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/13/保留数据的删除操作detach/"
-           data-title="保留数据的删除操作detach()" data-url="http://yoursite.com/2017/02/13/保留数据的删除操作detach/">
+      <div class="ds-thread" data-thread-key="2017/02/13/DOM拷贝clone/"
+           data-title="DOM拷贝clone()" data-url="http://yoursite.com/2017/02/13/DOM拷贝clone/">
       </div>
     
   </div>
@@ -529,17 +525,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/h.png"
@@ -602,22 +589,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意："><span class="nav-number">1.</span> <span class="nav-text">注意：</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
