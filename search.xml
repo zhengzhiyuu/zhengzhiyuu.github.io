@@ -3,9 +3,513 @@
   
     
     <entry>
-      <title><![CDATA[Javascript基础“]]></title>
-      <url>%2F2017%2F02%2F28%2FJavascript%E5%9F%BA%E7%A1%80%E2%80%9C%2F</url>
-      <content type="text"></content>
+      <title><![CDATA[Vue Todo list 代码]]></title>
+      <url>%2F2017%2F02%2F18%2FVue-Todo-list-%E4%BB%A3%E7%A0%81%2F</url>
+      <content type="text"><![CDATA[123456789101112131415161718192021222324252627282930313233343536373839404142434445464748&lt;template&gt; &lt;div class="hello"&gt; &lt;h1 v-text="title"&gt;&lt;/h1&gt; &lt;input v-model="newItem" v-on:keyup.enter="addNew"&gt; &lt;ul&gt; &lt;li v-for="item in items" v-text="item.label" v-bind:class="&#123;items: item.isOk&#125;" v-on:click="onclick(item)"&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt;&lt;/template&gt;&lt;script&gt; export default &#123; name: 'hello', data () &#123; return &#123; title: 'this is a todo list', items: [], newItem: '' &#125; &#125;, methods: &#123; onclick: function (item) &#123; item.isOk = !item.isOk &#125;, addNew: function () &#123; this.items.push(&#123; label: this.newItem, isOk: false &#125;) this.newItem = '' &#125; &#125; &#125;&lt;/script&gt;&lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;&lt;style scoped&gt;.hello&#123; margin-top: 200px;&#125;.items&#123; text-decoration: line-through; &#125;ul,li&#123; list-style-type: none;&#125;&lt;/style&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[bootstrap响应式表格]]></title>
+      <url>%2F2017%2F02%2F18%2Fbootstrap%E5%93%8D%E5%BA%94%E5%BC%8F%E8%A1%A8%E6%A0%BC%2F</url>
+      <content type="text"><![CDATA[Bootstrap提供了一个容器，并且此容器设置类名“.table-responsive”,此容器就具有响应式效果，然后将置于这个容器当中，这样表格也就具有响应式效果12345&lt;div class="table-responsive"&gt;&lt;table class="table table-bordered"&gt; …&lt;/table&gt;&lt;/div&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[bootstrap紧凑型表格]]></title>
+      <url>%2F2017%2F02%2F18%2Fbootstrap%E7%B4%A7%E5%87%91%E5%9E%8B%E8%A1%A8%E6%A0%BC%2F</url>
+      <content type="text"><![CDATA[紧凑型表格的运用，也只是需要在&lt;table class=&quot;table&quot;&gt;基础上添加类名“table-condensed”：123&lt;table class="table table-condensed"&gt;…&lt;/table&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[bootstrap鼠标悬浮高亮的表格]]></title>
+      <url>%2F2017%2F02%2F18%2Fbootstrap%E9%BC%A0%E6%A0%87%E6%82%AC%E6%B5%AE%E9%AB%98%E4%BA%AE%E7%9A%84%E8%A1%A8%E6%A0%BC%2F</url>
+      <content type="text"><![CDATA[鼠标悬停高亮的表格使用也简单，仅需要&lt;table class=&quot;table&quot;&gt;元素上添加类名“table-hover”即可：123&lt;table class="table table-hover"&gt;…&lt;/table&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[bootstrap带边框的表格]]></title>
+      <url>%2F2017%2F02%2F18%2Fbootstrap%E5%B8%A6%E8%BE%B9%E6%A1%86%E7%9A%84%E8%A1%A8%E6%A0%BC%2F</url>
+      <content type="text"><![CDATA[Bootstrap中带边框的表格使用方法和斑马线表格的使用方法类似，只需要在基础表格&lt;table class=&quot;table&quot;&gt;基础上添加一个“.table-bordered”类名即可：123&lt;table class="table table-bordered"&gt; …&lt;/table&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[bootstrap斑马线表格]]></title>
+      <url>%2F2017%2F02%2F18%2Fbootstrap%E6%96%91%E9%A9%AC%E7%BA%BF%E8%A1%A8%E6%A0%BC%2F</url>
+      <content type="text"><![CDATA[Bootstrap在&lt;table class=&quot;table&quot;&gt;的基础上增加类名“.table-striped”即可：123&lt;table class="table table-striped"&gt;…&lt;/table&gt; 其效果与基础表格相比，仅是在tbody隔行有一个浅灰色的背景色。其实现原理也非常的简单，利用CSS3的结构性选择器“:nth-child”来实现，所以对于IE8以及其以下浏览器，没有背景条纹效果。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[bootstrap基础表格]]></title>
+      <url>%2F2017%2F02%2F18%2Fbootstrap%E5%9F%BA%E7%A1%80%E8%A1%A8%E6%A0%BC%2F</url>
+      <content type="text"><![CDATA[基础表格在Bootstrap中，对于基础表格是通过类名“.table”来控制。如果在&lt;table&gt;元素中不添加任何类名，表格是无任何样式效果的。想得到基础表格，我们只需要在&lt;table&gt;元素上添加“.table”类名，就可以得到Bootstrap的基础表格：123&lt;table class="table"&gt;…&lt;/table&gt; 表格的结构123456789101112131415&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;表格标题&lt;/th&gt;…&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;表格单元格&lt;/td&gt;…&lt;/tr&gt; …&lt;/tbody&gt;&lt;/table&gt; 示例：123456789101112131415161718192021&lt;table class="table"&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;表格标题&lt;/th&gt; &lt;th&gt;表格标题&lt;/th&gt; &lt;th&gt;表格标题&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;表格单元格&lt;/td&gt; &lt;td&gt;表格单元格&lt;/td&gt; &lt;td&gt;表格单元格&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;表格单元格&lt;/td&gt; &lt;td&gt;表格单元格&lt;/td&gt; &lt;td&gt;表格单元格&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt;&lt;/table&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[bootstrap表格行的类]]></title>
+      <url>%2F2017%2F02%2F18%2Fbootstrap%E8%A1%A8%E6%A0%BC%E8%A1%8C%E7%9A%84%E7%B1%BB%2F</url>
+      <content type="text"><![CDATA[Bootstrap还为表格的行元素&lt;tr&gt;提供了五种不同的类名，每种类名控制了行的不同背景颜色，具体说明如下表所示：示例：123&lt;tr class="active"&gt; &lt;td&gt;…&lt;/td&gt;&lt;/tr&gt; 实现悬浮状态，需要在&lt;table&gt;标签上加入table-hover类12345678910111213141516&lt;table class="table table-hover table-bordered"&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;类名&lt;/th&gt; &lt;th&gt;描述&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr class="active"&gt; &lt;td&gt;.active&lt;/td&gt; &lt;td&gt;表示当前活动的信息&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt;&lt;/table&gt; &lt;/body&gt;&lt;/html&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[bootstrap表格]]></title>
+      <url>%2F2017%2F02%2F18%2Fbootstrap%E8%A1%A8%E6%A0%BC%2F</url>
+      <content type="text"><![CDATA[表格行的类 基础表格.table 斑马线表格.table-striped 带边框的表格.table-bordered 鼠标悬浮高亮的表格.table-hover 紧凑型表格.table-condensed 响应式表格]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[bootstrap排版]]></title>
+      <url>%2F2017%2F02%2F18%2Fbootstrap%E6%8E%92%E7%89%88%2F</url>
+      <content type="text"><![CDATA[副标题1&lt;h1&gt;Hello，world &lt;small&gt; bootstrap之旅&lt;/small&gt;&lt;/h1&gt; 强调内容1通过添加类名 .lead 实现 文本加粗1&lt;b&gt;和&lt;strong&gt; 斜体和正常1&lt;em&gt;和&lt;cite&gt; 强调相关的类 .text-muted：提示，使用浅灰色（#999） .text-primary：主要，使用蓝色（#428bca） .text-success：成功，使用浅绿色(#3c763d) .text-info：通知信息，使用浅蓝色（#31708f） .text-warning：警告，使用黄色（#8a6d3b） .text-danger：危险，使用褐色（#a94442）文本对齐风格☑ .text-left：左对齐☑ .text-center：居中对齐☑ .text-right：右对齐☑ .text-justify：两端对齐列表嵌套1234567891011&lt;ol&gt; &lt;li&gt;有序列表&lt;/li&gt; &lt;li&gt; 有序列表 &lt;ol&gt; &lt;li&gt;有序列表(2)&lt;/li&gt; &lt;li&gt;有序列表(2)&lt;/li&gt; &lt;/ol&gt; &lt;/li&gt; &lt;li&gt;有序列表&lt;/li&gt;&lt;/ol&gt; 列表–去点列表1添加类名 .list-unstyled 列表–内联列表把垂直列表换成水平列表，而且去掉项目符号（编号），保持水平显示1添加类名 .list-inline 列表–定义列表调整了行间距，外边距和字体加粗效果1234&lt;dl&gt; &lt;dt&gt;ANSON&lt;/dt&gt;&lt;!--加粗--&gt; &lt;dd&gt;anson&lt;/dd&gt;&lt;!--正常--&gt;&lt;/dl&gt; 列表–水平定义列表给定义列表实现水平显示效果1&lt;dl&gt;添加类名 .dl-horizontal 三种代码风格：1、使用&lt;code&gt;&lt;/code&gt;来显示单行内联代码2、使用&lt;pre&gt;&lt;/pre&gt;来显示多行块代码3、使用&lt;kbd&gt;&lt;/kbd&gt;来显示用户输入代码以&amp;lt;开始，以&amp;gt;结束12345&lt;div&gt;Bootstrap的代码风格有三种： &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;kbd&amp;gt;&lt;/code&gt;&lt;/div&gt; pre元素一般用于显示大块的代码，并保证原有格式不变。但有时候代码太多，而且不想让其占有太大的页面篇幅，就想控制代码块的大小。Bootstrap也考虑到这一点，你只需要在pre标签上添加类名“.pre-scrollable”，就可以控制代码块区域最大高度为340px，一旦超出这个高度，就会在Y轴出现滚动条。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[bootstrap基础]]></title>
+      <url>%2F2017%2F02%2F18%2Fbootstrap%E5%9F%BA%E7%A1%80%2F</url>
+      <content type="text"><![CDATA[基本的Html模板123456789101112131415161718192021222324252627282930313233&lt;!DOCTYPE html&gt;&lt;html lang="zh-CN"&gt;&lt;head&gt; &lt;meta charset="utf-8"&gt; &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt; &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; &lt;!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --&gt; &lt;title&gt;Bootstrap demo&lt;/title&gt; &lt;!-- Bootstrap --&gt; &lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt; &lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt; &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt; &lt;!--[if lt IE 9]&gt; &lt;script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"&gt;&lt;/script&gt; &lt;script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt; &lt;![endif]--&gt;&lt;/head&gt;&lt;body&gt; &lt;h1&gt;你好，世界！&lt;/h1&gt; &lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt; &lt;!--&lt;script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;--&gt; &lt;script src="../jquery/jquery-3.1.1.min.js"&gt;&lt;/script&gt; &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt; &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; bootstrap模板为使IE6、7、8版本（IE9以下版本）浏览器兼容html5新增的标签，引入下面代码文件即可1&lt;script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"&gt;&lt;/script&gt; 同理为使IE6、7、8版本浏览器兼容css3样式，引入下面代码：1&lt;script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[.ssh设置]]></title>
+      <url>%2F2017%2F02%2F17%2Fssh%E8%AE%BE%E7%BD%AE%2F</url>
+      <content type="text"><![CDATA[运行环境deepin 检查电脑是否有ssh key 存在 1ls -a .ssh 如果没有则 1ssh-keygen -t rsa -C "your emlie" 其他回车即可然后1cd .ssh 1dir 1vi id_rsa.pub]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[DOM元素的获取index方法]]></title>
+      <url>%2F2017%2F02%2F17%2FDOM%E5%85%83%E7%B4%A0%E7%9A%84%E8%8E%B7%E5%8F%96index%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[.index()方法，从匹配的元素中搜索给定元素的索引值，从0开始计数 语法：参数接受一个jQuery或者dom对象作为查找的条件123.index().index( selector ).index( element ) 如果不传递任何参数给 .index() 方法，则返回值就是jQuery对象中第一个元素相对于它同辈元素的位置 如果在一组元素上调用 .index() ，并且参数是一个DOM元素或jQuery对象， .index() 返回值就是传入的元素相对于原先集合的位置 如果参数是一个选择器， .index() 返回值就是原先元素相对于选择器匹配元素的位置。如果找不到匹配的元素，则 .index() 返回 -1简单来说：123456&lt;ul&gt; &lt;a&gt;&lt;/a&gt; &lt;li id="test1"&gt;1&lt;/li&gt; &lt;li id="test2"&gt;2&lt;/li&gt; &lt;li id="test3"&gt;3&lt;/li&gt;&lt;/ul&gt; $(&quot;li&quot;).index() 没有传递参数，返回的结果是1，它的意思是返回同辈的排列循序，第一个li之前有a元素,同辈元素是a开始为0，所以li的开始索引是1如果要快速找到第二个li在列表中的索引,可以通过如下2种方式处理12$("li").index(document.getElementById("test2")) //结果：1$("li").index($("#test2")) //结果:1]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[DOM元素的获取get方法]]></title>
+      <url>%2F2017%2F02%2F17%2FDOM%E5%85%83%E7%B4%A0%E7%9A%84%E8%8E%B7%E5%8F%96get%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[jQuery是一个合集对象，如果需要单独操作合集中的的某一个元素，可以通过.get()方法获取到以下有3个a元素结构：123&lt;a&gt;1&lt;/a&gt;&lt;a&gt;2&lt;/a&gt;&lt;a&gt;3&lt;/a&gt; 通过jQuery获取所有的a元素合集$(“a”)，如果想进一步在合集中找到第二2个dom元素单独处理，可以通过get方法语法：1.get( [index ] ) 注意 get方法是获取的dom对象，也就是通过document.getElementById获取的对象 get方法是从0开始索引所以第二个a元素的查找： 1$(a).get(1) 负索引值参数get方法还可以从后往前索引，传递一个负索引值，注意的负值的索引起始值是-1同样是找到第二元素，可以传递1$(a).get(-2)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[去空格神器trim方法]]></title>
+      <url>%2F2017%2F02%2F17%2F%E5%8E%BB%E7%A9%BA%E6%A0%BC%E7%A5%9E%E5%99%A8trim%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[jQuery.trim()函数用于去除字符串两端的空白字符例如常见的登录信息的提交处理。用户的输入不一定是标准的，输入一段密码：’ 1123456 “，注意了： 密码的前后会留空，这可能是用户的无心的行为，但是密码确实又没错，针对这样的行为，应该要判断输入值的前后是否有空白符、换行符、制表符这样明显的无意义的输入值用法1$.trim($("ele")]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[查找数组中的索引inArray]]></title>
+      <url>%2F2017%2F02%2F17%2F%E6%9F%A5%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%B4%A2%E5%BC%95inArray%2F</url>
+      <content type="text"><![CDATA[等同ECMAScript5的indexOfjQuery.inArray()函数用于在数组中搜索指定的值，并返回其索引值。如果数组中不存在该值，则返回 -1。 语法：1jQuery.inArray( value, array ,[ fromIndex ] ) ECMAScript5中indexOf用法1234var str="Hello world!"document.write(str.indexOf("Hello") + "&lt;br /&gt;") //0document.write(str.indexOf("World") + "&lt;br /&gt;") //-1document.write(str.indexOf("world")) // 6 用法非常简单，传递一个检测的目标值，然后传递原始的数组，可以通过fromIndex规定查找的起始值，默认数组是0开始例如：在数组中查找值是5的索引1$.inArray(5,[1,2,3,4,5,6,7]) //返回对应的索引：4]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[each方法的应用]]></title>
+      <url>%2F2017%2F02%2F16%2Feach%E6%96%B9%E6%B3%95%E7%9A%84%E5%BA%94%E7%94%A8%2F</url>
+      <content type="text"><![CDATA[jQuery中有个很重要的核心方法each，大部分jQuery方法在内部都会调用each，其主要的原因的就是jQuery的实例是一个元素合集jQuery的大部分方法都是针元素合集的操作，所以jQuery会提供$(selector).each()来遍历jQuery对象.each只是处理jQuery对象的方法，jQuery还提供了一个通用的jQuery.each方法，用来处理对象和数组的遍历 语法12jQuery.each(array, callback )jQuery.each( object, callback ) 第一个参数传递的就是一个对象或者数组，第二个是回调函数1234$.each(["anson", "安森"], function(index, value) &#123; //index是索引,也就是数组的索引 //value就是数组中的值了&#125;); each就是for循环方法的一个包装，内部就是通过for遍历数组与对象，通过回调函数返回内部迭代的一些参数，第一个参数是当前迭代成员在对象或数组中的索引值(从0开始计数)，第二个参数是当前迭代成员(与this的引用相同 jQuery.each()函数还会根据每次调用函数callback的返回值来决定后续动作。如果返回值为false，则停止循环(相当于普通循环中的break)；如果返回其他任何值，均表示继续执行下一个循环。123$.each(["anson", "安森"], function(index, value) &#123; return false; //停止迭代&#125;); 示例：123456789101112// 遍历数组元素$.each(['anson', '安森'], function(i, item) &#123; $anson.append("索引=" + i + " 元素=" + item);&#125;);//索引=0元素=anson 索引=1元素=安森// 遍历对象属性$.each(&#123; name: "anson", age: 18&#125;, function(property, value) &#123; $anson.append("属性名=" + property + "; 属性值=" + value);&#125;);//属性名=name属性值=anson 属性名=age属性值=18]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[停止动画stop]]></title>
+      <url>%2F2017%2F02%2F16%2F%E5%81%9C%E6%AD%A2%E5%8A%A8%E7%94%BBstop%2F</url>
+      <content type="text"><![CDATA[动画在执行过程中是允许被暂停的，当一个元素调用.stop()方法，当前正在运行的动画（如果有的话）立即停止 语法：12.stop( [clearQueue ], [ jumpToEnd ] ).stop( [queue ], [ clearQueue ] ,[ jumpToEnd ] ) stop可选的参数: .stop(); 停止当前动画，点击在暂停处继续开始 .stop(true); 如果同一元素调用多个动画方法，尚未被执行的动画被放置在元素的效果队列中。这些动画不会开始，直到第一个完成。当调用.stop()的时候，队列中的下一个动画立即开始。如果clearQueue参数提供true值,那么在队列中的动画其余被删除并永远不会运行 .stop(true,true); 当前动画将停止，但该元素上的 CSS 属性会被立刻修改成动画的目标值参考下面代码:123456789$("#anson").animate(&#123; height: 300&#125;, 5000)$("#anson").animate(&#123; width: 300&#125;, 5000)$("#anson").animate(&#123; opacity: 0.6&#125;, 2000) stop()：只会停止第一个动画，第二个第三个继续stop(true)：停止第一个、第二个和第三个动画stop(true ture)：停止动画，直接跳到第一个动画的最终状态12345678910111213141516171819202122232425262728//点击执行动画$("#exec").click(function()&#123; $("#anson").animate(&#123; height: 300 &#125;, 5000) $("#anson").animate(&#123; width: 300 &#125;, 5000) $("#anson").animate(&#123; opacity: 0.6 &#125;, 2000)&#125;)$("#stop").click(function() &#123; var v = $("#animation").val(); var $anson = $("#anson"); if (v == "1") &#123; //当前当前动画 $anson.stop() &#125; else if (v == "2") &#123; //停止所以队列 $anson.stop(true) &#125; else if (v == "3") &#123; //停止动画，直接跳到当前动画的结束 $anson.stop(true,true) &#125; &#125;);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[animate(下)]]></title>
+      <url>%2F2017%2F02%2F16%2Fanimate-%E4%B8%8B%2F</url>
+      <content type="text"><![CDATA[animate在执行动画中，如果需要观察动画的一些执行情况，或者在动画进行中的某一时刻进行一些其他处理，我们可以通过animate提供的第二种设置语法，传递一个对象参数，可以拿到动画执行状态一些通知1.animate( properties, options ) options参数 duration - 设置动画执行的时间 easing - 规定要使用的 easing 函数，过渡使用哪种缓动函数 step：规定每个动画的每一步完成之后要执行的函数 progress：每一次动画调用的时候会执行这个回调，就是一个进度的概念 complete：动画完成回调其中最关键的一点就是：如果多个元素执行动画，回调将在每个匹配的元素上执行一次，不是作为整个动画执行一次列出常用的方式12345678910111213$('#elem').animate(&#123; width: 'toggle', height: 'toggle' &#125;, &#123; duration: 5000, specialEasing: &#123; width: 'linear', height: 'easeOutBounce'&#125;, complete: function() &#123; $(this).after('&lt;div&gt;Animation complete.&lt;/div&gt;');&#125;&#125;); ```js$ele.animate({ height: ‘50’ }, { duration :2000, //每一个动画都会调用 step: function(now) { $aaron.text(‘高度的改变值:’+now) }})]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[animate]]></title>
+      <url>%2F2017%2F02%2F16%2Fanimate%2F</url>
+      <content type="text"><![CDATA[复杂的动画通过之前几个动画函数是不能够实现，这时候就需要强大的animate方法了操作一个元素执行3秒的淡入动画，对比一下2组动画设置的区别12345$(elem).fadeOut(3000) $(elem).animate(&#123; opacity:0&#125;,3000) 语法：12.animate( properties ,[ duration ], [ easing ], [ complete ] ).animate( properties, options ) .animate()方法允许我们在任意的数值的CSS属性上创建动画。2种语法使用，几乎差不多了，唯一必要的属性就是一组CSS属性键值对。这组属性和用于设置.css()方法的属性键值对类似，除了属性范围做了更多限制。第二个参数开始可以单独传递多个实参也可以合并成一个对象传递了 参数分解：properties：一个或多个css属性的键值对所构成的Object对象。要特别注意所有用于动画的属性必须是数字的，除非另有说明；这些属性如果不是数字的将不能使用基本的jQuery功能。比如常见的，border、margin、padding、width、height、font、left、top、right、bottom、wordSpacing等等这些都是能产生动画效果的。background-color很明显不可以，因为参数是red或者GBG这样的值，非常用插件，否则正常情况下是不能只用动画效果的。注意，CSS 样式使用 DOM 名称（比如 “fontSize”）来设置，而非 CSS 名称（比如 “font-size”）。特别注意单位，属性值的单位像素（px）,除非另有说明。单位em 和 %需要指定使用123456.animate(&#123; left: 50, width: '50px' opacity: 'show', fontSize: "10em",&#125;, 500); 除了定义数值，每个属性能使用’show’, ‘hide’, 和 ‘toggle’。这些快捷方式允许定制隐藏和显示动画用来控制元素的显示或隐藏123.animate(&#123; width: "toggle"&#125;); 如果提供一个以+= 或 -=开始的值，那么目标值就是以这个属性的当前值加上或者减去给定的数字来计算的123.animate(&#123; left: '+=50px'&#125;, "slow"); duration时间动画执行的时间，持续时间是以毫秒为单位的；值越大表示动画执行的越慢，不是越快。还可以提供’fast’ 和 ‘slow’字符串，分别表示持续时间为200 和 600毫秒。 easing动画运动的算法jQuery库中默认调用 swing。如果需要其他的动画算法，请查找相关的插件 complete回调动画完成时执行的函数，这个可以保证当前动画确定完成后发会触发示例：1234567891011&lt;style&gt;p &#123; color: red;&#125;div&#123; width:200px; height: 100px; background-color: yellow; color:red;&#125;&lt;/style&gt; 123456789&lt;div id="aaron"&gt;内部动画&lt;/div&gt; 点击观察动画效果： &lt;select id="animation"&gt; &lt;option value="1"&gt;动画1&lt;/option&gt; &lt;option value="2"&gt;动画2&lt;/option&gt; &lt;option value="3"&gt;动画3&lt;/option&gt; &lt;option value="4"&gt;动画4&lt;/option&gt; &lt;/select&gt;&lt;input id="exec" type="button" value="执行动画"&gt; 12345678910111213141516171819202122232425262728$("#exec").click(function() &#123; var v = $("#animation").val(); var $aaron = $("#aaron"); if (v == "1") &#123; // 数值的单位默认是px $aaron.animate(&#123; width :300, height :300 &#125;); &#125; else if (v == "2") &#123; // 在现有高度的基础上增加100px $aaron.animate(&#123; width : "+=100px", height : "+=100px" &#125;); &#125; else if (v == "3") &#123; $aaron.animate(&#123; fontSize: "5em" &#125;, 2000, function() &#123; alert("动画 fontSize执行完毕!"); &#125;); &#125; else if (v == "4") &#123; //通过toggle参数切换高度 $aaron.animate(&#123; width: "toggle" &#125;); &#125; &#125;);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[淡入效果fadeTo]]></title>
+      <url>%2F2017%2F02%2F16%2F%E6%B7%A1%E5%85%A5%E6%95%88%E6%9E%9CfadeTo%2F</url>
+      <content type="text"><![CDATA[淡入淡出fadeIn与fadeOut都是修改元素样式的opacity属性，但是他们都有个共同的特点，变化的区间要么是0，要么是1fadeIn：淡入效果，内容显示，opacity是0到1fadeOut：淡出效果，内容隐藏，opacity是1到0fadeTo： 自定义透明度 语法1.fadeTo( duration, opacity ,callback) 必需的 duration参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。fadeTo() 方法中必需的 opacity 参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。可选的 callback 参数是该函数完成后所执行的函数名称。1$("p").fadeTo(1000, 0.2);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[淡入淡出切换fadeToggle]]></title>
+      <url>%2F2017%2F02%2F16%2F%E6%B7%A1%E5%85%A5%E6%B7%A1%E5%87%BA%E5%88%87%E6%8D%A2fadeToggle%2F</url>
+      <content type="text"><![CDATA[fadeToggle()函数用于切换所有匹配的元素，并带有淡入/淡出的过渡动画效果1.fadeToggle( [duration ] ,[ complete ] ) 可选的 duration 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。 可选的 callback 参数是 fadeToggle完成后所执行的函数名称。fadeToggle() 方法可以在 fadeIn() 与 fadeOut() 方法之间进行切换。如果元素已淡出，则 fadeToggle() 会向元素添加淡入效果。如果元素已淡入，则 fadeToggle() 会向元素添加淡出效果。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[淡入动画fadeIn]]></title>
+      <url>%2F2017%2F02%2F16%2F%E6%B7%A1%E5%85%A5%E5%8A%A8%E7%94%BBfadeIn%2F</url>
+      <content type="text"><![CDATA[fadeOut是淡出效果，相反的还有淡入效果fadeIn,方法使用上两者都是一致的，只是结果相反1.fadeIn( [duration ], [ complete ] ) duration：指定过渡动画运行多长时间(毫秒数)，默认值为400。该参数也可以为字符串”fast”(=200)或”slow”(=600)。 元素显示完毕后需要执行的函数。函数内的this指向当前DOM元素。 fadeIn()函数用于显示所有匹配的元素，并带有淡入的过渡动画效果。注意： 淡入的动画原理：操作元素的不透明度从0%逐渐增加到100% 如果元素本身是可见的，不对其作任何改变。如果元素是隐藏的，则使其可见]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[淡出动画fadeOut]]></title>
+      <url>%2F2017%2F02%2F16%2F%E6%B7%A1%E5%87%BA%E5%8A%A8%E7%94%BBfadeOut%2F</url>
+      <content type="text"><![CDATA[fadeOut()函数用于隐藏所有匹配的元素，并带有淡出的过渡动画效果1.fadeOut( [duration ], [ complete ] ) 1$("p").fadeOut("1000");]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[上卷下拉切换slideToggle]]></title>
+      <url>%2F2017%2F02%2F16%2F%E4%B8%8A%E5%8D%B7%E4%B8%8B%E6%8B%89%E5%88%87%E6%8D%A2slideToggle%2F</url>
+      <content type="text"><![CDATA[基本的操作：slideToggle()这是最基本的操作，获取元素的高度，使这个元素的高度发生改变，从而让元素里的内容往下或往上滑。提供参数：.slideToggle( [duration ] ,[ complete ] )同样的提供了时间、还有动画结束的回调。在参数对应的时间内，元素会完成动画，然后出发回调函数同时也提供了时间的快速定义，字符串 ‘fast’ 和 ‘slow’ 分别代表200和600毫秒的延时12slideToggle("fast") slideToggle("slow") 注意： display属性值保存在jQuery的数据缓存中，所以display可以方便以后可以恢复到其初始值 当一个隐藏动画后，高度值达到0的时候，display 样式属性被设置为none，以确保该元素不再影响页面布局]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[上卷动画slideUp]]></title>
+      <url>%2F2017%2F02%2F16%2F%E4%B8%8A%E5%8D%B7%E5%8A%A8%E7%94%BBslideUp%2F</url>
+      <content type="text"><![CDATA[.slideDown()：用滑动动画显示一个匹配元素 .slideDown()方法将给匹配元素的高度的动画，这会导致页面的下面部分滑下去，弥补了显示的方式常见的操作，提供一个动画是时间，然后传递一个回调，用于知道动画是什么时候结束.slideDown( [duration ],[complete ] )持续时间（duration）是以毫秒为单位的，数值越大，动画越慢，不是越快。字符串 ‘fast’ 和 ‘slow’ 分别代表200和600毫秒的延时。如果提供任何其他字符串，或者这个duration参数被省略，那么默认使用400 毫秒的延时。具体使用：123$("ele").slideDown(1000, function() &#123; //等待动画执行1秒后,执行别的动作....&#125;); 注意事项： 下拉动画是从无到有，所以一开始元素是需要先隐藏起来的，可以设置display:none 如果提供回调函数参数，callback会在动画完成的时候调用。将不同的动画串联在一起按顺序排列执行是非常有用的。这个回调函数不设置任何参数，但是 this会设成将要执行动画的那个DOM元素，如果多个元素一起做动画效果，那么要非常注意，回调函数会在每一个元素执行完动画后都执行一次，而不是这组 动画整体才执行一次]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[下拉动画slideDown]]></title>
+      <url>%2F2017%2F02%2F16%2F%E4%B8%8B%E6%8B%89%E5%8A%A8%E7%94%BBslideDown%2F</url>
+      <content type="text"><![CDATA[.slideDown()：用滑动动画显示一个匹配元素 .slideDown()方法将给匹配元素的高度的动画，这会导致页面的下面部分滑下去，弥补了显示的方式常见的操作，提供一个动画是时间，然后传递一个回调，用于知道动画是什么时候结束 .slideDown( [duration ],[complete ] ) 持续时间（duration）是以毫秒为单位的，数值越大，动画越慢，不是越快。字符串 ‘fast’ 和 ‘slow’ 分别代表200和600毫秒的延时。如果提供任何其他字符串，或者这个duration参数被省略，那么默认使用400 毫秒的延时。具体使用：123$("ele").slideDown(1000, function() &#123; //等待动画执行1秒后,执行别的动作....&#125;); 注意事项： 下拉动画是从无到有，所以一开始元素是需要先隐藏起来的，可以设置display:none 如果提供回调函数参数，callback会在动画完成的时候调用。将不同的动画串联在一起按顺序排列执行是非常有用的。这个回调函数不设置任何参数，但是 this会设成将要执行动画的那个DOM元素，如果多个元素一起做动画效果，那么要非常注意，回调函数会在每一个元素执行完动画后都执行一次，而不是这组动画整体才执行一次]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[显示与隐藏切换toggle方法]]></title>
+      <url>%2F2017%2F02%2F16%2F%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F%E5%88%87%E6%8D%A2toggle%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[toggle用于切换显示或隐藏匹配元素 基本的操作：.toggle() 如果元素是最初显示，它会被隐藏 如果隐藏的，它会显示出来提供参数：.toggle( [duration ] [complete ] )直接定位：.toggle(display)直接提供一个参数，指定要改变的元素的最终效果其实就是确定是使用show还是hide方法12345if ( display === true ) &#123; $( "elem" ).show();&#125; else if ( display === false ) &#123; $( "elem" ).hide();&#125; 代码：12$("div").toggle(3000)//3000毫秒后隐藏]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[显示元素的show方法]]></title>
+      <url>%2F2017%2F02%2F16%2F%E6%98%BE%E7%A4%BA%E5%85%83%E7%B4%A0%E7%9A%84show%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[类似于display:block1$('elem').hide(3000).show(3000) 让元素执行3秒的隐藏动画，然后执行3秒的显示动画 注意事项： show与hide方法是修改的display属性，通过是visibility属性布局需要通过css方法单独设置 如果使用!important在你的样式中，比如display: none !important，如果你希望.show()方法正常工作，必须使用.css(‘display’, ‘block !important’)重写样式 如果让show与hide成为一个动画，那么默认执行动画会改变元素的高度，高度，透明度]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[隐藏元素的hide方法]]></title>
+      <url>%2F2017%2F02%2F16%2F%E9%9A%90%E8%97%8F%E5%85%83%E7%B4%A0%E7%9A%84hide%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[类似于设置css的display为none属性1$elem.hide() 提供参数：1.hide( options ) 当提供hide方法一个参数时，.hide()就会成为一个动画方法。.hide()方法将会匹配元素的宽度，高度，以及不透明度，同时进行动画操作 快捷参数：1.hide("fast / slow") 这是一个动画设置的快捷方式，’fast’ 和 ‘slow’ 分别代表200和600毫秒的延时，就是元素会执行200/600毫秒的动画后再隐藏代码：123 $("div").hide( 3000,function() &#123; alert('执行3000ms动画完毕')&#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[基础动画效果]]></title>
+      <url>%2F2017%2F02%2F16%2F%E5%9F%BA%E7%A1%80%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C%2F</url>
+      <content type="text"><![CDATA[1.动画基础隐藏和显示 隐藏元素的hide方法 显示元素的show方法 显示与隐藏切换toggle方法 2.上卷下拉效果 下拉动画slideDown 上卷动画slideUp 上卷下拉切换slideToggle 3.淡入淡出效果 淡出动画fadeOut 淡入动画fadeIn 淡入淡出切换fadeToggle 淡入效果fadeTo 4.自定义动画 animate(上) animate(下) 停止动画stop 5.jQuery核心 each方法的应用 查找数组中的索引inArray 去空格神器trim方法 DOM元素的获取get方法 DOM元素的获取index方法git]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[triggerHandler事件]]></title>
+      <url>%2F2017%2F02%2F16%2FtriggerHandler%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[trigger事件还有一个特性：会在DOM树上冒泡，所以如果要阻止冒泡就需要在事件处理程序中返回false或调用事件对象中的.stopPropagation() 方法可以使事件停止冒泡trigger事件是具有触发原生与自定义能力的，但是存在一个不可避免的问题： 事件对象event无法完美的实现，毕竟一个是浏览器给的，一个是自己模拟的。尽管 .trigger() 模拟事件对象，但是它并没有完美的复制自然发生的事件，若要触发通过 jQuery 绑定的事件处理函数，而不触发原生的事件，使用.triggerHandler() 来代替 triggerHandler与trigger的用法是一样的，重点看不同之处： triggerHandler不会触发浏览器的默认行为，.triggerHandler( “submit” )将不会调用表单上的.submit() .trigger() 会影响所有与 jQuery 对象相匹配的元素，而 .triggerHandler() 仅影响第一个匹配到的元素 使用 .triggerHandler() 触发的事件，并不会在 DOM 树中向上冒泡。 如果它们不是由目标元素直接触发的，那么它就不会进行任何处理 与普通的方法返回 jQuery 对象(这样就能够使用链式用法)相反，.triggerHandler() 返回最后一个处理的事件的返回值。如果没有触发任何事件，会返回 undefined]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[trigger事件]]></title>
+      <url>%2F2017%2F02%2F16%2Ftrigger%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[.trigger()根据绑定到匹配元素的给定的事件类型执行所有的处理程序和行为在jQuery通过on方法绑定一个原生事件123$('#elem').on('click', function() &#123; alert("触发系统事件") &#125;); alert需要执行的条件：必须有用户点击才可以。如果不同用户交互是否能在某一时刻自动触发该事件呢？ 正常来说是不可以的，但是jQuery解决了这个问题，提供了一个trigger方法来触发浏览器事件 所以我们可以这样： 1$('#elem').trigger('click'); 在绑定on的事件元素上，通过trigger方法就可以调用到alert trigge支持自定义事件，并且自定义时间还支持传递参数1234$('#elem').on('Aaron', function(event,arg1,arg2) &#123; alert("自触自定义时间") &#125;);$('#elem').trigger('Aaron',['参数1','参数2'])]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[自定义事件]]></title>
+      <url>%2F2017%2F02%2F16%2F%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[trigger事件 triggerHandler事件]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery事件对象的属性和方法]]></title>
+      <url>%2F2017%2F02%2F16%2FjQuery%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[常用的事件对象的属于与方法 event.type：获取事件的类型触发元素的事件类型123$("a").click(function(event) &#123; alert(event.type); // "click"事件&#125;); event.pageX 和 event.pageY：获取鼠标当前相对于页面的坐标通过这2个属性，可以确定元素在当前页面的坐标值，鼠标相对于文档的左边缘的位置（左边）与 （顶边）的距离，简单来说是从页面左上角开始,即是以页面为参考点,不随滑动条移动而变化 event.preventDefault() 方法：阻止默认行为这个用的特别多，在执行这个方法后，如果点击一个链接（a标签），浏览器不会跳转到新的 URL 去了。我们可以用 event.isDefaultPrevented() 来确定这个方法是否(在那个事件对象上)被调用过了 event.stopPropagation() 方法：阻止事件冒泡事件是可以冒泡的，为防止事件冒泡到DOM树上，也就是不触发的任何前辈元素上的事件处理函数 event.which：获取在鼠标单击时，单击的是鼠标的哪个键event.which 将 event.keyCode 和 event.charCode 标准化了。event.which也将正常化的按钮按下(mousedown 和 mouseupevents)，左键报告1，中间键报告2，右键报告3 event.currentTarget : 在事件冒泡过程中的当前DOM元素冒泡前的当前触发事件的DOM对象, 等同于this. this和event.target的区别：js中事件是会冒泡的，所以this是可以变化的，但event.target不会变化，它永远是直接接受事件的目标DOM元素；.this和event.target都是dom对象如果要使用jquey中的方法可以将他们转换为jquery对象。比如this和$(this)的使用、event.target和$(event.target)的使用；]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery事件对象的作用]]></title>
+      <url>%2F2017%2F02%2F16%2FjQuery%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BD%9C%E7%94%A8%2F</url>
+      <content type="text"><![CDATA[一个标准的”click”点击事件123$(elem).on("click",function(event)&#123; event //事件对象&#125;) 12345678910&lt;ul&gt; &lt;li&gt;点击：触发一&lt;/li&gt; &lt;!--触发的元素是内容是:点击：触发一--&gt; &lt;li&gt;点击：触发二&lt;/li&gt; &lt;!--触发的元素是内容是:点击：触发二--&gt; &lt;li&gt;点击：触发三&lt;/li&gt; &lt;!--触发的元素是内容是:点击：触发三--&gt; &lt;li&gt;点击：触发四&lt;/li&gt; &lt;!--触发的元素是内容是:点击：触发四--&gt; &lt;/ul&gt; 1234//多事件绑定$("ul").on('click',function(e)&#123; alert('触发的元素是内容是: ' + e.target.textContent)&#125;) event.targettarget 属性可以是注册事件时的元素，或者它的子元素。通常用于比较 event.target 和 this 来确定事件是不是由于冒泡而触发的。经常用于事件冒泡时处理事件委托简单来说：event.target代表当前触发事件的元素，可以通过当前元素对象的一系列属性来判断是不是我们想要的元素]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[事件对象的使用]]></title>
+      <url>%2F2017%2F02%2F16%2F%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+      <content type="text"><![CDATA[jQuery事件对象的作用 jQuery事件对象的属性和方法]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[卸载事件off()方法]]></title>
+      <url>%2F2017%2F02%2F16%2F%E5%8D%B8%E8%BD%BD%E4%BA%8B%E4%BB%B6off-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[通过.on()绑定的事件处理程序 通过off() 方法移除该绑定 根据on绑定事件的一些特性，off方法也可以通过相应的传递组合的事件名，名字空间，选择器或处理函数来移除绑定在元素上指定的事件处理函数。当有多个过滤参数时，只有与这些参数完全匹配的事件处理函数才会被移除绑定2个事件1$("elem").on("mousedown mouseup",fn) 删除一个事件1$("elem").off("mousedown") 删除所有事件1$("elem").off("mousedown mouseup") 快捷方式删除所有事件，这里不需要传递事件名了，节点上绑定的所有事件讲全部销毁1$("elem").off()]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[on()的高级用法]]></title>
+      <url>%2F2017%2F02%2F16%2Fon-%E7%9A%84%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[on的另一个事件机制委托的机制 委托机制1.on( events ,[ selector ] ,[ data ], handler(eventObject) ) 在on的第二参数中提供了一个selector选择器，简单的来描述下参考下面3层结构12345&lt;div class="left"&gt; &lt;p class="aaron"&gt; &lt;a&gt;目标节点&lt;/a&gt; //点击在这个元素上 &lt;/p&gt;&lt;/div&gt; 给出如下代码：1$("div").on("click","p",fn) 事件绑定在最上层div元素上，当用户触发在a元素上，事件将往上冒泡，一直会冒泡在div元素上。如果提供了第二参数，那么事件在往上冒泡的过程中遇到了选择器匹配的元素，将会触发事件回调函数示例：12345&lt;div class="left"&gt; &lt;div class="aaron"&gt; &lt;a&gt;点击这里&lt;/a&gt; &lt;/div&gt;&lt;/div&gt; 123456//给body绑定一个click事件//没有直接a元素绑定点击事件//通过委托机制，点击a元素的时候，事件触发$('body').on('click', 'a', function(e) &#123; alert(e.target.textContent)&#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[on()的多事件绑定]]></title>
+      <url>%2F2017%2F02%2F16%2Fon-%E7%9A%84%E5%A4%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%2F</url>
+      <content type="text"><![CDATA[基本用法：.on( events ,[ selector ] ,[ data ] )最常见的给元素绑定一个点击事件，对比一下快捷方式与on方式的不同12$("#elem").click(function()&#123;&#125;) //快捷方式$("#elem").on('click',function()&#123;&#125;) //on方式 最大的不同点就是on是可以自定义事件名 多个事件绑定同一个函数1$("#elem").on("mouseover mouseout",function()&#123; &#125;); 通过空格分离，传递不同的事件名，可以同时绑定多个事件 多个事件绑定不同函数1234$("#elem").on(&#123; mouseover:function()&#123;&#125;, mouseout:function()&#123;&#125;,&#125;); 通过空格分离，传递不同的事件名，可以同时绑定多个事件，每一个事件执行自己的回调方法 将数据传递到处理程序123456function greet( event ) &#123; alert( "Hello " + event.data.name ); //Hello anson&#125;$( "button" ).on( "click", &#123; name: "anson"&#125;, greet ); 可以通过第二参数（对象），当一个事件被触发时，要传递给事件处理函数的]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[事件的绑定和解绑]]></title>
+      <url>%2F2017%2F02%2F16%2F%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%BB%91%E5%AE%9A%E5%92%8C%E8%A7%A3%E7%BB%91%2F</url>
+      <content type="text"><![CDATA[on()的多事件绑定 on()的高级用法 卸载事件off()方法]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[keypress()事件]]></title>
+      <url>%2F2017%2F02%2F16%2Fkeypress-%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[在input元素上绑定keydown事件会发现一个问题：每次获取的内容都是之前输入的，当前输入的获取不到 keypress事件与keydown和keyup的主要区别 只能捕获单个字符，不能捕获组合键 无法响应系统功能键（如delete，backspace） 不区分小键盘和主键盘的数字字符总而言之，KeyPress主要用来接收字母、数字等ANSI字符，而 KeyDown 和 KeyUP 事件过程可以处理任何不被 KeyPress 识别的击键。诸如：功能键（F1-F12）、编辑键、定位键以及任何这些键和键盘换档键的组合等。用法：1234567//直接绑定事件$elem.keypress( handler(eventObject) )//传递参数$elem.keypress( [eventData ], handler(eventObject) )//手动触发已绑定的事件$elem.keypress()代码： 123456&lt;div class="left"&gt; &lt;div class="aaron"&gt;监听keypress输入: &lt;input class="target1" type="text" value="" /&gt;&lt;br /&gt; 输入中文测试，无法显示:&lt;em&gt;&lt;/em&gt; &lt;/div&gt;&lt;/div&gt; 12345//监听键盘按键//获取输入的值$('.target1').keypress(function(e) &#123; $("em").text(e.target.value)&#125;);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[keydown()与keyup()事件]]></title>
+      <url>%2F2017%2F02%2F16%2Fkeydown-%E4%B8%8Ekeyup-%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[键盘按下与松手，对应keydown与keyup方法来监听 keydown事件：当用户在一个元素上第一次按下键盘上字母键的时候，就会触发它。使用上非常简单，与基本事件参数处理保持一致，这里使用不在重复了，列出使用的方法123456//直接绑定事件$elem.keydown( handler(eventObject) )//传递参数$elem.keydown( [eventData ], handler(eventObject) )//手动触发已绑定的事件$elem.keydown() keyup事件：当用户在一个元素上第一次松手键盘上的键的时候，就会触发它。使用方法与keydown是一致的只是触发的条件是方法的代码：123456789&lt;div&gt;监听keydown输入: &lt;input class="target1" type="text" value="" /&gt;&lt;br /&gt; 按下显示输入的值:&lt;em&gt;&lt;/em&gt;&lt;/div&gt; &lt;div&gt;监听keyup输入: &lt;input class="target2" type="text" value="" /&gt;&lt;br /&gt; 松手显示输入的值:&lt;em&gt;&lt;/em&gt;&lt;/div&gt; 1234567891011//监听键盘按键//获取输入的值$('.target1').keydown(function(e) &#123; $("em:first").text(e.target.value)&#125;);//监听键盘按键//获取输入的值$('.target2').keyup(function(e) &#123; $("em:last").text(e.target.value)&#125;);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery键盘事件]]></title>
+      <url>%2F2017%2F02%2F16%2FjQuery%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[keydown()与keyup()事件keydown(按下)|keyup(松开) keypress()事件keypress类似于keydown]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[submit事件]]></title>
+      <url>%2F2017%2F02%2F16%2Fsubmit%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[在表单提交的时候过滤一些的数据、做一些必要的操作（例如：验证表单输入的正确性，如果错误就阻止提交，从新输入）此时可以通过submit事件，监听下提交表单的这个动作 方法一：$ele.submit()绑定$ele元素，不带任何参数一般是用来指定触发一个事件，用的比较少1&lt;div id="test"&gt;点击触发&lt;div&gt; 123456$("ele").submit(function()&#123; alert('触发指定事件')&#125;)$("#text").click(function()&#123; $("ele").submit() //指定触发事件 &#125;); 方法二：$ele.submit( handler(eventObject) )绑定$ele元素，每次$ele元素触发点击操作会执行回调 handler函数这样可以针对事件的反馈做很多操作了123&lt;form id="target" action="destination.html"&gt; &lt;input type="submit" value="Go" /&gt;&lt;/form&gt; 123$("#target").submit(function() &#123; //绑定提交表单触发 //this指向 from元素 &#125;); 方法三：$ele.submit( [eventData ], handler(eventObject) )使用与方法二一致，不过可以接受一个数据参数，这样的处理是为了解决不同作用域下数据传递的问题123&lt;form id="target" action="destination.html"&gt; &lt;input type="submit" value="Go" /&gt;&lt;/form&gt; 123$("#target").submit(11111,function(data) &#123; //绑定提交表单触发 //data =&gt; 1111 //传递的data数据&#125;);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[select事件]]></title>
+      <url>%2F2017%2F02%2F16%2Fselect%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[textarea 或文本类型的 input 元素中的文本被选择时，会发生 select 事件这个函数会调用执行绑定到select事件的所有函数，包括浏览器的默认行为。可以通过在某个绑定的函数中返回false来防止触发浏览器的默认行为 方法一：.select()触发元素的select事件:1$("input").select(); 方法二：$ele.select( handler(eventObject) )绑定$ele元素，每次$ele元素触发点击操作会执行回调 handler函数这样可以针对事件的反馈做很多操作了1&lt;input id="test" value="文字选中"&gt;&lt;/input&gt; 123$("#test").select(function() &#123; //响应文字选中回调 //this指向 input元素 &#125;); 方法三：$ele.select( [eventData ], handler(eventObject) )使用与方法二一致，不过可以接受一个数据参数，这样的处理是为了解决不同作用域下数据传递的问题1&lt;input id="test" value="文字选中"&gt;&lt;/input&gt; 1234$("#test").select(11111,function(e) &#123;//响应文字选中回调 //this指向 div元素 //e.date =&gt; 11111 传递数据&#125;); 代码:12345678910//监听input元素中value的选中//触发元素的select事件$("input").select(function(e)&#123; alert(e.target.value)&#125;)//监听textarea元素中value的选中$('textarea').select(function(e) &#123; alert(e.target.value);&#125;); 代码：1234567891011121314&lt;div class="aaron"&gt; &lt;form id="target1" action="test.html"&gt; 回车键或者点击提交表单： &lt;input type="text" value="输入新的值" /&gt; &lt;input type="submit" value="Go" /&gt; &lt;/form&gt;&lt;/div&gt;&lt;div class="aaron"&gt; &lt;form id="target2" action="destination.html"&gt; 回车键或者点击提交表单,禁止浏览器默认跳转： &lt;input type="text" value="输入新的值" /&gt; &lt;input type="submit" value="Go" /&gt; &lt;/form&gt;&lt;/div&gt; 123456789//回车键或者点击提交表单$('#target1').submit(function(e) &#123; alert('捕获提交表达动作,不阻止页面跳转')&#125;);//回车键或者点击提交表单,禁止浏览器默认跳转：$('#target2').submit(function() &#123; alert('捕获提交表达动作,阻止页面跳转') return false;&#125;); 通过在form元素上绑定submit事件，可以监听到用户的提交表单的的行为具体能触发submit事件的行为：12341. &lt;input type="submit"&gt;2. &lt;input type="image"&gt;3. &lt;button type="submit"&gt;4. 当某些表单元素获取焦点时，敲击Enter（回车键） 注意：form元素是有默认提交表单的行为，如果通过submit处理的话，需要禁止浏览器的这个默认行为传统的方式是调用事件对象 e.preventDefault() 来处理， jQuery中可以直接在函数中最后结尾return false即可jQuery处理如下：123$("#target").submit(function(data) &#123; return false; //阻止默认行为，提交表单&#125;);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[change事件]]></title>
+      <url>%2F2017%2F02%2F15%2Fchange%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[input元素，textarea和select元素的值都是可以发生改变的，通过change事件去监听这些改变的动作 注释：当用于 select 元素时，change 事件会在选择某个选项时发生。当用于 textfield 或 textarea 时，该事件会在元素失去焦点时发生 input元素监听value值的变化，当有改变时，失去焦点后触发change事件。对于单选按钮和复选框，当用户用鼠标做出选择时，该事件立即触发。 select元素对于下拉选择框，当用户用鼠标作出选择时，该事件立即触发 textarea元素多行文本输入框，当有改变时，失去焦点后触发change事件12345678910111213141516171819&lt;div class="left"&gt; //监听input的改变 &lt;div class="aaron"&gt;input： &lt;input class="target1" type="text" value="监听input的改变" /&gt; &lt;/div&gt; //监听select的改变 &lt;div class="aaron1"&gt;select： &lt;select class="target2"&gt; &lt;option value="option1" selected="selected"&gt;Option 1&lt;/option&gt; &lt;option value="option2"&gt;Option 2&lt;/option&gt; &lt;/select&gt; &lt;/div&gt; //监听textarea的改变 &lt;div class="aaron3"&gt;textarea： &lt;textarea class="target2" rows="3" cols="20"&gt;多行的文本输入控件&lt;/textarea&gt; &lt;/div&gt;&lt;/div&gt; 输出结果： &lt;div id="result"&gt;&lt;/div&gt; 1234567891011121314//监听input值的改变 $('.target1').change(function(e) &#123; $("#result").html(e.target.value) &#125;); //监听select： $(".target2").change(function(e) &#123; $("#result").html(e.target.value) &#125;) //监听textarea： $(".target3").change(function(e) &#123; $("#result").html(e.target.value) &#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[blur与focus事件]]></title>
+      <url>%2F2017%2F02%2F15%2Fblur%E4%B8%8Efocus%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[focusin事件,focusout事件与focus,blur事件聚焦focus 失焦blur 区别：是否支持冒泡处理例子123&lt;div&gt; &lt;input type="text" /&gt;&lt;/div&gt; 其中input元素可以触发focus()事件div是input的父元素，当它包含的元素input触发了focus事件时，它就产生了focusin()事件。focus()在元素本身产生，focusin()在元素包含的元素中产生blur与focusout也亦是如此]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery表单事件]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E8%A1%A8%E5%8D%95%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[focusin事件监听聚焦事件 focusout事件监听失焦事件 blur与focus事件监听表单焦点(聚焦|失焦) change事件监听输入域动作 select事件监听鼠标选中事件 submit事件监听下提交表单动作]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[focusout事件]]></title>
+      <url>%2F2017%2F02%2F15%2Ffocusout%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[当一个元素，或者其内部任何一个元素失去焦点的时候，比如input元素，用户在点击失去焦的时候，如果开发者需要捕获这个动作，jQuery提供了一个focusout事件 方法一：$ele.focusout()绑定$ele元素，不带任何参数一般是用来指定触发一个事件，可能一般用的比较少1&lt;div id="test"&gt;点击触发&lt;div&gt; 123456$("ele").focusout(function()&#123; alert('触发指定事件')&#125;)$("#test").mouseup(function()&#123; $("ele").focusout() //指定触发事件 &#125;); 方法二：$ele.focusout( handler )绑定$ele元素，每次$ele元素触发点击操作会执行回调 handler函数这样可以针对事件的反馈做很多操作了1&lt;div id="test"&gt;点击触发&lt;div&gt; 123$("#test").focusout(function() &#123; //this指向 div元素&#125;); 代码:12345//input失去焦点//给input元素增加一个边框$("input:first").focusout(function() &#123; $(this).css('border','2px solid red')&#125;) 方法三：$ele.focusout( [eventData ], handler )使用与方法二一致，不过可以接受一个数据参数，这样的处理是为了解决不同作用域下数据传递的问题1&lt;div id="test"&gt;点击触发&lt;div&gt; 1234$("#test").focusout(11111,function(e) &#123; //this指向 div元素 //e.date =&gt; 11111 传递数据&#125;);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[focusin事件]]></title>
+      <url>%2F2017%2F02%2F15%2Ffocusin%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[当一个元素，或者其内部任何一个元素获得焦点的时候，例如：input元素，用户在点击聚焦的时候，如果开发者需要捕获这个动作的时候，jQuery提供了一个focusin事件 方法一：$ele.focusin()绑定$ele元素，不带任何参数一般是用来指定触发一个事件，一般用的比较少1&lt;div id="test"&gt;点击触发&lt;div&gt; 123456$("ele").focusin(function()&#123; alert('触发指定事件')&#125;)$("#test").mouseup(function()&#123; $("ele").focusin() //指定触发事件 &#125;); 方法二：$ele.focusin( handler )绑定$ele元素，每次$ele元素触发点击操作会执行回调 handler函数这样可以针对事件的反馈做很多操作了1&lt;div id="test"&gt;点击触发&lt;div&gt; 123$("#test").focusin(function() &#123; //this指向 div元素&#125;); 代码：12345//input聚焦//给input元素增加23333文字$("input:first").focusin(function() &#123; $(this).val('23333')&#125;) 方法三：$ele.focusin( [eventData ], handler )使用与方法二一致，不过可以接受一个数据参数，这样的处理是为了解决不同作用域下数据传递的问题1&lt;div id="test"&gt;点击触发&lt;div&gt; 1234$("#test").focusin(11111,function(e) &#123; //this指向 div元素 //e.date =&gt; 11111 传递数据&#125;);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[hover事件]]></title>
+      <url>%2F2017%2F02%2F15%2Fhover%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[hover = mouseenter + mouseleave在元素上移进移出切换其换色，一般通过2个事件配合就可以达到，这里用mouseenter与mouseleave，这样可以避免冒泡问题123456$(ele).mouseenter(function()&#123; $(this).css("background", '#bbffaa'); &#125;)$(ele).mouseleave(function()&#123; $(this).css("background", 'red');&#125;) 等同于123//只需要在hover方法中传递2个回调函数就可以了//不需要显示的绑定2个事件$(selector).hover(handlerIn, handlerOut) handlerIn(eventObject)：当鼠标指针进入元素时触发执行的事件函数 handlerOut(eventObject)：当鼠标指针离开元素时触发执行的事件函数代码：12345678910// hover()方法是同时绑定 mouseenter和 mouseleave事件。// 我们可以用它来简单地应用在 鼠标在元素上行为$("p").hover( function() &#123; $(this).css("background", 'red'); &#125;, function() &#123; $(this).css("background", '#bbffaa'); &#125;);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[mouseenter与mouseleave事件]]></title>
+      <url>%2F2017%2F02%2F15%2Fmouseenter%E4%B8%8Emouseleave%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[监听用户移动到内部的操作三种参数传递方式与mouseover和mouseout是一模一样 mouseenter事件和mouseover的区别 关键点就是：冒泡的方式处理问题简单的例子：mouseover为例：123&lt;div class="aaron2"&gt; &lt;p&gt;鼠标离开此区域触发mouseleave事件&lt;/p&gt;&lt;/div&gt; 如果在p元素与div元素都绑定mouseover事件，鼠标在离开p元素，但是没有离开div元素的时候，触发的结果:p元素响应事件div元素响应事件这里的问题是div为什么会被触发？ 原因就是事件冒泡的问题，p元素触发了mouseover，他会一直往上找父元素上的mouseover事件，如果父元素有mouseover事件就会被触发所以在这种情况下面，jQuery推荐我们使用 mouseenter事件 mouseenter事件只会在绑定它的元素上被调用，而不会在后代节点上被触发]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[mouseover与mouseout事件]]></title>
+      <url>%2F2017%2F02%2F15%2Fmouseover%E4%B8%8Emouseout%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[监听用户的移入移出操作 方法一：$ele.mouseover()绑定$ele元素，不带任何参数一般是用来指定触发一个事件，用的比较少1&lt;div id="test"&gt;点击触发&lt;div&gt; 123456$("ele").mouseover(function()&#123; alert('触发指定事件')&#125;)$("#test").click(function()&#123; $("ele").mouseover() //指定触发事件 &#125;); 方法二：$ele.mouseover( handler(eventObject) )绑定$ele元素，每次$ele元素触发点击操作会执行回调 handler函数这样可以针对事件的反馈做很多操作了1&lt;div id="test"&gt;滑动触发&lt;div&gt; 123$("#test").mouseover(function() &#123; //this指向 div元素 &#125;); 方法三：$ele.mouseover( [eventData ], handler(eventObject) )使用与方法二一致，不过可以接受一个数据参数，这样的处理是为了解决不同作用域下数据传递的问题1&lt;div id="test"&gt;点击触发&lt;div&gt; 1234$("#test").mouseover(11111,function(e) &#123; //this指向 div元素 //e.date =&gt; 11111 传递数据&#125;);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[mousemove事件]]></title>
+      <url>%2F2017%2F02%2F15%2Fmousemove%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[mousemove方法可以监听用户鼠标移动的操作 方法一：$ele.mousemove()绑定$ele元素，不带任何参数一般是用来指定触发一个事件，用的比较少1&lt;div id="test"&gt;点击触发&lt;div&gt; 123456$("ele").mousemove(function()&#123; alert('触发指定事件')&#125;)$("#test").click(function()&#123; $("ele").mousemove() //指定触发事件 &#125;); 方法二：$ele.mousemove( handler(eventObject) )绑定$ele元素，每次$ele元素触发点击操作会执行回调 handler函数这样可以针对事件的反馈做很多操作了1&lt;div id="test"&gt;滑动触发&lt;div&gt; 123$("#test").mousemove(function() &#123; //this指向 div元素 &#125;); 像:12345//绑定一个mousemove事件 //触发后修改内容 $(".aaron1").mousemove(function(e) &#123; $(this).find('p:last').html('移动的X位置：' + e.pageX) &#125;) 方法三：$ele.mousemove( [eventData ], handler(eventObject) )使用与方法二一致，不过可以接受一个数据参数，这样的处理是为了解决不同作用域下数据传递的问题1&lt;div id="test"&gt;点击触发&lt;div&gt; 1234$("#test").mousemove(11111,function(e) &#123; //this指向 div元素 //e.date =&gt; 11111 传递数据&#125;); 像：123456789//不同函数传递数据 function data(e) &#123; $(this).find('p:last').html('数据:' + e.data) &#125; function a() &#123; $(".right").mousemove(1111, data) &#125; a();]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[mousedown与mouseup事件]]></title>
+      <url>%2F2017%2F02%2F15%2Fmousedown%E4%B8%8Emouseup%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[mousedown方法可以监听用户鼠标按下的操作；mouseup方法可以监听用户鼠标弹起的操作 方法一：$ele.mousedown()绑定$ele元素，不带任何参数一般是用来指定触发一个事件，可能一般用的比较少1&lt;div id="test"&gt;点击触发&lt;div&gt; 123456$("ele").mousedown(function()&#123; alert('触发指定事件')&#125;)$("#test").mousedown(function()&#123; $("ele").mousedown() //手动指定触发事件 &#125;); 方法二：$ele.mousedown( handler(eventObject) )绑定$ele元素，每次$ele元素触发点击操作会执行回调 handler函数这样可以针对事件的反馈做很多操作了1&lt;div id="test"&gt;点击触发&lt;div&gt; 123$("#test").mousedown(function() &#123; //this指向 div元素&#125;); 方法三：$ele.mousedown( [eventData ], handler(eventObject) )使用与方法二一致，不过可以接受一个数据参数，这样的处理是为了解决不同作用域下数据传递的问题1&lt;div id="test"&gt;点击触发&lt;div&gt; 1234$("#test").mousedown(11111,function(e) &#123; //this指向 div元素 //e.date =&gt; 11111 传递数据&#125;); 像:123456789//不同函数传递数据 function data(e) &#123; alert(e.data) //1111 &#125; function a() &#123; $("button:eq(2)").mousedown(1111, data) &#125; a(); mouseup与mousedown用法相似 mouseup事件触发需要以下几点： mouseup强调是松手触发，与mousedown是相反的 mouseup与mousedown组合起来就是click事件 如果用户在一个元素上按下鼠标按键，并且拖动鼠标离开这个元素，然后释放鼠标键，这仍然是算作mouseup事件任何鼠标按钮松手时都能触发mouseup事件 用event 对象的which区别按键，敲击鼠标左键which的值是1，敲击鼠标中键which的值是2，敲击鼠标右键which的值是3click与mousedown的区别：click事件其实是由mousedown于mouseup 2个动作构成，所以点击的动作只有在松手后才触发]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[click与dbclick事件]]></title>
+      <url>%2F2017%2F02%2F15%2Fclick%E4%B8%8Edbclick%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[click方法用于监听用户单击操作;dbclick方法用于监听用户双击操作 方法一：$ele.click()绑定$ele元素，不带任何参数一般是用来指定触发一个事件，用的比较少1&lt;div id="test"&gt;点击触发&lt;div&gt; 1234567$("ele").click(function()&#123; alert('触发指定事件')&#125;)$("#test").click(function()&#123; $("ele").click() //手动指定触发事件 &#125;); 方法二：$ele.click( handler(eventObject) )绑定$ele元素，每次$ele元素触发点击操作会执行回调 handler函数，这样可以针对事件的反馈做很多操作了，方法中的this是指向了绑定事件的元素1&lt;div id="test"&gt;点击触发&lt;div&gt; 123$("#test").click(function() &#123; //this指向 div元素&#125;); 方法三：$ele.click( [eventData ], handler(eventObject) )使用与方法二一致，不过可以接受一个数据参数，这样的处理是为了解决不同作用域下数据传递的问题1&lt;div id="test"&gt;点击触发&lt;div&gt; 1234$("#test").click(11111,function(e) &#123; //this指向 div元素 //e.date =&gt; 11111 传递数据&#125;); 像：123456789//不同函数传递数据 function data(e) &#123; alert(e.data) //1111 &#125; function a() &#123; $("button:eq(2)").click(1111, data) &#125; a(); dblclick()的用法和click()的用法是类似的，可以参考以上click()的用法]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery鼠标事件]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%BC%A0%E6%A0%87%E4%BA%8B%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[click与dbclick事件click方法用于监听用户单击操作;dbclick方法用于监听用户双击操作 mousedown与mouseup事件mousedown方法可以监听用户鼠标按下的操作；mouseup方法可以监听用户鼠标弹起的操作 mousemove事件mousemove方法可以监听用户鼠标移动的操作 mouseover与mouseout事件监听用户的移入移出操作 mouseenter与mouseleave事件 moumouseenter = mouseovermouseleave = mouseout hover事件hover = mouseenter + mouseleave focusin事件聚焦事件 focusout事件失焦事件]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery遍历之each()]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%E4%B9%8Beach%2F</url>
+      <content type="text"><![CDATA[each() 方法就是一个for循环的迭代器，它会迭代jQuery对象合集中的每一个DOM元素。每次回调函数执行时，会传递当前循环次数作为参数(从0开始计数) 重点： each是一个for循环的包装迭代器 each通过回调的方式处理，并且会有2个固定的实参，索引与元素 each回调方法中的this指向当前迭代的dom元素案例1234&lt;ul&gt; &lt;li&gt;item-1&lt;/li&gt; &lt;li&gt;item-2&lt;/li&gt;&lt;/ul&gt; 开始迭代li，循环2次12345$("li").each(function(index, element) &#123; index 索引 0,1 element 是对应的li节点 li,li this 指向的是li&#125;) 代码12345//遍历所有的li//修改每个li内的字体颜色$("li").each(function(index, element) &#123; $(this).css('color','red')&#125;) 123456789(function() &#123; //遍历所有的li //修改偶数li内的字体颜色 $("li").each(function(index, element) &#123; if (index % 2) &#123; $(this).css('color','blue') &#125; &#125;)&#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery遍历之add()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%E4%B9%8Badd-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[.add()的参数可以几乎接受任何的$()，包括一个jQuery选择器表达式，DOM元素，或HTML片段引用。 案例：操作：选择所有的li元素，之后把p元素也加入到li的合集中123456&lt;ul&gt; &lt;li&gt;list item 1&lt;/li&gt; &lt;li&gt;list item 2&lt;/li&gt; &lt;li&gt;list item 3&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;p元素&lt;/p&gt; 处理一：传递选择器1$('li').add('p') 处理二：传递dom元素1$('li').add(document.getElementsByTagName('p')[0]) 还有一种方式，就是动态创建P标签加入到合集，然后插入到指定的位置，但是这样就改变元素的本身的排列了1$('li').add('&lt;p&gt;新的p元素&lt;/p&gt;').appendTo(目标位置)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery遍历之siblings()]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%E4%B9%8Bsiblings%2F</url>
+      <content type="text"><![CDATA[查找指定元素集合中每一个元素的同辈元素 理解节点查找关系：class=”item-1”,class=”item-3”就是class=”item-2”兄弟节点12345&lt;ul&gt; &lt;li class="item-1"&gt;1&lt;/li&gt; &lt;li class="item-2"&gt;2&lt;/li&gt; &lt;li class="item-3"&gt;3&lt;/li&gt;&lt;/ul&gt; siblings()无参数取得一个包含匹配的元素集合中每一个元素的同辈元素的元素集合12.siblings().css('border', '2px solid red')//找到class=item-2的所有兄弟节点,然后加上红色的边 siblings()方法选择性地接受同一类型选择器表达式12345$("button:last").click(function() &#123; //找到class=item-2的所有兄弟节点 //然后筛选出最后一个，加上蓝色的边 $('.item-2').siblings(':last').css('border', '2px solid blue')&#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery遍历之prev()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%E4%B9%8Bprev-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[快速查找指定元素集合中每一个元素紧邻的前面同辈元素的元素集合 理解节点查找关系：class=”item-1”就是class=”item-2”的兄弟节点12345&lt;ul class="level-3"&gt; &lt;li class="item-1"&gt;1&lt;/li&gt; &lt;li class="item-2"&gt;2&lt;/li&gt; &lt;li class="item-3"&gt;3&lt;/li&gt;&lt;/ul&gt; prev()无参数取得一个包含匹配的元素集合中每一个元素紧邻的前一个同辈元素的元素集合12345&lt;ul&gt; &lt;li class="item-1"&gt;1&lt;/li&gt; &lt;li class="item-2"&gt;2&lt;/li&gt; &lt;li class="item-3"&gt;3&lt;/li&gt;&lt;/ul&gt; 12$('.item-2').prev().css('border', '1px solid red')//找到class=item-2所对应的上一个兄弟节点 prev()方法选择性地接受同一类型选择器表达式同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式123//找到class=item-2//然后筛选出最后一个，加上蓝色的边$('.item-3').prev(':last').css('border', '1px solid blue')]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery遍历之next()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%E4%B9%8Bnext-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[查找指定元素集合中每一个元素紧邻的后面同辈元素的元素集合 理解节点查找关系：class=”item-2”是class=”item-1”元素的兄弟元素12345&lt;ul&gt; &lt;li class="item-1"&gt;1&lt;/li&gt; &lt;li class="item-2"&gt;2&lt;/li&gt; &lt;li class="item-3"&gt;3&lt;/li&gt;&lt;/ul&gt; next()无参数允许我们找遍元素集合中紧跟着这些元素的直接兄弟元素，并根据匹配的元素创建一个新的 jQuery 对象12345&lt;ul&gt; &lt;li class="item-1"&gt;1&lt;/li&gt; &lt;li class="item-2"&gt;2&lt;/li&gt; &lt;li class="item-3"&gt;3&lt;/li&gt;&lt;/ul&gt; 1234$("button:first").click(function() &#123; $('.item-1').next().css('border', '1px solid red') //给class=item-2的li加上红色的边&#125;) next()方法选择性地接受同一类型选择器表达式同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式12345$("button:last").click(function() &#123; //找到所有class=item-3的li //然后筛选出第一个li，加上蓝色的边 $('.item-2').next(':first').css('border', '1px solid blue')&#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery遍历之closest()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%E4%B9%8Bclosest-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[closest()方法接受一个匹配元素的选择器字符串从元素本身开始，在DOM 树上逐级向上级元素匹配，并返回最先匹配的祖先元素例如：在div元素中，往上查找li元素，可以这样表达1$("div").closet("li') 12345678$("button:first").click(function() &#123; $('.item').closest('.level').css('border', '1px solid red') /* 找到class="item"的li元素 通过closest方法往上找到class=".level"的元素 加上边框颜色 */&#125;) .parents()和.closest()区别: 起始位置不同：.closest开始于当前元素.parents开始于父元素 遍历的目标不同：.closest要找到指定的目标.parents遍历到文档根元素.closest向上查找，直到找到一个匹配的就停止查找.parents一直查找到根元素，并将匹配的元素加入集合 结果不同：.closest返回的是包含零个或一个元素的jquery对象.parents返回的是包含零个或一个或多个元素的jquery对象]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery遍历之parents()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%E4%B9%8Bparents-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[类似find与children的区别，parent只会查找一级，parents则会往上一直查到查找到祖先节点 理解节点查找关系： 1 在li节点上找到祖辈元素div1$("li").parents() parents()无参数parents()方法允许我们能够在DOM树中搜索到这些元素的祖先元素，从有序的向上匹配元素，并根据匹配的元素创建一个新的 jQuery 对象返回的元素秩序是从离他们最近的父级元素开始的1234$("button:first").click(function() &#123; $('.item').parents().css('border','1px solid red') //找到class="item"元素的所有祖辈元素并且附上一个红色的边框&#125;) parents()方法选择性地接受同一型选择器表达式同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式12345$("button:last").click(function() &#123; //找到当前元素的所有祖辈元素,筛选出class="first-div"的元素 //并且附上一个边 $('.item').parents('.first-div').css('border', '2px solid blue')&#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery遍历之parent()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%E4%B9%8Bparent-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[快速查找合集里面的每一个元素的父元素（这里可以理解为就是父亲-儿子的关系） 理解节点查找关系：12345&lt;div class="div"&gt; &lt;ul class="son"&gt; &lt;li class="grandson"&gt;1&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt; 查找ul的父元素div1$(ul).parent() parent()无参数parent()方法允许我们能够在DOM树中搜索到这些元素的父级元素，从有序的向上匹配元素，并根据匹配的元素创建一个新的 jQuery 对象1234567$("button:first").click(function() &#123; $('.div').parent().css("border","1px solid red") /* 找到所有class=div的元素 找到它的父元素,并且加上一个红色的边框 */&#125;) parent()方法选择性地接受同一型选择器表达式同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式12345$("button:last").click(function() &#123; //找到所有class=item的父元素 //然后筛选出最后一个，加上蓝色的边 $('.item').parent(':last').css('border', '1px solid blue')&#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery遍历之find()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%E4%B9%8Bfind-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[快速查找DOM树中的元素的后代元素注意 children与find方法的区别，children是父子关系查找，find是后代关系（包含父子关系） 理解节点查找关系：12345&lt;div class="div"&gt; &lt;ul class="son"&gt; &lt;li class="grandson"&gt;1&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt; 代码如果是$(“div”).find(“li”)，此时，li与div是祖辈关系，通过find方法就可以快速的查找到了 .find()方法要注意的知识点：find是遍历当前元素集合中每个元素的后代。只要符合，不管是儿子辈，孙子辈都可以。与其他的树遍历方法不同，选择器表达式对于 .find() 是必需的参数。如果我们需要实现对所有后代元素的取回，可以传递通配选择器 ‘*’。find只在后代中遍历，不包括自己。选择器 context 是由 .find() 方法实现的；因此，$(‘.item-ii’).find(‘li’) 等价于 $(‘li’, ‘.item-ii’)(找到类名为item-ii的标签下的li标签) 注意重点：.find()和.children()方法是相似的1.children只查找第一级的子节点2.find查找范围包括子节点的所有后代节点代码：12345678$("button:first").click(function() &#123; $(".left").find("li:last").css("border","1px solid red") /* 在class="left"的元素中 找到后代元素li中的最后一个 并加上红色的边框 */ &#125;) 123456$("button:last").click(function() &#123; //找到所有p元素，然后筛选出子元素是span标签的节点 //改变其字体颜色 var $spans = $('span'); $("p").find($spans).css('color', 'red');&#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery遍历之children()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%E4%B9%8Bchildren-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[返回匹配元素集合中每个元素的子元素，添加可选参数可通过选择器进行过滤 理解节点查找关系：12345&lt;div class="div"&gt; &lt;ul class="son"&gt; &lt;li class="grandson"&gt;1&lt;/li&gt; &lt;/ul&gt;&lt;/div&gt; 代码如果是$(“div”).children()，那么意味着只能找到ul，因为div与ul是父子关系，li与div是祖辈关系，因此无法找到 children()无参数允许我们通过在DOM树中对这些元素的直接子元素进行搜索，并且构造一个新的匹配元素的jQuery对象注意：jQuery是一个合集对象，所以通过children是匹配合集中每一给元素的第一级子元素1234 $("#bt1").click(function() &#123; $(".div").children().css("color","red") //找到所有class=div的元素节点，然后找到其对应的子元素，改变颜色&#125;) .children()方法选择性地接受同一类型选择器表达式$(“div”).children(“.selected”)同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式12345$("#bt2").click(function() &#123; //找到所有class=div的元素 //找到其对应的子元素ul，然后筛选出最后一个，给边宽加上颜色 $('.div').children(':last').css('border', '3px solid blue')&#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jQuery中的遍历]]></title>
+      <url>%2F2017%2F02%2F15%2FjQuery%E9%81%8D%E5%8E%86%2F</url>
+      <content type="text"><![CDATA[children()方法查找元素集合中每个元素的子元素 find()方法查找DOM树中的元素的后代元素 parent()方法查找合集里面的每一个元素的父元素 parents()方法查找合集里面的每一个元素的所有祖辈元素 closest()方法查找当前元素的父辈祖辈元素 next()方法查找指定元素集合中每一个元素紧邻的后面同辈元素的元素集合 prev()方法查找指定元素集合中每一个元素紧邻的前面同辈元素的元素集合 siblings()方法查找指定元素集合中每一个元素的同辈元素 add()方法元素添加到匹配的元素集合中 each()方法.each() 方法就是一个for循环的迭代器，它会迭代jQuery对象合集中的每一个DOM元素]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[DOM删除包裹wrapInner()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FDOM%E5%88%A0%E9%99%A4%E5%8C%85%E8%A3%B9wrapInner-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[.wrapInner( wrappingElement )：给集合中匹配的元素的内部，增加包裹的HTML结构代码：12&lt;div&gt;p元素&lt;/div&gt;&lt;div&gt;p元素&lt;/div&gt; 给所有元素增加一个p包裹1$('div').wrapInner('&lt;p&gt;&lt;/p&gt;') 最后的结构，匹配的div元素的内部元素被p给包裹了123456&lt;div&gt; &lt;p&gt;p元素&lt;/p&gt;&lt;/div&gt;&lt;div&gt; &lt;p&gt;p元素&lt;/p&gt;&lt;/div&gt; .wrapInner( function ) ：允许我们用一个callback函数做参数，每次遇到匹配元素时，该函数被执行，返回一个DOM元素，jQuery对象，或者HTML片段，用来包住匹配元素的内容123$('div').wrapInner(function() &#123; return '&lt;p&gt;&lt;/p&gt;'; &#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[DOM包裹wrapAll()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FDOM%E5%8C%85%E8%A3%B9wrapAll-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[.wrapAll( wrappingElement )：给集合中匹配的元素增加一个外面包裹HTML结构代码：12&lt;p&gt;p元素&lt;/p&gt;&lt;p&gt;p元素&lt;/p&gt; 给所有p元素增加一个div包裹1$('p').wrapAll('&lt;div&gt;&lt;/div&gt;') 最后的结构，2个P元素都增加了一个父div的结构1234&lt;div&gt; &lt;p&gt;p元素&lt;/p&gt; &lt;p&gt;p元素&lt;/p&gt;&lt;/div&gt; .wrapAll( function ) ：一个回调函数，返回用于包裹匹配元素的 HTML 内容或 jQuery 对象通过回调的方式可以单独处理每一个元素以上面案例为例，123$('p').wrapAll(function() &#123; return '&lt;div&gt;&lt;div/&gt;'; &#125;)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[DOM删除包裹unwrap()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FDOM%E5%88%A0%E9%99%A4%E5%8C%85%E8%A3%B9unwrap-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[.unwarp()方法 ，作用与wrap方法是相反的。将匹配元素集合的父级元素删除，保留自身（和兄弟元素，如果存在）在原来的位置案例：123&lt;div&gt; &lt;p&gt;p元素&lt;/p&gt;&lt;/div&gt; 保留内部元素p,删除父元素div12$('p').unwarp();//找到p元素，然后调用unwarp方法，这样只会删除父辈div元素了 结果：1&lt;p&gt;p元素&lt;/p&gt; 参看：1234567891011121314&lt;script type="text/javascript"&gt;$(".aaron1").on('click', function() &#123; //找到所有p元素，删除父容器div $('p').unwrap('&lt;div&gt;&lt;/div&gt;')&#125;)&lt;/script&gt;&lt;script type="text/javascript"&gt;$(".aaron2").on('click', function() &#123; //找到所有p元素，删除父容器div $('a').unwrap(function() &#123; return '&lt;div&gt;&lt;/div&gt;'; &#125;)&#125;)&lt;/script&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[DOM包裹wrap()方法]]></title>
+      <url>%2F2017%2F02%2F15%2FDOM%E5%8C%85%E8%A3%B9wrap-%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[将元素用其他元素包裹起来，也就是给它增加一个父元素，针对这样的处理，JQuery提供了一个wrap方法 .wrap( wrappingElement )：在集合中匹配的每个元素周围包裹一个HTML结构p元素1&lt;p&gt;p元素&lt;/p&gt; 给p元素增加一个div包裹1$('p').wrap('&lt;div&gt;&lt;/div&gt;') 最后的结构，p元素增加了一个父div的结构123&lt;div&gt; &lt;p&gt;p元素&lt;/p&gt;&lt;/div&gt; .wrap( function ) ：一个回调函数，返回用于包裹匹配元素的 HTML 内容或 jQuery 对象使用后的效果与直接传递参数是一样，只不过可以把代码写在函数体内部，写法不同而已1234$('p').wrap(function() &#123; return '&lt;div&gt;&lt;/div&gt;'; //与第一种类似，只是写法不一样&#125;) 注意：.wrap()函数可以接受任何字符串或对象，可以传递给$()工厂函数来指定一个DOM结构。这种结构可以嵌套了好几层深，但应该只包含一个核心的元素。每个匹配的元素都会被这种结构包裹。该方法返回原始的元素集，以便之后使用链式方法。]]></content>
     </entry>
 
     
@@ -117,7 +621,7 @@
     <entry>
       <title><![CDATA[jQuery中DOM操作]]></title>
       <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%ADDOM%E6%93%8D%E4%BD%9C%2F</url>
-      <content type="text"><![CDATA[大神都是从DOM开始的 JavaScript中的一点原生方法： 创建元素：document.createElement 设置属性：setAttribute 添加文本：innerHTML 加入文档：appendChildDOM节点的创建1234567891011&lt;script type="text/javascript"&gt; var $body = $('body'); $body.on("click",function() &#123; //通过jQuery生成div元素节点 var div = $("&lt;div&gt;动态创建DIV元素节点&lt;/div&gt;") //通过jQuery生成div属性节点 var div1 = $("&lt;div id='test' class='aaron'&gt;创建为属性节点&lt;/div&gt;") $body.append(div) $body.append(div1) &#125;)&lt;/script&gt; DOM节点的插入 DOM内部插入append() 与 appendTo() append(content):向每一个匹配的元素内部追加内容 appendTo(content):把所有匹配的元素追加到另一个指定的元素集合中DOM外部插入after() 与 before() after(content):在匹配元素集合在中的每一个元素后面插入参数所制定的内容作为其兄弟元素 before(content):根据参数设定，在匹配元素的前面插入内容DOM内部插入prepend() 与 prependTo() prepend(content):向每个匹配的元素内部前置内容 prependTo(content):把所有匹配的元素前置到另一个指定的元素集合中DOM内部插入insertAfter() 与 insertBefore() insertAfter():在目标元素前面插入集合中每个匹配的元素 insertBefore():在目标元素后面插入集合中每个匹配的元素DOM节点的删除DOM节点删除之empty()的基本用法remove()的有参用法和无参用法保留数据的删除操作detach()DOM节点的复制与替换DOM拷贝clone()DOM替换replaceWith()和replaceAll()]]></content>
+      <content type="text"><![CDATA[大神都是从DOM开始的 JavaScript中的一点原生方法： 创建元素：document.createElement 设置属性：setAttribute 添加文本：innerHTML 加入文档：appendChildDOM节点的创建1234567891011&lt;script type="text/javascript"&gt; var $body = $('body'); $body.on("click",function() &#123; //通过jQuery生成div元素节点 var div = $("&lt;div&gt;动态创建DIV元素节点&lt;/div&gt;") //通过jQuery生成div属性节点 var div1 = $("&lt;div id='test' class='aaron'&gt;创建为属性节点&lt;/div&gt;") $body.append(div) $body.append(div1) &#125;)&lt;/script&gt; DOM节点的插入 DOM内部插入append() 与 appendTo() append(content):向每一个匹配的元素内部追加内容 appendTo(content):把所有匹配的元素追加到另一个指定的元素集合中DOM外部插入after() 与 before() after(content):在匹配元素集合在中的每一个元素后面插入参数所制定的内容作为其兄弟元素 before(content):根据参数设定，在匹配元素的前面插入内容DOM内部插入prepend() 与 prependTo() prepend(content):向每个匹配的元素内部前置内容 prependTo(content):把所有匹配的元素前置到另一个指定的元素集合中DOM内部插入insertAfter() 与 insertBefore() insertAfter():在目标元素前面插入集合中每个匹配的元素 insertBefore():在目标元素后面插入集合中每个匹配的元素DOM节点的删除 DOM节点删除之empty()的基本用法 remove()的有参用法和无参用法 保留数据的删除操作detach()DOM节点的复制与替换 DOM拷贝clone() DOM替换replaceWith()和replaceAll() DOM包裹wrap()方法wrap是针对单个dom元素处理 DOM删除包裹unwrap()方法unwrap是针对单个dom元素处理 DOM包裹wrapAll()方法wrapAll是针对集合dom元素处理 DOM删除包裹wrapInner()方法wrapInner是针对集合dom元素处理]]></content>
     </entry>
 
     
@@ -159,7 +663,7 @@
     <entry>
       <title><![CDATA[jQuery中的removeClass()方法]]></title>
       <url>%2F2017%2F02%2F12%2FjQuery%E4%B8%AD%E7%9A%84removeClass-%E6%96%B9%E6%B3%95%2F</url>
-      <content type="text"><![CDATA[.removeClass( )方法 .removeClass( [className ] )：每个匹配元素移除的一个或多个用空格隔开的样式名 .removeClass( function(index, class) ) ： 一个函数，返回一个或多个将要被移除的样式名 注意事项如果一个样式类名作为一个参数,只有这样式类会被从匹配的元素集合中删除 。 如果没有样式名作为参数，那么所有的样式类将被移除 学习代码：1234567891011121314151617181920&lt;script type="text/javascript"&gt; //class=left下div元素删除newClass样式 $('.left div').removeClass('newClass')&lt;/script&gt;&lt;script type="text/javascript"&gt; //.removeClass() 方法允许我们指定一个函数作为参数，返回将要被删除的样式 $('.right &gt; div:first').removeClass(function(index,className)&#123; //className = aa bb oClass //把div的className赋给下一个兄弟元素div上作为它的class $(this).next().addClass(className) //删除自己本身的oClass return 'oClass' &#125;)&lt;/script&gt;]]></content>
+      <content type="text"><![CDATA[.removeClass( )方法 .removeClass( [className ] )：每个匹配元素移除的一个或多个用空格隔开的样式名 .removeClass( function(index, class) ) ： 一个函数，返回一个或多个将要被移除的样式名 注意事项如果一个样式类名作为一个参数,只有这样式类会被从匹配的元素集合中删除 。 如果没有样式名作为参数，那么所有的样式类将被移除 学习代码：1234&lt;script type="text/javascript"&gt; //class=left下div元素删除newClass样式 $('.left div').removeClass('newClass')&lt;/script&gt; 1234567891011121314&lt;script type="text/javascript"&gt; //.removeClass() 方法允许我们指定一个函数作为参数，返回将要被删除的样式 $('.right &gt; div:first').removeClass(function(index,className)&#123; //className = aa bb oClass //把div的className赋给下一个兄弟元素div上作为它的class $(this).next().addClass(className) //删除自己本身的oClass return 'oClass' &#125;)&lt;/script&gt;]]></content>
     </entry>
 
     
@@ -192,16 +696,16 @@
 
     
     <entry>
-      <title><![CDATA[jQuery属性与样式基础]]></title>
+      <title><![CDATA[jQuery属性样式基础]]></title>
       <url>%2F2017%2F02%2F12%2FjQuery%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95%2F</url>
       <content type="text"><![CDATA[目前我只是粗浅的学习了几种jQuery属性和操作方法。这些方法对于 XML 文档和 HTML 文档均是适用的，除了：html() attr()设置或返回匹配元素的属性和值 removeAttr()从所有匹配的元素中移除指定的属性 addClass()向匹配的元素添加指定的类名 removeClass()从所有匹配的元素中删除全部或者指定的类 toggleClass()从匹配的元素中添加或删除一个类 css()设置或返回匹配元素的样式属性 html()设置或返回匹配的元素集合中的 HTML 内容 val()设置或返回匹配元素的值 text()设置或返回被选元素的文本内容 data()向被选元素附加数据，或者从被选元素获取数据]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[jQuery初步学习]]></title>
+      <title><![CDATA[jQuery初试(选择器)]]></title>
       <url>%2F2017%2F02%2F11%2FjQuery%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0%2F</url>
-      <content type="text"><![CDATA[jQuery是javascript的一个子集，jQuery使人们不用顾虑浏览器的兼容性（我说的就是IE）。这里主要介绍jQuery的选择器 引入jQuery库：1&lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt; jQuery版的Hello，World！12345&lt;script&gt; $(document).ready(function () &#123; $("div").html("Hello,world!"); &#125;)&lt;/script&gt; Query中的页面加载后 “监听事件”的方法：1$(document).ready(function()&#123;&#125;); 等同于1window.onload = function()&#123;&#125;; 但ready事件优先于onload事件执行 简单的jQuery选择器jQuery基本选择器 ID选择器：$(“#id”) Class选择器：$(“.Class”) 标签选择器：$(“tagname”) 通配选择器：$(“ * “) 组选择器：$(“seletor1,seletor2,~N”) 层级选择器 1234567891011121314151617181920212223&lt;script type="text/javascript"&gt; //子选择器 //$('div &gt; p') 选择所有div元素里面的子元素P $('div&gt;p').css("border", "1px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //后代选择器 //$('div p') 选择所有div元素里面的p元素 $('div p').css("border", "1px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //相邻兄弟选择器 //选取prev后面的第一个的div兄弟节点 $('div+span').css("border", "3px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //一般相邻选择器 //选取prev后面的所有的div兄弟节点 $('.prev~div').css("border", "3px groove green");&lt;/script&gt; 基本筛选选择器 123456789101112131415161718192021222324252627282930313233343536373839404142&lt;script type="text/javascript"&gt; //找到第一个div $(".div:first").css("color", "#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //找到最后一个div $(".div:last").css("color", "#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:even 选择所引值为偶数的元素，从 0 开始计数 $(".div:even").css("border", "3px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:odd 选择所引值为奇数的元素，从 0 开始计数 $(".div:odd").css("border", "3px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:eq //选择单个 $(".aaron:eq(2)").css("border", "3px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:gt 选择匹配集合中所有索引值大于给定index参数的元素 $("aaron:gt(3)").css("border", "3px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:lt 选择匹配集合中所有索引值小于给定index参数的元素 //与:gt相反 $(".aaron:lt(2)").css("color", "#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:not 选择所有元素去除不匹配给定的选择器的元素 //选中所有紧接着没有checked属性的input元素后的p元素，赋予颜色 $("input:not(:checked)+p").css("background-color", "#CD00CD");&lt;/script&gt; 内容筛选选择器 1234567891011121314151617181920212223&lt;script type="text/javascript"&gt; //查找所有class='div'中DOM元素中包含"box"的元素节点 //并且设置颜色 $(".div:contains('box')").css("color","#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //选择所有包含子元素或者文本的a元素 //增加一个蓝色的边框 $("a:parent").css("border", "3px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //找到a元素下面的所有空节点(没有子元素) //增加一段文本与边框 $("a:empty").text(":empty").css("border", "3px groove red"); &lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有class='div'中DOM元素中包含"span"的元素节点 //并且设置颜色 $(".div:has(span)").css("color", "blue");&lt;/script&gt; 可见性筛选选择器 123456789&lt;script type="text/javascript"&gt; //查找id = div1的DOM元素,是否可见 show($("#div1:visible"));&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找id = div1的DOM元素,是否隐藏 show($("div1:hidden"));&lt;/script&gt; 属性筛选选择器 123456789101112131415161718192021222324252627282930313233343536373839&lt;script type="text/javascript"&gt; //查找所有div中，属性name=p1的div元素 $("div[name=p1]").css("border", "3px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，有属性p2的div元素 $("div[p2]").css("border", "3px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，有属性name中的值只包含一个连字符“-”的div元素 $('div[name|="-"]').css("border", "3px groove #00FF00");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，有属性name中的值包含一个连字符“空”和“a”的div元素 $('div[name~="a"]').css("border", "3px groove #668B8B");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，属性name的值是用bob开头的 $('div[name^=bob]').css("border", "3px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，属性name的值是用bob结尾的 $("div[name$=bob]").css("border", "3px groove blue");&lt;/script&gt; &lt;script type="text/javascript"&gt; //查找所有div中，有属性name中的值包含一个test字符串的div元素 $('div[name*="test"]').css("border", "3px groove #00FF00");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，有属性testattr中的值没有包含"true"的div $('div[testattr!="true"]').css("border", "3px groove #668B8B");&lt;/script&gt; 子元素筛选选择器 123456789101112131415161718192021222324252627&lt;script type="text/javascript"&gt; //查找class="first-div"下的第一个a元素 //针对所有父级下的第一个 $('.first-div a:first-child').css("color", "#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找class="first-div"下的最后一个a元素 //针对所有父级下的最后一个 //如果只有一个元素的话，last也是第一个元素 $('.first-div a:last-child').css("color", "red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找class="first-div"下的只有一个子元素的a元素 $('.first-div a:only-child').css("color", "blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找class="last-div"下的第二个a元素 $('last-div a:nth-child(2)').css("color", "#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找class="last-div"下的倒数第二个a元素 $('last-div a:nth-last-child(2)').css("color", "red");&lt;/script&gt; 表单元素选择器 123456789101112131415161718192021222324252627282930313233343536373839404142434445&lt;script type="text/javascript"&gt; //查找所有 input, textarea, select 和 button 元素 //:input 选择器基本上选择所有表单控件 $(':input').css("border", "1px groove red"); &lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中类型为text的input元素 $('input:text').css("background", "#A2CD5A");&lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中类型为password的input元素 $('input:password').css("background", "yellow"); &lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中的单选按钮,并选中 $('input:radio').attr('checked','true');&lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中的复选按钮,并选中 $('input:checkbox').attr('checked','true'); &lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中的提交的按钮,修改背景颜色 $('input:submit').css("background", "#C6E2FF");&lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中的图像类型的元素,修改背景颜色 $('input:img').css("background", "#F4A460");&lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中类型为按钮的元素 $('input:button').css("background", "red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中类型为file的元素 $('input:file').css("background", "#CD1076");&lt;/script&gt; 表单对象属性选择器 123456789101112131415161718192021&lt;script type="text/javascript"&gt; //查找所有input所有可用的（未被禁用的元素）input元素。 $('input:enabled').css("border", "2px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有input所有不可用的（被禁用的元素）input元素。 $('input:disabled').css("border", "2px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有input所有勾选的元素(单选框,复选框) //移除input的checked属性 $('input:checked').removeAttr('checked')&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有option元素中,有selected属性被选中的选项 //移除option的selected属性 $('option:selected').removeAttr('selected')&lt;/script&gt; 特殊选择器thisJavaScript原生DOM处理 1234567&lt;script type="text/javascript"&gt; var p1 = document.getElementById('test1') p1.addEventListener('click',function()&#123; //直接通过dom的方法改变颜色 this.style.color = "red"; &#125;,false);&lt;/script&gt; jQuery处理123456&lt;script type="text/javascript"&gt; $('#test2').click(function()&#123; //通过包装成jQuery对象改变颜色 $(this).css('color','blue'); &#125;)&lt;/script&gt; Dom对象转换jQuery对象123456789var div = document.getElementsByTagName('div'); //dom对象 div[1].style.color = "blue"; //将dom节点div转化为$div的jquery对象 var $div = $(div); // var $first = $div.first(); //找到第一个div元素 // $first.css('color', 'red'); //给第一个元素设置颜色 $div.get(0).style.color = "red"; $("div").get($div.length -1).style.color = "pink"; jQuery对象转换Dom对象123var $div = $('div'); //jQuery对象 var div = $div.get(0); div.style.color = 'red'; //操作dom对象的属性]]></content>
+      <content type="text"><![CDATA[jQuery是javascript的一个子集，jQuery使人们不用顾虑浏览器的兼容性（我说的就是IE）。这里主要介绍jQuery的选择器 引入jQuery库：1&lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt; jQuery版的Hello，World！12345&lt;script&gt; $(document).ready(function () &#123; $("div").html("Hello,world!"); &#125;)&lt;/script&gt; jQuery中的页面加载后 “监听事件”的方法：1$(document).ready(function()&#123;&#125;); 等同于1window.onload = function()&#123;&#125;; 但ready事件优先于onload事件执行 简单的jQuery选择器jQuery基本选择器 ID选择器：$(“#id”) Class选择器：$(“.Class”) 标签选择器：$(“tagname”) 通配选择器：$(“ * “) 组选择器：$(“seletor1,seletor2,~N”) 层级选择器 1234567891011121314151617181920212223&lt;script type="text/javascript"&gt; //子选择器 //$('div &gt; p') 选择所有div元素里面的子元素P $('div&gt;p').css("border", "1px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //后代选择器 //$('div p') 选择所有div元素里面的p元素 $('div p').css("border", "1px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //相邻兄弟选择器 //选取prev后面的第一个的div兄弟节点 $('div+span').css("border", "3px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //一般相邻选择器 //选取prev后面的所有的div兄弟节点 $('.prev~div').css("border", "3px groove green");&lt;/script&gt; 基本筛选选择器 123456789101112131415161718192021222324252627282930313233343536373839404142&lt;script type="text/javascript"&gt; //找到第一个div $(".div:first").css("color", "#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //找到最后一个div $(".div:last").css("color", "#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:even 选择所引值为偶数的元素，从 0 开始计数 $(".div:even").css("border", "3px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:odd 选择所引值为奇数的元素，从 0 开始计数 $(".div:odd").css("border", "3px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:eq //选择单个 $(".aaron:eq(2)").css("border", "3px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:gt 选择匹配集合中所有索引值大于给定index参数的元素 $("aaron:gt(3)").css("border", "3px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:lt 选择匹配集合中所有索引值小于给定index参数的元素 //与:gt相反 $(".aaron:lt(2)").css("color", "#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //:not 选择所有元素去除不匹配给定的选择器的元素 //选中所有紧接着没有checked属性的input元素后的p元素，赋予颜色 $("input:not(:checked)+p").css("background-color", "#CD00CD");&lt;/script&gt; 内容筛选选择器 1234567891011121314151617181920212223&lt;script type="text/javascript"&gt; //查找所有class='div'中DOM元素中包含"box"的元素节点 //并且设置颜色 $(".div:contains('box')").css("color","#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //选择所有包含子元素或者文本的a元素 //增加一个蓝色的边框 $("a:parent").css("border", "3px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //找到a元素下面的所有空节点(没有子元素) //增加一段文本与边框 $("a:empty").text(":empty").css("border", "3px groove red"); &lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有class='div'中DOM元素中包含"span"的元素节点 //并且设置颜色 $(".div:has(span)").css("color", "blue");&lt;/script&gt; 可见性筛选选择器 123456789&lt;script type="text/javascript"&gt; //查找id = div1的DOM元素,是否可见 show($("#div1:visible"));&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找id = div1的DOM元素,是否隐藏 show($("div1:hidden"));&lt;/script&gt; 属性筛选选择器 123456789101112131415161718192021222324252627282930313233343536373839&lt;script type="text/javascript"&gt; //查找所有div中，属性name=p1的div元素 $("div[name=p1]").css("border", "3px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，有属性p2的div元素 $("div[p2]").css("border", "3px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，有属性name中的值只包含一个连字符“-”的div元素 $('div[name|="-"]').css("border", "3px groove #00FF00");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，有属性name中的值包含一个连字符“空”和“a”的div元素 $('div[name~="a"]').css("border", "3px groove #668B8B");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，属性name的值是用bob开头的 $('div[name^=bob]').css("border", "3px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，属性name的值是用bob结尾的 $("div[name$=bob]").css("border", "3px groove blue");&lt;/script&gt; &lt;script type="text/javascript"&gt; //查找所有div中，有属性name中的值包含一个test字符串的div元素 $('div[name*="test"]').css("border", "3px groove #00FF00");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有div中，有属性testattr中的值没有包含"true"的div $('div[testattr!="true"]').css("border", "3px groove #668B8B");&lt;/script&gt; 子元素筛选选择器 123456789101112131415161718192021222324252627&lt;script type="text/javascript"&gt; //查找class="first-div"下的第一个a元素 //针对所有父级下的第一个 $('.first-div a:first-child').css("color", "#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找class="first-div"下的最后一个a元素 //针对所有父级下的最后一个 //如果只有一个元素的话，last也是第一个元素 $('.first-div a:last-child').css("color", "red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找class="first-div"下的只有一个子元素的a元素 $('.first-div a:only-child').css("color", "blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找class="last-div"下的第二个a元素 $('last-div a:nth-child(2)').css("color", "#CD00CD");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找class="last-div"下的倒数第二个a元素 $('last-div a:nth-last-child(2)').css("color", "red");&lt;/script&gt; 表单元素选择器 123456789101112131415161718192021222324252627282930313233343536373839404142434445&lt;script type="text/javascript"&gt; //查找所有 input, textarea, select 和 button 元素 //:input 选择器基本上选择所有表单控件 $(':input').css("border", "1px groove red"); &lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中类型为text的input元素 $('input:text').css("background", "#A2CD5A");&lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中类型为password的input元素 $('input:password').css("background", "yellow"); &lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中的单选按钮,并选中 $('input:radio').attr('checked','true');&lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中的复选按钮,并选中 $('input:checkbox').attr('checked','true'); &lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中的提交的按钮,修改背景颜色 $('input:submit').css("background", "#C6E2FF");&lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中的图像类型的元素,修改背景颜色 $('input:img').css("background", "#F4A460");&lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中类型为按钮的元素 $('input:button').css("background", "red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //匹配所有input元素中类型为file的元素 $('input:file').css("background", "#CD1076");&lt;/script&gt; 表单对象属性选择器 123456789101112131415161718192021&lt;script type="text/javascript"&gt; //查找所有input所有可用的（未被禁用的元素）input元素。 $('input:enabled').css("border", "2px groove red");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有input所有不可用的（被禁用的元素）input元素。 $('input:disabled').css("border", "2px groove blue");&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有input所有勾选的元素(单选框,复选框) //移除input的checked属性 $('input:checked').removeAttr('checked')&lt;/script&gt;&lt;script type="text/javascript"&gt; //查找所有option元素中,有selected属性被选中的选项 //移除option的selected属性 $('option:selected').removeAttr('selected')&lt;/script&gt; 特殊选择器thisJavaScript原生DOM处理 1234567&lt;script type="text/javascript"&gt; var p1 = document.getElementById('test1') p1.addEventListener('click',function()&#123; //直接通过dom的方法改变颜色 this.style.color = "red"; &#125;,false);&lt;/script&gt; jQuery处理123456&lt;script type="text/javascript"&gt; $('#test2').click(function()&#123; //通过包装成jQuery对象改变颜色 $(this).css('color','blue'); &#125;)&lt;/script&gt; Dom对象转换jQuery对象123456789var div = document.getElementsByTagName('div'); //dom对象 div[1].style.color = "blue"; //将dom节点div转化为$div的jquery对象 var $div = $(div); // var $first = $div.first(); //找到第一个div元素 // $first.css('color', 'red'); //给第一个元素设置颜色 $div.get(0).style.color = "red"; $("div").get($div.length -1).style.color = "pink"; jQuery对象转换Dom对象123var $div = $('div'); //jQuery对象 var div = $div.get(0); div.style.color = 'red'; //操作dom对象的属性]]></content>
     </entry>
 
     

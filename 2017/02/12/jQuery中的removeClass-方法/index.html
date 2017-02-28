@@ -99,7 +99,7 @@
 <meta property="og:description" content=".removeClass( )方法
 .removeClass( [className ] )：每个匹配元素移除的一个或多个用空格隔开的样式名
 .removeClass( function(index, class) ) ： 一个函数，返回一个或多个将要被移除的样式名">
-<meta property="og:updated_time" content="2017-02-12T06:12:24.593Z">
+<meta property="og:updated_time" content="2017-02-15T05:26:45.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery中的removeClass()方法">
 <meta name="twitter:description" content=".removeClass( )方法
@@ -421,8 +421,8 @@
 <li>.removeClass( function(index, class) ) ： 一个函数，返回一个或多个将要被移除的样式名<a id="more"></a>
 <h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4>如果一个样式类名作为一个参数,只有这样式类会被从匹配的元素集合中删除 。 如果没有样式名作为参数，那么所有的样式类将被移除</li>
 </ol>
-<p>学习代码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;script type="text/javascript"&gt; </div><div class="line">    //class=left下div元素删除newClass样式</div><div class="line">    $('.left div').removeClass('newClass')</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;script type="text/javascript"&gt; </div><div class="line">    //.removeClass() 方法允许我们指定一个函数作为参数，返回将要被删除的样式</div><div class="line">    $('.right &gt; div:first').removeClass(function(index,className)&#123;</div><div class="line">        </div><div class="line">        //className = aa bb oClass</div><div class="line">        //把div的className赋给下一个兄弟元素div上作为它的class</div><div class="line">        $(this).next().addClass(className)</div><div class="line"></div><div class="line">        //删除自己本身的oClass</div><div class="line">        return 'oClass'</div><div class="line">    &#125;)</div><div class="line"></div><div class="line"></div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-
+<p>学习代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt; </div><div class="line">    <span class="comment">//class=left下div元素删除newClass样式</span></div><div class="line">    $(<span class="string">'.left div'</span>).removeClass(<span class="string">'newClass'</span>)</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt; </div><div class="line">    <span class="comment">//.removeClass() 方法允许我们指定一个函数作为参数，返回将要被删除的样式</span></div><div class="line">    $(<span class="string">'.right &gt; div:first'</span>).removeClass(<span class="function"><span class="keyword">function</span>(<span class="params">index,className</span>)</span>&#123;</div><div class="line">        </div><div class="line">        <span class="comment">//className = aa bb oClass</span></div><div class="line">        <span class="comment">//把div的className赋给下一个兄弟元素div上作为它的class</span></div><div class="line">        $(<span class="keyword">this</span>).next().addClass(className)</div><div class="line"></div><div class="line">        <span class="comment">//删除自己本身的oClass</span></div><div class="line">        <span class="keyword">return</span> <span class="string">'oClass'</span></div><div class="line">    &#125;)</div><div class="line"></div><div class="line"></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -561,7 +561,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">105</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -570,7 +570,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -579,7 +579,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
