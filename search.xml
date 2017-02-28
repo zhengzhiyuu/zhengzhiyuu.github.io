@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[Vue Todo list 代码]]></title>
       <url>%2F2017%2F02%2F18%2FVue-Todo-list-%E4%BB%A3%E7%A0%81%2F</url>
-      <content type="text"><![CDATA[123456789101112131415161718192021222324252627282930313233343536373839404142434445464748&lt;template&gt; &lt;div class="hello"&gt; &lt;h1 v-text="title"&gt;&lt;/h1&gt; &lt;input v-model="newItem" v-on:keyup.enter="addNew"&gt; &lt;ul&gt; &lt;li v-for="item in items" v-text="item.label" v-bind:class="&#123;items: item.isOk&#125;" v-on:click="onclick(item)"&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt;&lt;/template&gt;&lt;script&gt; export default &#123; name: 'hello', data () &#123; return &#123; title: 'this is a todo list', items: [], newItem: '' &#125; &#125;, methods: &#123; onclick: function (item) &#123; item.isOk = !item.isOk &#125;, addNew: function () &#123; this.items.push(&#123; label: this.newItem, isOk: false &#125;) this.newItem = '' &#125; &#125; &#125;&lt;/script&gt;&lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;&lt;style scoped&gt;.hello&#123; margin-top: 200px;&#125;.items&#123; text-decoration: line-through; &#125;ul,li&#123; list-style-type: none;&#125;&lt;/style&gt;]]></content>
+      <content type="text"><![CDATA[Vue初学123456789101112131415161718192021222324252627282930313233343536373839404142434445464748&lt;template&gt; &lt;div class="hello"&gt; &lt;h1 v-text="title"&gt;&lt;/h1&gt; &lt;input v-model="newItem" v-on:keyup.enter="addNew"&gt; &lt;ul&gt; &lt;li v-for="item in items" v-text="item.label" v-bind:class="&#123;items: item.isOk&#125;" v-on:click="onclick(item)"&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/div&gt;&lt;/template&gt;&lt;script&gt; export default &#123; name: 'hello', data () &#123; return &#123; title: 'this is a todo list', items: [], newItem: '' &#125; &#125;, methods: &#123; onclick: function (item) &#123; item.isOk = !item.isOk &#125;, addNew: function () &#123; this.items.push(&#123; label: this.newItem, isOk: false &#125;) this.newItem = '' &#125; &#125; &#125;&lt;/script&gt;&lt;!-- Add "scoped" attribute to limit CSS to this component only --&gt;&lt;style scoped&gt;.hello&#123; margin-top: 200px;&#125;.items&#123; text-decoration: line-through; &#125;ul,li&#123; list-style-type: none;&#125;&lt;/style&gt;]]></content>
     </entry>
 
     
@@ -215,7 +215,7 @@
     <entry>
       <title><![CDATA[基础动画效果]]></title>
       <url>%2F2017%2F02%2F16%2F%E5%9F%BA%E7%A1%80%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C%2F</url>
-      <content type="text"><![CDATA[1.动画基础隐藏和显示 隐藏元素的hide方法 显示元素的show方法 显示与隐藏切换toggle方法 2.上卷下拉效果 下拉动画slideDown 上卷动画slideUp 上卷下拉切换slideToggle 3.淡入淡出效果 淡出动画fadeOut 淡入动画fadeIn 淡入淡出切换fadeToggle 淡入效果fadeTo 4.自定义动画 animate(上) animate(下) 停止动画stop 5.jQuery核心 each方法的应用 查找数组中的索引inArray 去空格神器trim方法 DOM元素的获取get方法 DOM元素的获取index方法git]]></content>
+      <content type="text"><![CDATA[jQuery动画 1.动画基础隐藏和显示 隐藏元素的hide方法 显示元素的show方法 显示与隐藏切换toggle方法 2.上卷下拉效果 下拉动画slideDown 上卷动画slideUp 上卷下拉切换slideToggle 3.淡入淡出效果 淡出动画fadeOut 淡入动画fadeIn 淡入淡出切换fadeToggle 淡入效果fadeTo 4.自定义动画 animate(上) animate(下) 停止动画stop 5.jQuery核心 each方法的应用 查找数组中的索引inArray 去空格神器trim方法 DOM元素的获取get方法 DOM元素的获取index方法git]]></content>
     </entry>
 
     
