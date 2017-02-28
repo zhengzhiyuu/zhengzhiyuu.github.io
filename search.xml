@@ -12,7 +12,7 @@
     <entry>
       <title><![CDATA[bootstrap响应式表格]]></title>
       <url>%2F2017%2F02%2F18%2Fbootstrap%E5%93%8D%E5%BA%94%E5%BC%8F%E8%A1%A8%E6%A0%BC%2F</url>
-      <content type="text"><![CDATA[Bootstrap提供了一个容器，并且此容器设置类名“.table-responsive”,此容器就具有响应式效果，然后将置于这个容器当中，这样表格也就具有响应式效果12345&lt;div class="table-responsive"&gt;&lt;table class="table table-bordered"&gt; …&lt;/table&gt;&lt;/div&gt;]]></content>
+      <content type="text"><![CDATA[Bootstrap提供了一个容器，并且此容器设置类名“.table-responsive”,此容器就具有响应式效果，然后将置于这个容器当中，这样表格也就具有响应式效果 12345&lt;div class="table-responsive"&gt;&lt;table class="table table-bordered"&gt; …&lt;/table&gt;&lt;/div&gt;]]></content>
     </entry>
 
     
