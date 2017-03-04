@@ -3,9 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[递归算法]]></title>
+      <url>%2F2017%2F03%2F04%2F%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[递归就是程序自己调用自己( recursion)一般来说,递归需要有边界条件、递归前进段和递归返回段12345678function a(num) &#123; if(num &lt;= 1) &#123; return 1; &#125;else &#123; return num * a(num-1) &#125;&#125;console.log(a(5)) //120 消除紧密耦合:12345678function a(num) &#123; if(num &lt;= 1) &#123; return 1; &#125;else &#123; return num * arguments.callee(num-1) &#125;&#125;console.log(a(5)) 为什么要消除耦合现象？123456789101112131415161718function factorial(num) &#123; if(num &lt;= 1) &#123; return 1; &#125; else &#123; return num * factorial(num-1); &#125; &#125; alert(factorial(5)); //输出120 factorial = function()&#123; return 0; &#125; alert(factorial(5)); //输出0//原因是return num * factorial(num-1)中调用的factorial函数被覆盖了 解决办法：12345678910111213141516171819function factorial(num) &#123; if(num &lt;= 1) &#123; return 1; &#125; else &#123; return num * arguments.callee(num-1); &#125; &#125; alert(factorial(5)); //输出120 var trueFactorial = factorial; //赋值函数指针 factorial = function()&#123; return 0; &#125; alert(factorial(5)); //输出0；原因是return num * factorial(num-1);中调用的factorial函数被覆盖了 alert(trueFactorial(5)); //输出120]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[JavaScript数组排序]]></title>
       <url>%2F2017%2F03%2F04%2FJavaScript%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%2F</url>
-      <content type="text"><![CDATA[sort()方法先创建比较函数12345678910//从大到小排序function compare(value1,value2) &#123; if(value1 &lt; value2) &#123; return -1; &#125;else if(value1 &gt; value2) &#123; return 1; &#125;else &#123; return 0; &#125;&#125; 将其作为参数传给sort()方法例：123var value = ['1','5','2','15','11','8']value.sort(compare)alert(value) //15,11,8,5,2,1 反之123456789function compare(value1,value2) &#123; if(value1 &lt; value2) &#123; return 1; &#125;else if(value1 &gt; value2) &#123; return -1; &#125;else &#123; return 0; &#125;&#125;]]></content>
+      <content type="text"><![CDATA[sort()方法先创建比较函数12345678910//从大到小排序function compare(value1,value2) &#123; if(value1 &lt; value2) &#123; return -1; &#125;else if(value1 &gt; value2) &#123; return 1; &#125;else &#123; return 0; &#125;&#125; 将其作为参数传给sort()方法例：123var value = ['1','5','2','15','11','8']value.sort(compare)alert(value) //15,11,8,5,2,1 反之123456789function compare(value1,value2) &#123; if(value1 &lt; value2) &#123; return 1; &#125;else if(value1 &gt; value2) &#123; return -1; &#125;else &#123; return 0; &#125;&#125; 试验品：12345678910111213function creatCompare(propertyName) &#123; return function(object1,object2) &#123; var = object1[propertyName]; var = object2[propertyName]; if(value1 &lt; value2) &#123; return -1; &#125;else if(value1 &gt; value2) &#123; return 1; &#125;else &#123; return 0; &#125; &#125;;&#125;]]></content>
     </entry>
 
     
