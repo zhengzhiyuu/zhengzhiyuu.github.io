@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[Object.defineproperties]]></title>
+      <url>%2F2017%2F03%2F05%2FObject-defineproperties%2F</url>
+      <content type="text"><![CDATA[和Object.defineProperty类似，只不过这个方法可以设置多个属性。继承defineproperty的参数 语法Object.defineProperties(obj, props,descriptor) 参数Object obj 目标对象String prop 需要定义的属性Object descriptor 该属性拥有的特性，可设置的值有： value 属性的值，默认为 undefined。 writable 该属性是否可写，如果设置成 false，则任何对该属性改写的操作都无效（但不会报错），默认为 false。 get 一旦目标对象访问该属性，就会调用这个方法，并返回结果。默认为 undefined。 set 一旦目标对象设置该属性，就会调用这个方法。默认为 undeinfed。 configurable 如果为false，则任何尝试删除目标属性或修改属性以下特性（writable, configurable, enumerable）的行为将被无效化，默认为 false。 enumerable 是否能在for…in循环中遍历出来或在Object.keys中列举出来。默认为 false。1234567891011121314151617181920212223242526272829//用面向字面量的方式创建一个book对象var book=&#123;&#125;;//调用Object.defineProperties(对象名，要添加的属性)方法，为对象一次定义多个属性(1.数据属性)(2.访问器属性)Object.defineProperties(book,&#123;//添加的两个数据属性(_year,edition)_year:&#123;//(_year)前面的下划线表示只能通过对象方法访问的属性value:2004&#125;,edition:&#123;value:1&#125;,//添加了访问器属性(year)year:&#123;//调用get方法读取属性get:function()&#123;return this._year;&#125;,//调用set方法写入属性set:function(newValue)&#123;if (newValue&gt;2004) &#123;this._year=newValue;this.edition+=newValue-2004;&#125;&#125;&#125;&#125;);//测试book.year=2005;//访问器属性常见方式，设置一个属性的值会导致其他属性发生变化alert(book.edition);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Object.defineproperty]]></title>
+      <url>%2F2017%2F03%2F05%2FObject-defineproperty%2F</url>
+      <content type="text"><![CDATA[直接在一个对象上定义一个新的属性，或修改一个已经存在的属性。这个方法会返回该对象。 语法Object.defineProperty(obj, prop, descriptor) 参数Object obj 目标对象String prop 需要定义的属性Object descriptor 该属性拥有的特性，可设置的值有： value 属性的值，默认为 undefined。 writable 该属性是否可写，如果设置成 false，则任何对该属性改写的操作都无效（但不会报错），默认为 false。 get 一旦目标对象访问该属性，就会调用这个方法，并返回结果。默认为 undefined。 set 一旦目标对象设置该属性，就会调用这个方法。默认为 undeinfed。 configurable 如果为false，则任何尝试删除目标属性或修改属性以下特性（writable, configurable, enumerable）的行为将被无效化，默认为 false。 enumerable 是否能在for…in循环中遍历出来或在Object.keys中列举出来。默认为 false。注意: ~ 在 descriptor 中不能同时设置访问器 (get 和 set) 和 wriable 或 value，否则会报错误]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[递归算法]]></title>
       <url>%2F2017%2F03%2F04%2F%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%2F</url>
       <content type="text"><![CDATA[递归就是程序自己调用自己( recursion)一般来说,递归需要有边界条件、递归前进段和递归返回段12345678function a(num) &#123; if(num &lt;= 1) &#123; return 1; &#125;else &#123; return num * a(num-1) &#125;&#125;console.log(a(5)) //120 消除紧密耦合:12345678function a(num) &#123; if(num &lt;= 1) &#123; return 1; &#125;else &#123; return num * arguments.callee(num-1) &#125;&#125;console.log(a(5)) 为什么要消除耦合现象？123456789101112131415161718function factorial(num) &#123; if(num &lt;= 1) &#123; return 1; &#125; else &#123; return num * factorial(num-1); &#125; &#125; alert(factorial(5)); //输出120 factorial = function()&#123; return 0; &#125; alert(factorial(5)); //输出0//原因是return num * factorial(num-1)中调用的factorial函数被覆盖了 解决办法：12345678910111213141516171819function factorial(num) &#123; if(num &lt;= 1) &#123; return 1; &#125; else &#123; return num * arguments.callee(num-1); &#125; &#125; alert(factorial(5)); //输出120 var trueFactorial = factorial; //赋值函数指针 factorial = function()&#123; return 0; &#125; alert(factorial(5)); //输出0；原因是return num * factorial(num-1);中调用的factorial函数被覆盖了 alert(trueFactorial(5)); //输出120]]></content>
