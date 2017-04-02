@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="JavaScript,闭包," />
 
 
 
@@ -87,16 +87,16 @@
 
 
 
-<meta name="description" content="闭包学的那是细碎啊！">
+<meta name="description" content="稀碎啊稀碎!　　模块的一般形式是：一个定义了“私有变量”和函数的函数，利用闭包的特性(即创建了可以访问“私有变量和函数”的特权函数)，最后将这些特权函数返回或保存到一个可以访问的地方。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript闭包初学">
+<meta property="og:title" content="JavaScript闭包初识">
 <meta property="og:url" content="http://yoursite.com/2017/04/02/JavaScript闭包初学/index.html">
 <meta property="og:site_name" content="明己志">
-<meta property="og:description" content="闭包学的那是细碎啊！">
-<meta property="og:updated_time" content="2017-04-02T04:54:42.379Z">
+<meta property="og:description" content="稀碎啊稀碎!　　模块的一般形式是：一个定义了“私有变量”和函数的函数，利用闭包的特性(即创建了可以访问“私有变量和函数”的特权函数)，最后将这些特权函数返回或保存到一个可以访问的地方。">
+<meta property="og:updated_time" content="2017-04-02T06:28:55.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript闭包初学">
-<meta name="twitter:description" content="闭包学的那是细碎啊！">
+<meta name="twitter:title" content="JavaScript闭包初识">
+<meta name="twitter:description" content="稀碎啊稀碎!　　模块的一般形式是：一个定义了“私有变量”和函数的函数，利用闭包的特性(即创建了可以访问“私有变量和函数”的特权函数)，最后将这些特权函数返回或保存到一个可以访问的地方。">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title> JavaScript闭包初学 | 明己志 </title>
+  <title> JavaScript闭包初识 | 明己志 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -304,7 +304,7 @@
             
             
               
-                JavaScript闭包初学
+                JavaScript闭包初识
               
             
           </h1>
@@ -380,7 +380,7 @@
 
           
           
-             <span id="/2017/04/02/JavaScript闭包初学/" class="leancloud_visitors" data-flag-title="JavaScript闭包初学">
+             <span id="/2017/04/02/JavaScript闭包初学/" class="leancloud_visitors" data-flag-title="JavaScript闭包初识">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -409,9 +409,10 @@
       
 
       
-        <p>闭包学的那是细碎啊！<br><a id="more"></a><br>IIFE立即调用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> person = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">let</span> age = <span class="number">21</span>;</div><div class="line">            <span class="keyword">return</span> &#123;</div><div class="line">                <span class="attr">name</span>: <span class="string">"Anson"</span>,</div><div class="line">                <span class="attr">getAge</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                    <span class="keyword">return</span> age;</div><div class="line">                &#125;,</div><div class="line">                <span class="attr">gorwOlder</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                    age++;</div><div class="line">                &#125;</div><div class="line">            &#125;;</div><div class="line">        &#125;());</div><div class="line">        <span class="built_in">console</span>.log(person.name); <span class="comment">//Anson</span></div><div class="line">        <span class="built_in">console</span>.log(person.getAge()); <span class="comment">//21</span></div><div class="line">        person.age = <span class="number">100</span>;</div><div class="line">        <span class="built_in">console</span>.log(person.getAge()); <span class="comment">//21</span></div><div class="line">        person.gorwOlder();</div><div class="line">        <span class="built_in">console</span>.log(person.getAge()); <span class="comment">//22</span></div></pre></td></tr></table></figure></p>
-<p>使用模块模式创建person对象,变量age是给对象的私有属性,它无法被外界直接访问,但可以通过对象方法来访问，该对象有两个特权方法getAge()和goewOlder()<br>模块模式的变种暴露模式：<br>它将所有变量和方法都组织在IIFE的顶部，然后将它们设置到需要被返回的对象上<br>它可以保障所有的变量和函数声明都在一处<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> person = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">let</span> age = <span class="number">21</span>;</div><div class="line"></div><div class="line">            <span class="function"><span class="keyword">function</span> <span class="title">getAge</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="keyword">return</span> age;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="function"><span class="keyword">function</span> <span class="title">gorwOlder</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                age++;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> &#123;</div><div class="line">                <span class="attr">name</span>: <span class="string">"Anson"</span>,</div><div class="line">                <span class="attr">getAge</span>: getAge,</div><div class="line">                <span class="attr">gorwOlder</span>: gorwOlder</div><div class="line">            &#125;;</div><div class="line">        &#125;());</div></pre></td></tr></table></figure></p>
-<p>结果是什么那？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"The Window"</span>;</div><div class="line">　　<span class="keyword">var</span> object = &#123;</div><div class="line">　　　　<span class="attr">name</span> : <span class="string">"My Object"</span>,</div><div class="line">　　　　<span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　　　<span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">　　　　　　&#125;;</div><div class="line">　　　　&#125;</div><div class="line">　　&#125;;</div><div class="line">　　alert(object.getNameFunc()());</div></pre></td></tr></table></figure></p>
+        <p>稀碎啊稀碎!<br>　　模块的一般形式是：一个定义了“私有变量”和函数的函数，利用闭包的特性(即创建了可以访问“私有变量和函数”的特权函数)，最后将这些特权函数返回或保存到一个可以访问的地方。<br><a id="more"></a><br>IIFE立即调用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> person = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">let</span> age = <span class="number">21</span>;</div><div class="line">            <span class="keyword">return</span> &#123;</div><div class="line">                <span class="attr">name</span>: <span class="string">"Anson"</span>,</div><div class="line">                <span class="attr">getAge</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                    <span class="keyword">return</span> age;</div><div class="line">                &#125;,</div><div class="line">                <span class="attr">growOlder</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                    age++;</div><div class="line">                &#125;</div><div class="line">            &#125;;</div><div class="line">        &#125;());</div><div class="line">        <span class="built_in">console</span>.log(person.name); <span class="comment">//Anson</span></div><div class="line">        <span class="built_in">console</span>.log(person.getAge()); <span class="comment">//21</span></div><div class="line">        person.age = <span class="number">100</span>;</div><div class="line">        <span class="built_in">console</span>.log(person.getAge()); <span class="comment">//21</span></div><div class="line">        person.growOlder();</div><div class="line">        <span class="built_in">console</span>.log(person.getAge()); <span class="comment">//22</span></div></pre></td></tr></table></figure></p>
+<p>使用模块模式创建person对象,变量age是给对象的私有属性,它无法被外界直接访问,但可以通过对象方法来访问，该对象有两个特权方法getAge()和goewOlder()<br>模块模式的变种暴露模式：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> person = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">let</span> age = <span class="number">21</span>;</div><div class="line"></div><div class="line">            <span class="function"><span class="keyword">function</span> <span class="title">getAge</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                <span class="keyword">return</span> age;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="function"><span class="keyword">function</span> <span class="title">gorwOlder</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                age++;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> &#123;</div><div class="line">                <span class="attr">name</span>: <span class="string">"Anson"</span>,</div><div class="line">                <span class="attr">getAge</span>: getAge,</div><div class="line">                <span class="attr">gorwOlder</span>: gorwOlder</div><div class="line">            &#125;;</div><div class="line">        &#125;());</div></pre></td></tr></table></figure></p>
+<p>它将所有变量和方法都组织在IIFE的顶部，然后将它们设置到需要被返回的对象上<br>它可以保障所有的变量和函数声明都在一处</p>
+<p>理解下面的结果：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"The Window"</span>;</div><div class="line">　　<span class="keyword">var</span> object = &#123;</div><div class="line">　　　　<span class="attr">name</span> : <span class="string">"My Object"</span>,</div><div class="line">　　　　<span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　　　<span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">　　　　　　&#125;;</div><div class="line">　　　　&#125;</div><div class="line">　　&#125;;</div><div class="line">　　alert(object.getNameFunc()());</div></pre></td></tr></table></figure></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"The Window"</span>;</div><div class="line">　　<span class="keyword">var</span> object = &#123;</div><div class="line">　　　　<span class="attr">name</span> : <span class="string">"My Object"</span>,</div><div class="line">　　　　<span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　<span class="keyword">var</span> that = <span class="keyword">this</span>;</div><div class="line">　　　　　　<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　　　<span class="keyword">return</span> that.name;</div><div class="line">　　　　　　&#125;;</div><div class="line">　　　　&#125;</div><div class="line">　　&#125;;</div><div class="line">　　alert(object.getNameFunc()());</div></pre></td></tr></table></figure>
       
     </div>
@@ -437,6 +438,8 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
+            <a href="/tags/闭包/" rel="tag"># 闭包</a>
+          
         </div>
       
 
@@ -457,6 +460,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/02/构造函数的私有成员/" rel="prev" title="构造函数的私有成员">
+                构造函数的私有成员 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -506,7 +513,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/04/02/JavaScript闭包初学/"
-           data-title="JavaScript闭包初学" data-url="http://yoursite.com/2017/04/02/JavaScript闭包初学/">
+           data-title="JavaScript闭包初识" data-url="http://yoursite.com/2017/04/02/JavaScript闭包初学/">
       </div>
     
   </div>
@@ -544,7 +551,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">116</span>
+                <span class="site-state-item-count">117</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -562,7 +569,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
