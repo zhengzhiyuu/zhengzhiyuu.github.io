@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[JSON]]></title>
+      <url>%2F2017%2F04%2F15%2FJSON%2F</url>
+      <content type="text"><![CDATA[JSON是一种数据交换格式 序列化把对象转换为JSON格式:123456let MyObj = &#123; name: 'anson', age: 20&#125;JSON.stringify(MyObj);//"&#123;"name":"anson","age":20&#125;" 格式换行:1234567891011let MyObj = &#123; name: 'anson', age: 20&#125;JSON.stringify(MyObj,null,' ');/* "&#123; "name":"anson", "age":20 &#125;"*/ 第二个参数:筛选对象键值123456JSON.stringify(MyObj,["name"],' ');/* &#123; "name":"anson" &#125;*/ 传入函数对每个键值进行处理12345678910111213function convert(key,value) &#123; if(typeof value == 'string') &#123; return value.toUpperCase(); &#125; return value;&#125;JSON.stringify(MyObj,convert,' ');/* &#123; "name": "ANSON", "age": 20 &#125;*/ 精确控制序列化:似乎方法名称必须是toJSON1234567891011let MyObj = &#123; name: 'anson', age: 20, toJSON() &#123; return &#123; name: this.name &#125;; &#125; &#125;JSON.stringify(MyObj);//&#123;"name":"anson"&#125; 反序列化:把JSON转换为对象1234567let MyObj = &#123; name: 'anson', age: 20 &#125;let MyJson = JSON.stringify(MyObj);JSON.parse(MyJson)//Object &#123;name: "anson", age: 2&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[实现自增方法]]></title>
       <url>%2F2017%2F04%2F15%2F%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%A2%9E%E6%96%B9%E6%B3%95%2F</url>
       <content type="text"><![CDATA[用Generator 闭包 构造器实现自增 Generator:123456function* next_id() &#123; let index = 0; while (true) &#123; yield index++; &#125; &#125; 闭包:123function next_id() &#123; let index = 0; return () =&gt; index++; 构造器:1234function Next_id() &#123; let indx = 0; this.next = function () &#123; return indx++;]]></content>
@@ -101,16 +108,16 @@
 
     
     <entry>
-      <title><![CDATA[患得患失 小起小落]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
-      <content type="text"></content>
+      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
+      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
-      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
+      <title><![CDATA[患得患失 小起小落]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
+      <content type="text"></content>
     </entry>
 
     
