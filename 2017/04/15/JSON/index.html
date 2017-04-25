@@ -89,13 +89,13 @@
 
 <meta name="description" content="JSON是一种数据交换格式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSON">
+<meta property="og:title" content="JSON的常用方法">
 <meta property="og:url" content="http://yoursite.com/2017/04/15/JSON/index.html">
 <meta property="og:site_name" content="明己志">
 <meta property="og:description" content="JSON是一种数据交换格式">
-<meta property="og:updated_time" content="2017-04-15T10:17:56.987Z">
+<meta property="og:updated_time" content="2017-04-21T06:48:51.883Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JSON">
+<meta name="twitter:title" content="JSON的常用方法">
 <meta name="twitter:description" content="JSON是一种数据交换格式">
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title> JSON | 明己志 </title>
+  <title> JSON的常用方法 | 明己志 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -314,7 +314,7 @@
             
             
               
-                JSON
+                JSON的常用方法
               
             
           </h1>
@@ -390,7 +390,7 @@
 
           
           
-             <span id="/2017/04/15/JSON/" class="leancloud_visitors" data-flag-title="JSON">
+             <span id="/2017/04/15/JSON/" class="leancloud_visitors" data-flag-title="JSON的常用方法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -420,12 +420,12 @@
 
       
         <p>JSON是一种数据交换格式<br><a id="more"></a></p>
-<h4 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h4><p>把对象转换为JSON格式:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> MyObj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'anson'</span>,</div><div class="line">    <span class="attr">age</span>: <span class="number">20</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">JSON</span>.stringify(MyObj);</div><div class="line"><span class="comment">//"&#123;"name":"anson","age":20&#125;"</span></div></pre></td></tr></table></figure></p>
-<h4 id="格式换行"><a href="#格式换行" class="headerlink" title="格式换行:"></a>格式换行:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> MyObj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'anson'</span>,</div><div class="line">    <span class="attr">age</span>: <span class="number">20</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">JSON</span>.stringify(MyObj,<span class="literal">null</span>,<span class="string">' '</span>);</div><div class="line"><span class="comment">/*</span></div><div class="line">   "&#123;</div><div class="line">    "name":"anson",</div><div class="line">    "age":20</div><div class="line">    &#125;"</div><div class="line">*/</div></pre></td></tr></table></figure>
+<h4 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h4><p>把对象转换为JSON格式:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> MyObj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'anson'</span>,</div><div class="line">    <span class="attr">age</span>: <span class="number">20</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">JSON</span>.stringify(MyObj);</div><div class="line"><span class="comment">//"&#123;"name":"anson","age":20&#125;"</span></div></pre></td></tr></table></figure></p>
+<h4 id="格式换行"><a href="#格式换行" class="headerlink" title="格式换行:"></a>格式换行:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> MyObj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'anson'</span>,</div><div class="line">    <span class="attr">age</span>: <span class="number">20</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">JSON</span>.stringify(MyObj,<span class="literal">null</span>,<span class="string">' '</span>);</div><div class="line"><span class="comment">/*</span></div><div class="line">   "&#123;</div><div class="line">    "name":"anson",</div><div class="line">    "age":20</div><div class="line">    &#125;"</div><div class="line">*/</div></pre></td></tr></table></figure>
 <h4 id="第二个参数"><a href="#第二个参数" class="headerlink" title="第二个参数:"></a>第二个参数:</h4><h5 id="筛选对象键值"><a href="#筛选对象键值" class="headerlink" title="筛选对象键值"></a>筛选对象键值</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">JSON</span>.stringify(MyObj,[<span class="string">"name"</span>],<span class="string">' '</span>);</div><div class="line"><span class="comment">/*</span></div><div class="line">    &#123;</div><div class="line">    "name":"anson"</div><div class="line">    &#125;</div><div class="line">*/</div></pre></td></tr></table></figure>
 <h5 id="传入函数对每个键值进行处理"><a href="#传入函数对每个键值进行处理" class="headerlink" title="传入函数对每个键值进行处理"></a>传入函数对每个键值进行处理</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">convert</span>(<span class="params">key,value</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> value == <span class="string">'string'</span>) &#123;</div><div class="line">        <span class="keyword">return</span> value.toUpperCase();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> value;</div><div class="line">&#125;</div><div class="line"><span class="built_in">JSON</span>.stringify(MyObj,convert,<span class="string">' '</span>);</div><div class="line"><span class="comment">/*</span></div><div class="line">   &#123;</div><div class="line">     "name": "ANSON",</div><div class="line">     "age": 20</div><div class="line">   &#125;</div><div class="line">*/</div></pre></td></tr></table></figure>
-<h4 id="精确控制序列化"><a href="#精确控制序列化" class="headerlink" title="精确控制序列化:"></a>精确控制序列化:</h4><p><code>似乎方法名称必须是toJSON</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> MyObj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'anson'</span>,</div><div class="line">    <span class="attr">age</span>: <span class="number">20</span>,</div><div class="line">    toJSON() &#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">name</span>: <span class="keyword">this</span>.name</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line"> &#125;</div><div class="line"><span class="built_in">JSON</span>.stringify(MyObj);</div><div class="line"><span class="comment">//&#123;"name":"anson"&#125;</span></div></pre></td></tr></table></figure></p>
-<h4 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化:"></a>反序列化:</h4><p>把JSON转换为对象<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> MyObj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'anson'</span>,</div><div class="line">    <span class="attr">age</span>: <span class="number">20</span></div><div class="line"> &#125;</div><div class="line"><span class="keyword">let</span> MyJson = <span class="built_in">JSON</span>.stringify(MyObj);</div><div class="line"><span class="built_in">JSON</span>.parse(MyJson)</div><div class="line"><span class="comment">//Object &#123;name: "anson", age: 2&#125;</span></div></pre></td></tr></table></figure></p>
+<h4 id="精确控制序列化"><a href="#精确控制序列化" class="headerlink" title="精确控制序列化:"></a>精确控制序列化:</h4><p><code>似乎方法名称必须是toJSON</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> MyObj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'anson'</span>,</div><div class="line">    <span class="attr">age</span>: <span class="number">20</span>,</div><div class="line">    toJSON() &#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">name</span>: <span class="keyword">this</span>.name</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line"> &#125;</div><div class="line"><span class="built_in">JSON</span>.stringify(MyObj);</div><div class="line"><span class="comment">//&#123;"name":"anson"&#125;</span></div></pre></td></tr></table></figure></p>
+<h4 id="反序列化"><a href="#反序列化" class="headerlink" title="反序列化:"></a>反序列化:</h4><p>把JSON转换为对象<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> MyObj = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'anson'</span>,</div><div class="line">    <span class="attr">age</span>: <span class="number">20</span></div><div class="line"> &#125;</div><div class="line"><span class="keyword">const</span> MyJson = <span class="built_in">JSON</span>.stringify(MyObj);</div><div class="line"><span class="built_in">JSON</span>.parse(MyJson)</div><div class="line"><span class="comment">//Object &#123;name: "anson", age: 2&#125;</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -462,8 +462,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/15/实现自增方法/" rel="next" title="实现自增方法">
-                <i class="fa fa-chevron-left"></i> 实现自增方法
+              <a href="/2017/04/15/实现自增方法/" rel="next" title="几种实现自增方法">
+                <i class="fa fa-chevron-left"></i> 几种实现自增方法
               </a>
             
           </div>
@@ -471,6 +471,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/25/单例模式/" rel="prev" title="Singleton(单例)模式">
+                Singleton(单例)模式 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -520,7 +524,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/04/15/JSON/"
-           data-title="JSON" data-url="http://yoursite.com/2017/04/15/JSON/">
+           data-title="JSON的常用方法" data-url="http://yoursite.com/2017/04/15/JSON/">
       </div>
     
   </div>
@@ -567,7 +571,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">122</span>
+                <span class="site-state-item-count">123</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -585,7 +589,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
