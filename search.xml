@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[递归算法]]></title>
+      <url>%2F2017%2F04%2F29%2F%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[递归就是程序自己调用自己( recursion)一般来说,递归需要有边界条件、递归前进段和递归返回段12345678function a(num) &#123; if(num &lt;= 1) &#123; return 1; &#125;else &#123; return num * a(num-1) &#125;&#125;console.log(a(5)) //120 消除紧密耦合:12345678function a(num) &#123; if(num &lt;= 1) &#123; return 1; &#125;else &#123; return num * arguments.callee(num-1) &#125;&#125;console.log(a(5)) 为什么要消除耦合现象？123456789101112131415161718function factorial(num) &#123; if(num &lt;= 1) &#123; return 1; &#125; else &#123; return num * factorial(num-1); &#125; &#125; alert(factorial(5)); //输出120 factorial = function()&#123; return 0; &#125; alert(factorial(5)); //输出0//原因是return num * factorial(num-1)中调用的factorial函数被覆盖了 解决办法：12345678910111213141516171819function factorial(num) &#123; if(num &lt;= 1) &#123; return 1; &#125; else &#123; return num * arguments.callee(num-1); &#125; &#125; alert(factorial(5)); //输出120 var trueFactorial = factorial; //赋值函数指针 factorial = function()&#123; return 0; &#125; alert(factorial(5)); //输出0；原因是return num * factorial(num-1);中调用的factorial函数被覆盖了 alert(trueFactorial(5)); //输出120]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[CSS中栏流动布局(圣杯?)]]></title>
       <url>%2F2017%2F04%2F29%2FCSS%E4%B8%AD%E6%A0%8F%E6%B5%81%E5%8A%A8%E5%B8%83%E5%B1%80%2F</url>
       <content type="text"><![CDATA[大概可能是圣杯布局吧 ? 不管了 , 反正是三栏中栏流动式布局 , 中间也没有被遮盖 !DOM 结构为:12345&lt;div id="main"&gt; &lt;div id="left"&gt;left&lt;/div&gt; &lt;div id="center"&gt;center&lt;/div&gt; &lt;div id="right"&gt;right&lt;/div&gt;&lt;/div&gt; CSS样式为:1234567891011121314151617181920212223242526272829303132333435363738394041* &#123; margin: 0; padding: 0;&#125;#main &#123; position: relative; /* 给左右两固定栏流出位置 解决遮盖中间流动层的被遮盖问题 */ padding-left: 300px; padding-right: 300px; /* 如果想要固定main宽度 则需抛出左右两侧的宽度 width:360px; 实际宽度则是:(360+300+300)px */&#125;#center &#123; width: 100%; height: 500px; background: greenyellow;&#125;#left &#123; width: 300px; height: 500px; background: paleturquoise; position: absolute; top: 0; left: 0;&#125;#right &#123; width: 300px; height: 500px; background: pink; position: absolute; top: 0; right: 0;&#125; 实现效果为:]]></content>
@@ -101,13 +108,6 @@
 
     
     <entry>
-      <title><![CDATA[递归算法]]></title>
-      <url>%2F2017%2F03%2F04%2F%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%2F</url>
-      <content type="text"><![CDATA[递归就是程序自己调用自己( recursion)一般来说,递归需要有边界条件、递归前进段和递归返回段12345678function a(num) &#123; if(num &lt;= 1) &#123; return 1; &#125;else &#123; return num * a(num-1) &#125;&#125;console.log(a(5)) //120 消除紧密耦合:12345678function a(num) &#123; if(num &lt;= 1) &#123; return 1; &#125;else &#123; return num * arguments.callee(num-1) &#125;&#125;console.log(a(5)) 为什么要消除耦合现象？123456789101112131415161718function factorial(num) &#123; if(num &lt;= 1) &#123; return 1; &#125; else &#123; return num * factorial(num-1); &#125; &#125; alert(factorial(5)); //输出120 factorial = function()&#123; return 0; &#125; alert(factorial(5)); //输出0//原因是return num * factorial(num-1)中调用的factorial函数被覆盖了 解决办法：12345678910111213141516171819function factorial(num) &#123; if(num &lt;= 1) &#123; return 1; &#125; else &#123; return num * arguments.callee(num-1); &#125; &#125; alert(factorial(5)); //输出120 var trueFactorial = factorial; //赋值函数指针 factorial = function()&#123; return 0; &#125; alert(factorial(5)); //输出0；原因是return num * factorial(num-1);中调用的factorial函数被覆盖了 alert(trueFactorial(5)); //输出120]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[JavaScript数组排序]]></title>
       <url>%2F2017%2F03%2F04%2FJavaScript%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%2F</url>
       <content type="text"><![CDATA[sort()方法ES6的写法:Array.sort((x, y) =&gt; x &gt; y ? 1 : -1)之前实在是太low…先创建比较函数12345678910111213//从小到大function compare(value1, value2) &#123; if (value1 &lt; value2) &#123; return -1; &#125; else if (value1 &gt; value2) &#123; return 1; &#125; else &#123; return 0; &#125;&#125;let value = [1,5,2,15,11,8];let a = value.sort(compare);console.log(a);//[1, 2, 5, 8, 11, 15] 反之123456789function compare(value1,value2) &#123; if(value1 &lt; value2) &#123; return 1; &#125;else if(value1 &gt; value2) &#123; return -1; &#125;else &#123; return 0; &#125;&#125;]]></content>
@@ -122,16 +122,16 @@
 
     
     <entry>
-      <title><![CDATA[患得患失 小起小落]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
-      <content type="text"></content>
+      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
+      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
-      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
+      <title><![CDATA[患得患失 小起小落]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
+      <content type="text"></content>
     </entry>
 
     
