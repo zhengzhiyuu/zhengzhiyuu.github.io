@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[CSS中栏流动布局(圣杯?)]]></title>
+      <url>%2F2017%2F04%2F29%2FCSS%E4%B8%AD%E6%A0%8F%E6%B5%81%E5%8A%A8%E5%B8%83%E5%B1%80%2F</url>
+      <content type="text"><![CDATA[大概可能是圣杯布局吧 ? 不管了 , 反正是三栏中栏流动式布局 , 中间也没有被遮盖 !DOM 结构为:12345&lt;div id="main"&gt; &lt;div id="left"&gt;left&lt;/div&gt; &lt;div id="center"&gt;center&lt;/div&gt; &lt;div id="right"&gt;right&lt;/div&gt;&lt;/div&gt; CSS样式为:12345678910111213141516171819202122232425262728293031323334353637383940414243&lt;style&gt; * &#123; margin: 0; padding: 0; &#125; #main &#123; position: relative; /* 给左右两固定栏流出位置 解决遮盖中间流动层的被遮盖问题 */ padding-left: 300px; padding-right: 300px; /* 如果想要固定main宽度 则需抛出左右两侧的宽度 width:360px; 实际宽度则是:(360+300+300)px */ &#125; #center &#123; width: 100%; height: 500px; background: greenyellow; &#125; #left &#123; width: 300px; height: 500px; background: paleturquoise; position: absolute; top: 0; left: 0; &#125; #right &#123; width: 300px; height: 500px; background: pink; position: absolute; top: 0; right: 0; &#125;&lt;/style&gt; 实现效果为:]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[单例模式(Singleton)]]></title>
       <url>%2F2017%2F04%2F25%2F%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%2F</url>
       <content type="text"><![CDATA[Singleton模式是最常见的模式之一,它提供了一个命名空间它限制了类的实例化次数只能是一次.从经典的意义上来说,Singleton 模式,在该实例不存在的情况下,可以通过一个方法创建一个类来实现创建类的新实例;如果实例已经存在,那么就会简单的返回该对象的引用.它不同于静态类（或对象）,因为我们可以推迟它们的初始化,这通常是因为它们需要一些信息,而这些信息在初始化期间可能无法获得. 最简单的单例模式:12345678910const Anson = &#123; getName() &#123; return "anson"; &#125;, sayHello() &#123; //通过this使用当前对象getName方法 return `$&#123;this.getName()&#125; say hello!`; &#125;,&#125; //通过Anson.getName访问 特权方法:1234567891011121314151617const Anson = (function () &#123; //私有变量 const info = &#123; AGE: 20, NAME: "Anosn", &#125; //特权方法 return &#123; get(method) &#123; return info[method] ? info[method] :null; &#125; &#125;&#125;)();//取值:Anson.get("NAME");Anson.get("AGE"); 惰性单例:123456789101112131415161718192021222324252627//惰性载入单例const lazySingleton = (function () &#123; //单例实例引用 let _instance = null; //单例 function init() &#123; //定义私有属性和方法 const privateName = "Anson"; return &#123; publicMethod() &#123; return privateName; &#125; &#125; &#125; return function () &#123; if (!_instance) &#123; _instance = init(); &#125; return _instance; &#125;&#125;)();const singleA = lazySingleton();const singleB = lazySingleton();singleA == singleB; //truesingleA.publicMethod();//"Anson"singleB.publicMethod();//"Anson" 我们看到上面的结果返回使 true,这说明,singleA 与 singleB 是同一个值,也就是 singleA 的值. 原因就在于该实例已经被检测到创建过了,因此,不会再次创建.]]></content>
