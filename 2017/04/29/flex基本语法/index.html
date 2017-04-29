@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="CSS," />
 
 
 
@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content=".unwarp()方法 ，作用与wrap方法是相反的。将匹配元素集合的父级元素删除，保留自身（和兄弟元素，如果存在）在原来的位置">
+<meta name="description" content="Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DOM删除包裹unwrap()方法">
-<meta property="og:url" content="http://yoursite.com/2017/02/15/DOM删除包裹unwrap-方法/index.html">
+<meta property="og:title" content="Flex基本语法">
+<meta property="og:url" content="http://yoursite.com/2017/04/29/flex基本语法/index.html">
 <meta property="og:site_name" content="Anson 笔记">
-<meta property="og:description" content=".unwarp()方法 ，作用与wrap方法是相反的。将匹配元素集合的父级元素删除，保留自身（和兄弟元素，如果存在）在原来的位置">
-<meta property="og:updated_time" content="2017-02-15T01:17:32.048Z">
+<meta property="og:description" content="Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。">
+<meta property="og:updated_time" content="2017-04-29T13:34:03.640Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DOM删除包裹unwrap()方法">
-<meta name="twitter:description" content=".unwarp()方法 ，作用与wrap方法是相反的。将匹配元素集合的父级元素删除，保留自身（和兄弟元素，如果存在）在原来的位置">
+<meta name="twitter:title" content="Flex基本语法">
+<meta name="twitter:description" content="Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/15/DOM删除包裹unwrap-方法/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/29/flex基本语法/"/>
 
 
 
 
 
-  <title>DOM删除包裹unwrap()方法 | Anson 笔记</title>
+  <title>Flex基本语法 | Anson 笔记</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -306,7 +306,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/15/DOM删除包裹unwrap-方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/29/flex基本语法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anson Zheng">
@@ -327,7 +327,7 @@
             
             
               
-                DOM删除包裹unwrap()方法
+                Flex基本语法
               
             
           </h1>
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-15T09:12:14+08:00">
-                2017-02-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-29T20:32:35+08:00">
+                2017-04-29
               </time>
             
 
@@ -365,8 +365,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/jQuery仓库/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery仓库</span>
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
                   </a>
                 </span>
 
@@ -399,10 +410,25 @@
       
 
       
-        <p>.unwarp()方法 ，作用与wrap方法是相反的。将匹配元素集合的父级元素删除，保留自身（和兄弟元素，如果存在）在原来的位置<br><a id="more"></a><br>案例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p元素<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>保留内部元素p,删除父元素div<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'p'</span>).unwarp();</div><div class="line"><span class="comment">//找到p元素，然后调用unwarp方法，这样只会删除父辈div元素了</span></div></pre></td></tr></table></figure></p>
-<p>结果：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>p元素<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>参看：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;script type="text/javascript"&gt;</div><div class="line">$(".aaron1").on('click', function() &#123;</div><div class="line">    //找到所有p元素，删除父容器div</div><div class="line">    $('p').unwrap('&lt;div&gt;&lt;/div&gt;')</div><div class="line">&#125;)</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;script type="text/javascript"&gt;</div><div class="line">$(".aaron2").on('click', function() &#123;</div><div class="line">    //找到所有p元素，删除父容器div</div><div class="line">    $('a').unwrap(function() &#123;</div><div class="line">        return '&lt;div&gt;&lt;/div&gt;';</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+        <p>Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。<br><a id="more"></a></p>
+<h3 id="1-指定Flex布局"><a href="#1-指定Flex布局" class="headerlink" title="1. 指定Flex布局"></a>1. 指定Flex布局</h3><p><code>块级元素:</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#content</span>&#123;</div><div class="line">    <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>行内元素:</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#content</span>&#123;</div><div class="line">    <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="2-基本属性"><a href="#2-基本属性" class="headerlink" title="2. 基本属性"></a>2. 基本属性</h3><ul>
+<li><code>flex-direction</code></li>
+</ul>
+<p>属性决定主轴的方向（即项目的排列方向）</p>
+<p>flex-direction：row(左对齐) | row-reverse(右对齐) | column(顶对齐) | column-reverse(底对齐)</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">display</span>:flex;</div><div class="line">  <span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>flex-wrap</code></li>
+</ul>
+<p>如果一条轴线排不下，如何换行</p>
+<p>flex-wrap: nowrap(不换行) | wrap(换行，第一行在上方) | wrap-reverse(换行，第一行在下方)</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.boxs</span>&#123;</div><div class="line">    <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box1</span>&#123;</div><div class="line">  <span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>flex-flow</code></li>
+</ul>
+<p>是<code>flex-direction</code>属性和<code>flex-wrap</code>属性的简写形式，默认值为<code>row nowrap</code><br>不写了…<br><a href="http://www.runoob.com/cssref/css-reference.html#flexbox" target="_blank" rel="external">菜鸟教程 Flex</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank" rel="external">阮一峰 Flex语法基础</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="external">阮一峰 Flex布局实例</a></p>
 
       
     </div>
@@ -430,6 +456,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
+      
 
       
         
@@ -439,8 +471,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/15/DOM包裹wrap-方法/" rel="next" title="DOM包裹wrap()方法">
-                <i class="fa fa-chevron-left"></i> DOM包裹wrap()方法
+              <a href="/2017/04/29/CSS中栏流动布局-flex/" rel="next" title="CSS中栏流动布局(flex)">
+                <i class="fa fa-chevron-left"></i> CSS中栏流动布局(flex)
               </a>
             
           </div>
@@ -448,10 +480,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/15/DOM包裹wrapAll-方法/" rel="prev" title="DOM包裹wrapAll()方法">
-                DOM包裹wrapAll()方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -521,8 +549,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/h.png"
@@ -584,6 +621,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-指定Flex布局"><span class="nav-number">1.</span> <span class="nav-text">1. 指定Flex布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-基本属性"><span class="nav-number">2.</span> <span class="nav-text">2. 基本属性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

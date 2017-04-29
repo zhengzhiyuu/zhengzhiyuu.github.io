@@ -3,9 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[Flex基本语法]]></title>
+      <url>%2F2017%2F04%2F29%2Fflex%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。 1. 指定Flex布局块级元素:123#content&#123; display: flex;&#125; 行内元素:123#content&#123; display: flex;&#125; 2. 基本属性 flex-direction 属性决定主轴的方向（即项目的排列方向） flex-direction：row(左对齐) | row-reverse(右对齐) | column(顶对齐) | column-reverse(底对齐) 1234.box &#123; display:flex; flex-direction: row | row-reverse | column | column-reverse;&#125; flex-wrap 如果一条轴线排不下，如何换行 flex-wrap: nowrap(不换行) | wrap(换行，第一行在上方) | wrap-reverse(换行，第一行在下方) 123456.boxs&#123; display: flex;&#125;.box1&#123; flex-wrap: nowrap | wrap | wrap-reverse;&#125; flex-flow 是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap不写了…菜鸟教程 Flex阮一峰 Flex语法基础阮一峰 Flex布局实例]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[CSS中栏流动布局(flex)]]></title>
       <url>%2F2017%2F04%2F29%2FCSS%E4%B8%AD%E6%A0%8F%E6%B5%81%E5%8A%A8%E5%B8%83%E5%B1%80-flex%2F</url>
-      <content type="text"><![CDATA[这回用flex实现左右固定 , 中间流动的布局格式.实现 圣杯布局 …. 最基本的` DOM结构为： ·12345&lt;div class="container"&gt; &lt;div id="left"&gt;left&lt;/div&gt; &lt;div id="main"&gt;main&lt;/div&gt; &lt;div id="right"&gt;right&lt;/div&gt;&lt;/div&gt; CSS样式为:123456789101112131415161718.container&#123; display: flex;&#125;#main&#123; flex: 1; height: 300px; background: palevioletred&#125;#left&#123; flex: 0 0 300px; height: 300px; background: palegreen;&#125;#right&#123; flex: 0 0 300px; height: 300px; background: palegoldenrod;&#125; 实现效果为: 实现圣杯布局DOM结构为:123456789&lt;div class="HolyGrail"&gt; &lt;header class="HolyGrail_header"&gt;header&lt;/header&gt; &lt;div class="HolyGrail_body"&gt; &lt;main class="HolyGrail_baoy_main"&gt;main&lt;/main&gt; &lt;nav class="HolyGrail_baoy_nav"&gt;nav&lt;/nav&gt; &lt;aside class="HolyGrail_baoy_aside"&gt;aside&lt;/aside&gt; &lt;/div&gt; &lt;footer class="HolyGrail_footer"&gt;footer&lt;/footer&gt;&lt;/div&gt; CSS样式为:1234567891011121314151617181920212223242526272829303132.HolyGrail &#123; display: flex; min-height: 100vh; flex-direction: column;&#125;.HolyGrail_header,.HolyGrail_body,.HolyGrail_footer &#123; flex: 1;&#125;.HolyGrail_body&#123; display: flex;&#125;.HolyGrail_baoy_main&#123; background: palegoldenrod; flex: 1;&#125;.HolyGrail_baoy_nav&#123; flex: 0 0 12em; order: -1; background: pink;&#125;.HolyGrail_baoy_aside&#123; flex: 0 0 12em; background: palegreen;&#125;.HolyGrail_header&#123; background: palevioletred;&#125;.HolyGrail_footer&#123; background: powderblue;&#125; 实现效果为:]]></content>
+      <content type="text"><![CDATA[这回用flex实现左右固定 , 中间流动的布局格式.实现 圣杯布局 …. 最基本的` DOM结构为： ·12345&lt;div class="container"&gt; &lt;div id="left"&gt;left&lt;/div&gt; &lt;div id="main"&gt;main&lt;/div&gt; &lt;div id="right"&gt;right&lt;/div&gt;&lt;/div&gt; CSS样式为:123456789101112131415161718.container&#123; display: flex;&#125;#main&#123; flex: 1; height: 300px; background: palevioletred&#125;#left&#123; flex: 0 0 300px; height: 300px; background: palegreen;&#125;#right&#123; flex: 0 0 300px; height: 300px; background: palegoldenrod;&#125; 实现效果为: 实现圣杯布局DOM结构为:123456789&lt;div class="HolyGrail"&gt; &lt;header class="HolyGrail_header"&gt;header&lt;/header&gt; &lt;div class="HolyGrail_body"&gt; &lt;main class="HolyGrail_baoy_main"&gt;main&lt;/main&gt; &lt;nav class="HolyGrail_baoy_nav"&gt;nav&lt;/nav&gt; &lt;aside class="HolyGrail_baoy_aside"&gt;aside&lt;/aside&gt; &lt;/div&gt; &lt;footer class="HolyGrail_footer"&gt;footer&lt;/footer&gt;&lt;/div&gt; CSS样式为:1234567891011121314151617181920212223242526272829303132333435363738394041424344.HolyGrail &#123; display: flex; min-height: 100vh; flex-direction: column;&#125;.HolyGrail_header,.HolyGrail_body,.HolyGrail_footer &#123; flex: 1;&#125;.HolyGrail_body&#123; display: flex;&#125;.HolyGrail_baoy_main&#123; background: palegoldenrod; flex: 1;&#125;.HolyGrail_baoy_nav&#123; flex: 0 0 12em; order: -1; background: pink;&#125;.HolyGrail_baoy_aside&#123; flex: 0 0 12em; background: palegreen;&#125;.HolyGrail_header&#123; background: palevioletred;&#125;.HolyGrail_footer&#123; background: powderblue;&#125; @media (max-width:760px)&#123; .HolyGrail_body&#123; display: flex; flex-direction: column; &#125; .HolyGrail_baoy_main, .HolyGrail_baoy_nav, .HolyGrail_baoy_aside&#123; flex: auto; &#125;&#125; 实现效果为:]]></content>
     </entry>
 
     
@@ -136,16 +143,16 @@
 
     
     <entry>
-      <title><![CDATA[患得患失 小起小落]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
-      <content type="text"></content>
+      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
+      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
-      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
+      <title><![CDATA[患得患失 小起小落]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
+      <content type="text"></content>
     </entry>
 
     
