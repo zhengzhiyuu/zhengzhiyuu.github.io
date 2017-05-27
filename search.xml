@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title><![CDATA[Node基本模块：fs]]></title>
+      <url>%2F2017%2F05%2F27%2FNode%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9D%97%EF%BC%9Afs%2F</url>
+      <content type="text"><![CDATA[Node基本模块：fs 引入fs模块：1const fs = require("fs"); 读取文件: fs.readFile()1234567fs.readFile('input.txt', 'utf-8', (err, data) =&gt; &#123; if (err) &#123; return console.log(err); &#125;else&#123; console.log(data.toString()); &#125;&#125;) 写入文件: fs.writeFile()12345678let data = 'My name is zhiyu!'fs.writeFile('input.txt', data, err =&gt; &#123; if (err) &#123; console.log(err); &#125; else &#123; console.log('ok'); &#125;&#125;); stat(获取文件大小，创建时间等信息)12]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[typings的使用方法]]></title>
+      <url>%2F2017%2F05%2F27%2Ftypings%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[通过typings完成代码提示 npm安装typings1npm install -g typings 查看版本1typings --version 搜索是否有需要的类型文件1typings search exampleName 安装相关提示信息文件12typings install dt~node --global --savetypings install lodash --save --global参数的使用场景 如果安装的包使用script标记来引用(如jQuery)(也就是在浏览器中使用) 这个包是属于环境的一部分(如node)时 该包没有使用--global安装失败时启用智能提示功能1/// &lt;reference path="./typings/index.d.ts" /&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Node模块概念]]></title>
+      <url>%2F2017%2F05%2F27%2FNode%E6%A8%A1%E5%9D%97%E6%A6%82%E5%BF%B5%2F</url>
+      <content type="text"><![CDATA[输出模块:1234function hello(name) &#123; console.log(`Hello,$&#123;name&#125;!`);&#125;module.exports = hello; 引入模块:12const hello = require('./hello');hello('Anson'); //Hello,Anson! 模块输出多个方法:12345678910111213//文件名为modulesfunction hello() &#123; console.log(`Hello,$&#123;name&#125;!`);&#125;function seyHei(name) &#123; console.log(`Hei,$&#123;name&#125;!`);&#125;module.exports = &#123; hello: hello, seyHei: seyHei,&#125;; 使用一个模块多个方法:123const modules = require('./modules');helloModule.hello('Anson');helloModule.seyHei('Anson');]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[mongoDB数据库之php]]></title>
       <url>%2F2017%2F05%2F22%2FmongoDB%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8Bphp%2F</url>
       <content type="text"><![CDATA[启动mongoDB数据库 : mongod –dbpath D:mongo\data\db(数据库文件路径)1234567891011121314151617181920212223242526&lt;?php$m = new MongoClient(); // 连接默认主机和端口为：mongodb://localhost:27017$db = $m-&gt;anson; // 获取名称为 "anson" 的数据库,没有则创建$collection = $db-&gt;anson; // 选择集合,没有则创建//获取提交数据$userName = $_POST['username'];$userPassword = $_POST['password'];//插入数据$document = array( "name" =&gt; "$userName", "passwords" =&gt; "$userPassword");$collection-&gt;insert($document);echo "数据插入成功 &lt;br&gt;";//查询数据$query = array( "name" =&gt; "$userName" );if($cursor = $collection-&gt;find($query))&#123; echo $document["name"]."&lt;br&gt;"; echo $document["passwords"]; &#125;?&gt;]]></content>
@@ -227,16 +248,16 @@
 
     
     <entry>
-      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
-      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
+      <title><![CDATA[患得患失 小起小落]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
+      <content type="text"></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[患得患失 小起小落]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
-      <content type="text"></content>
+      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
+      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
     </entry>
 
     
