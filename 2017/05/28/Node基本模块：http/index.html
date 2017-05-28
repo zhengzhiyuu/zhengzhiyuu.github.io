@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Node.Js," />
 
 
 
@@ -90,15 +90,16 @@
 
 
 
-<meta name="description" content="粉墨登场，演尽几番风云更替；西皮二黄，多少聚散与圆缺。此情可鉴，都在戏里几转日月；此心不变，听我恋歌唱几阕。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Anson 笔记">
-<meta property="og:url" content="http://yoursite.com/archives/2017/02/page/5/index.html">
+<meta name="description" content="Node基本模块：http">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node基本模块：http">
+<meta property="og:url" content="http://yoursite.com/2017/05/28/Node基本模块：http/index.html">
 <meta property="og:site_name" content="Anson 笔记">
-<meta property="og:description" content="粉墨登场，演尽几番风云更替；西皮二黄，多少聚散与圆缺。此情可鉴，都在戏里几转日月；此心不变，听我恋歌唱几阕。">
+<meta property="og:description" content="Node基本模块：http">
+<meta property="og:updated_time" content="2017-05-28T05:13:45.930Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Anson 笔记">
-<meta name="twitter:description" content="粉墨登场，演尽几番风云更替；西皮二黄，多少聚散与圆缺。此情可鉴，都在戏里几转日月；此心不变，听我恋歌唱几阕。">
+<meta name="twitter:title" content="Node基本模块：http">
+<meta name="twitter:description" content="Node基本模块：http">
 
 
 
@@ -126,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/02/page/5/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/28/Node基本模块：http/"/>
 
 
 
 
 
-  <title>归档 | Anson 笔记</title>
+  <title>Node基本模块：http | Anson 笔记</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,7 +158,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -295,772 +296,223 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-       
-        
-      非常好! 目前共计 144 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/28/Node基本模块：http/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Anson Zheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/h.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Anson 笔记">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Node基本模块：http
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-28T11:46:15+08:00">
+                2017-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Node-Js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.Js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <p>Node基本模块：http<br><a id="more"></a></p>
+<h3 id="导入http模块"><a href="#导入http模块" class="headerlink" title="导入http模块:"></a>导入http模块:</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div></pre></td></tr></table></figure>
+<h3 id="创建HTTP服务器：-http-createServer"><a href="#创建HTTP服务器：-http-createServer" class="headerlink" title="创建HTTP服务器： http.createServer()"></a>创建HTTP服务器： http.createServer()</h3><ul>
+<li><code>request</code>对象封装了HTTP请求，我们调用<code>request</code>对象的属性和方法就可以拿到所有HTTP请求的信息</li>
+<li><code>response</code>对象封装了HTTP响应，我们操作<code>response</code>对象的方法，就可以把HTTP响应返回给浏览器</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 创建http server，并传入回调函数:</span></div><div class="line"><span class="keyword">let</span> server = http.createServer(<span class="function">(<span class="params">request, response</span>) =&gt;</span> &#123;</div><div class="line">    <span class="comment">// 回调函数接收request和response对象,</span></div><div class="line">    <span class="comment">// 获得HTTP请求的method和url:</span></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;request.method&#125;</span> : <span class="subst">$&#123;request.url&#125;</span>`</span>);</div><div class="line">    <span class="comment">// 将HTTP响应200写入response, 同时设置Content-Type: text/html:</span></div><div class="line">    response.writeHead(<span class="number">200</span>, &#123;</div><div class="line">        <span class="string">'Content-Type'</span>: <span class="string">'text/html'</span></div><div class="line">    &#125;);</div><div class="line">    <span class="comment">// 将HTTP响应的HTML内容写入response:</span></div><div class="line">    response.end(<span class="string">'&lt;h1&gt;Hello world!&lt;/h1&gt;'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 让服务器监听8080端口:</span></div><div class="line">server.listen(<span class="number">8080</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Server is running at http://127.0.0.1:8080/'</span>);</div></pre></td></tr></table></figure>
+<h3 id="创建文件服务器"><a href="#创建文件服务器" class="headerlink" title="创建文件服务器:"></a>创建文件服务器:</h3><p>依赖模块:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>),</div><div class="line">    http = <span class="built_in">require</span>(<span class="string">'http'</span>),</div><div class="line">    url = <span class="built_in">require</span>(<span class="string">'url'</span>),</div><div class="line">    path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div></pre></td></tr></table></figure></p>
+<h4 id="解析URl需要url模块-通过url-parse-解析为url对象"><a href="#解析URl需要url模块-通过url-parse-解析为url对象" class="headerlink" title="解析URl需要url模块,通过url.parse()解析为url对象:"></a>解析URl需要url模块,通过<code>url.parse()</code>解析为url对象:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">'url'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(url.parse(<span class="string">'http://user:pass@host.com:8080/path/to/file?query=string#hash'</span>));</div></pre></td></tr></table></figure>
+<p>结果如下:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Url &#123;</div><div class="line">  <span class="attr">protocol</span>: <span class="string">'http:'</span>,</div><div class="line">  <span class="attr">slashes</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">auth</span>: <span class="string">'user:pass'</span>,</div><div class="line">  <span class="attr">host</span>: <span class="string">'host.com:8080'</span>,</div><div class="line">  <span class="attr">port</span>: <span class="string">'8080'</span>,</div><div class="line">  <span class="attr">hostname</span>: <span class="string">'host.com'</span>,</div><div class="line">  <span class="attr">hash</span>: <span class="string">'#hash'</span>,</div><div class="line">  <span class="attr">search</span>: <span class="string">'?query=string'</span>,</div><div class="line">  <span class="attr">query</span>: <span class="string">'query=string'</span>,</div><div class="line">  <span class="attr">pathname</span>: <span class="string">'/path/to/file'</span>,</div><div class="line">  <span class="attr">path</span>: <span class="string">'/path/to/file?query=string'</span>,</div><div class="line">  <span class="attr">href</span>: <span class="string">'http://user:pass@host.com:8080/path/to/file?query=string#hash'</span> &#125;</div></pre></td></tr></table></figure></p>
+<h4 id="处理本地文件目录需要path模块-它可以方便地构造目录"><a href="#处理本地文件目录需要path模块-它可以方便地构造目录" class="headerlink" title="处理本地文件目录需要path模块,它可以方便地构造目录:"></a>处理本地文件目录需要<code>path</code>模块,它可以方便地构造目录:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 解析当前目录:</span></div><div class="line"><span class="keyword">let</span> rootDir = path.resolve(<span class="string">'.'</span>);</div><div class="line"><span class="built_in">console</span>.log(rootDir); <span class="comment">// f:\Node</span></div><div class="line"></div><div class="line"><span class="comment">// 组合完整的文件路径:当前目录+'pub'+'index.html':</span></div><div class="line"><span class="keyword">let</span> filePath = path.join(rootDir, <span class="string">'pub'</span>, <span class="string">'index.html'</span>);</div><div class="line"><span class="built_in">console</span>.log(filePath); <span class="comment">// f:\Node\pub\index.html'</span></div></pre></td></tr></table></figure>
+<h4 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码:"></a>完整代码:</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>),</div><div class="line">    http = <span class="built_in">require</span>(<span class="string">'http'</span>),</div><div class="line">    url = <span class="built_in">require</span>(<span class="string">'url'</span>),</div><div class="line">    path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//获取root目录:</span></div><div class="line"><span class="keyword">let</span> root = path.resolve(<span class="string">'.'</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Static root dir: '</span> + root);</div><div class="line"></div><div class="line"><span class="comment">//创建服务器:</span></div><div class="line"><span class="keyword">let</span> server = http.createServer(<span class="function">(<span class="params">request, response</span>) =&gt;</span> &#123;</div><div class="line">    <span class="comment">// 获得URL的path</span></div><div class="line">    <span class="keyword">let</span> pathName = url.parse(request.url).pathname;</div><div class="line">    <span class="comment">// 获得对应的本地文件路径     </span></div><div class="line">    <span class="keyword">let</span> filePath = path.join(root, pathName);</div><div class="line">    fs.stat(filePath, (err, stats) =&gt; &#123;</div><div class="line">        <span class="keyword">if</span> (!err &amp;&amp; stats.isFile()) &#123;</div><div class="line">            <span class="comment">// 没有出错并且文件存在</span></div><div class="line">            <span class="built_in">console</span>.log(<span class="string">`200 <span class="subst">$&#123;request.url&#125;</span>`</span>);</div><div class="line">            <span class="comment">// 发送200响应:</span></div><div class="line">            response.writeHead(<span class="number">200</span>);</div><div class="line">            <span class="comment">// 将文件流导向response:</span></div><div class="line">            fs.createReadStream(filePath).pipe(response);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="comment">// 出错了或者文件不存在:response对象本身是一个Writable Stream</span></div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'404 '</span> + request.url);</div><div class="line">            <span class="comment">// 发送404响应:</span></div><div class="line">            response.writeHead(<span class="number">404</span>);</div><div class="line">            response.end(<span class="string">'404 Not Found'</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">server.listen(<span class="number">8080</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Server is running at http://127.0.0.1:8080/'</span>);</div></pre></td></tr></table></figure>
+<p>运行文件 浏览器输入<a href="http://127.0.0.1:8080/pub/index.html" target="_blank" rel="external">http://127.0.0.1:8080/pub/index.html</a></p>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Node-Js/" rel="tag"># Node.Js</a>
+          
         </div>
       
+
+      
+        
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/28/Node基本模块：stream/" rel="next" title="Node基本模块：stream">
+                <i class="fa fa-chevron-left"></i> Node基本模块：stream
+              </a>
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/13/DOM节点删除之empty-的基本用法/" itemprop="url">
-              
-                <span itemprop="name">DOM节点删除之empty()的基本用法</span>
-              
-            </a>
-        
-      </h1>
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-13T13:43:00+08:00"
-              content="2017-02-13" >
-          02-13
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/13/jQuery中的insertBefore-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的insertBefore()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-13T12:55:48+08:00"
-              content="2017-02-13" >
-          02-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/13/jQuery中的insertAfter-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的insertAfter()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-13T12:43:23+08:00"
-              content="2017-02-13" >
-          02-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/13/Angular2初试/" itemprop="url">
-              
-                <span itemprop="name">Angular2初试</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-13T10:22:55+08:00"
-              content="2017-02-13" >
-          02-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的prependTo-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的prependTo()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T21:16:20+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的prepend-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的prepend()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T21:12:34+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的befor-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的befor()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T21:06:03+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的after-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的after()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T21:00:50+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的appendTo-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的appendTo()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T20:52:33+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的append-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的append()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T20:47:35+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中DOM操作/" itemprop="url">
-              
-                <span itemprop="name">jQuery中DOM操作</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T19:56:05+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的data-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的data()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T18:28:13+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的val-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的val()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T14:42:55+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的removeAttr-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的removeAttr()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T14:34:11+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的attr-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的attr()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T14:24:28+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的toggleClass-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的toggleClass()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T14:14:54+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的removeClass-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的removeClass()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T14:05:25+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的addClass-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的addClass()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T13:39:24+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的text-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的text()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T13:36:14+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/12/jQuery中的html-方法/" itemprop="url">
-              
-                <span itemprop="name">jQuery中的html()方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-12T13:31:11+08:00"
-              content="2017-02-12" >
-          02-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2017/02/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2017/02/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2017/02/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/2017/02/page/6/">6</a><a class="extend next" rel="next" href="/archives/2017/02/page/6/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1068,6 +520,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -1087,8 +543,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/h.png"
@@ -1150,6 +615,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#导入http模块"><span class="nav-number">1.</span> <span class="nav-text">导入http模块:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建HTTP服务器：-http-createServer"><span class="nav-number">2.</span> <span class="nav-text">创建HTTP服务器： http.createServer()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建文件服务器"><span class="nav-number">3.</span> <span class="nav-text">创建文件服务器:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解析URl需要url模块-通过url-parse-解析为url对象"><span class="nav-number">3.1.</span> <span class="nav-text">解析URl需要url模块,通过url.parse()解析为url对象:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#处理本地文件目录需要path模块-它可以方便地构造目录"><span class="nav-number">3.2.</span> <span class="nav-text">处理本地文件目录需要path模块,它可以方便地构造目录:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完整代码"><span class="nav-number">3.3.</span> <span class="nav-text">完整代码:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1270,11 +751,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   

@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/28/Node基本模块：stream/index.html">
 <meta property="og:site_name" content="Anson 笔记">
 <meta property="og:description" content="stream是Node.js提供的基本模块，目的是支持“流”这种数据结构。">
-<meta property="og:updated_time" content="2017-05-28T03:35:53.409Z">
+<meta property="og:updated_time" content="2017-05-28T04:03:43.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node基本模块：stream">
 <meta name="twitter:description" content="stream是Node.js提供的基本模块，目的是支持“流”这种数据结构。">
@@ -411,14 +411,14 @@
 
       
         <p>stream是Node.js提供的基本模块，目的是支持“流”这种数据结构。<br><a id="more"></a></p>
-<h3 id="流读取数据"><a href="#流读取数据" class="headerlink" title="流读取数据:"></a>流读取数据:</h3><ul>
+<h3 id="流读取数据-fs-createReadStream"><a href="#流读取数据-fs-createReadStream" class="headerlink" title="流读取数据: fs.createReadStream()"></a>流读取数据: fs.createReadStream()</h3><ul>
 <li><code>data</code>事件表示流的数据已经可以读取了</li>
 <li><code>end</code>事件表示这个流已经到末尾了，没有数据可以读取</li>
-<li><code>error</code>事件表示出错了<br>样例：<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="comment">//打开一个流</span></div><div class="line"><span class="keyword">let</span> rs = fs.createReadStream(<span class="string">'input.txt'</span>,<span class="string">'utf-8'</span>);</div><div class="line">rs.on(<span class="string">'data'</span>,datas=&gt;<span class="built_in">console</span>.log(<span class="string">`DATA: <span class="subst">$&#123;datas&#125;</span>`</span>));</div><div class="line">rs.on(<span class="string">'end'</span>,()=&gt;<span class="built_in">console</span>.log(<span class="string">'END'</span>));</div><div class="line">rs.on(<span class="string">'error'</span>,err=&gt;<span class="built_in">console</span>.log(<span class="string">`ERROR: <span class="subst">$&#123;err&#125;</span>`</span>));</div></pre></td></tr></table></figure>
-</li>
+<li><code>error</code>事件表示出错了</li>
 </ul>
-<h3 id="流写入数据"><a href="#流写入数据" class="headerlink" title="流写入数据:"></a>流写入数据:</h3><p>以流的形式写入文件，只需要不断调用<code>write()</code>方法，最后以<code>end()</code>结束<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">let</span> ws = fs.createWriteStream(<span class="string">'output.txt'</span>, <span class="string">'utf-8'</span>);</div><div class="line">ws.write(<span class="string">'使用Stream写入文本数据...\n'</span>);</div><div class="line">ws.write(<span class="string">'END'</span>);</div><div class="line">ws.end();</div></pre></td></tr></table></figure></p>
-<h3 id="pipe"><a href="#pipe" class="headerlink" title="pipe:"></a>pipe:</h3><p>所有的数据自动从<code>Readable</code>流进入<code>Writable</code>流，这种操作叫<code>pipe</code>,也就是复制文件<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">let</span> rs = fs.createReadStream(<span class="string">'input.png'</span>);</div><div class="line"><span class="keyword">let</span> ws = fs.createWriteStream(<span class="string">'output.png'</span>);</div><div class="line">rs.pipe(ws);</div></pre></td></tr></table></figure></p>
+<p>样例：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="comment">//打开一个流</span></div><div class="line"><span class="keyword">let</span> rs = fs.createReadStream(<span class="string">'input.txt'</span>,<span class="string">'utf-8'</span>);</div><div class="line">rs.on(<span class="string">'data'</span>,datas=&gt;<span class="built_in">console</span>.log(<span class="string">`DATA: <span class="subst">$&#123;datas&#125;</span>`</span>));</div><div class="line">rs.on(<span class="string">'end'</span>,()=&gt;<span class="built_in">console</span>.log(<span class="string">'END'</span>));</div><div class="line">rs.on(<span class="string">'error'</span>,err=&gt;<span class="built_in">console</span>.log(<span class="string">`ERROR: <span class="subst">$&#123;err&#125;</span>`</span>));</div></pre></td></tr></table></figure></p>
+<h3 id="流写入数据-fs-createWriteStream"><a href="#流写入数据-fs-createWriteStream" class="headerlink" title="流写入数据: fs.createWriteStream"></a>流写入数据: fs.createWriteStream</h3><p>以流的形式写入文件，只需要不断调用<code>write()</code>方法，最后以<code>end()</code>结束<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">let</span> ws = fs.createWriteStream(<span class="string">'output.txt'</span>, <span class="string">'utf-8'</span>);</div><div class="line">ws.write(<span class="string">'使用Stream写入文本数据...\n'</span>);</div><div class="line">ws.write(<span class="string">'END'</span>);</div><div class="line">ws.end();</div></pre></td></tr></table></figure></p>
+<h3 id="pipe-readable-pipe-writable"><a href="#pipe-readable-pipe-writable" class="headerlink" title="pipe: readable.pipe(writable)"></a>pipe: readable.pipe(writable)</h3><p>所有的数据自动从<code>Readable</code>流进入<code>Writable</code>流，这种操作叫<code>pipe</code>,也就是复制文件<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">let</span> rs = fs.createReadStream(<span class="string">'input.png'</span>);</div><div class="line"><span class="keyword">let</span> ws = fs.createWriteStream(<span class="string">'output.png'</span>);</div><div class="line">rs.pipe(ws);</div></pre></td></tr></table></figure></p>
 <p>默认情况下，当<code>Readable</code>流的数据读取完毕,<code>end</code>事件触发后，将自动关闭<code>Writable</code>流。如果我们不希望自动关闭<code>Writable</code>流，需要传入参数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">readable.pipe(writable, &#123; <span class="attr">end</span>: <span class="literal">false</span> &#125;);</div></pre></td></tr></table></figure></p>
 <h4 id="也可以这样"><a href="#也可以这样" class="headerlink" title="也可以这样?"></a>也可以这样?</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">let</span> rs = fs.createReadStream(<span class="string">'input.png'</span>);</div><div class="line"><span class="keyword">let</span> ws = fs.createWriteStream(<span class="string">'output.png'</span>);</div><div class="line">rs.on(<span class="string">'data'</span>, data =&gt; &#123;</div><div class="line">    ws.write(data);</div><div class="line">    ws.end();</div><div class="line">&#125;);</div><div class="line">rs.on(<span class="string">'end'</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'END'</span>));</div><div class="line">rs.on(<span class="string">'error'</span>, err =&gt; <span class="built_in">console</span>(<span class="string">`ERROR: <span class="subst">$&#123;err&#125;</span>`</span>));</div></pre></td></tr></table></figure>
       
@@ -471,6 +471,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/28/Node基本模块：http/" rel="prev" title="Node基本模块：http">
+                Node基本模块：http <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -565,7 +569,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">143</span>
+                <span class="site-state-item-count">144</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -622,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#流读取数据"><span class="nav-number">1.</span> <span class="nav-text">流读取数据:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流写入数据"><span class="nav-number">2.</span> <span class="nav-text">流写入数据:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pipe"><span class="nav-number">3.</span> <span class="nav-text">pipe:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#也可以这样"><span class="nav-number">3.1.</span> <span class="nav-text">也可以这样?</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#流读取数据-fs-createReadStream"><span class="nav-number">1.</span> <span class="nav-text">流读取数据: fs.createReadStream()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流写入数据-fs-createWriteStream"><span class="nav-number">2.</span> <span class="nav-text">流写入数据: fs.createWriteStream</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pipe-readable-pipe-writable"><span class="nav-number">3.</span> <span class="nav-text">pipe: readable.pipe(writable)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#也可以这样"><span class="nav-number">3.1.</span> <span class="nav-text">也可以这样?</span></a></li></ol></li></ol></div>
             
 
           </div>
