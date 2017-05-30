@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="jQuery," />
+  <meta name="keywords" content="Node.Js,MongoDB," />
 
 
 
@@ -90,31 +90,16 @@
 
 
 
-<meta name="description" content="focusin事件监听聚焦事件
-focusout事件监听失焦事件
-blur与focus事件监听表单焦点(聚焦|失焦)
-change事件监听输入域动作
-select事件监听鼠标选中事件
-submit事件监听下提交表单动作">
+<meta name="description" content="使用Node工具操作 MongoDB 数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery表单事件">
-<meta property="og:url" content="http://yoursite.com/2017/02/15/jQuery表单事件/index.html">
+<meta property="og:title" content="Node工具操作MongoDB">
+<meta property="og:url" content="http://yoursite.com/2017/05/30/mongoose操作mongoDB/index.html">
 <meta property="og:site_name" content="Anson 笔记">
-<meta property="og:description" content="focusin事件监听聚焦事件
-focusout事件监听失焦事件
-blur与focus事件监听表单焦点(聚焦|失焦)
-change事件监听输入域动作
-select事件监听鼠标选中事件
-submit事件监听下提交表单动作">
-<meta property="og:updated_time" content="2017-02-16T01:16:20.713Z">
+<meta property="og:description" content="使用Node工具操作 MongoDB 数据库">
+<meta property="og:updated_time" content="2017-05-30T12:16:03.461Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery表单事件">
-<meta name="twitter:description" content="focusin事件监听聚焦事件
-focusout事件监听失焦事件
-blur与focus事件监听表单焦点(聚焦|失焦)
-change事件监听输入域动作
-select事件监听鼠标选中事件
-submit事件监听下提交表单动作">
+<meta name="twitter:title" content="Node工具操作MongoDB">
+<meta name="twitter:description" content="使用Node工具操作 MongoDB 数据库">
 
 
 
@@ -142,13 +127,13 @@ submit事件监听下提交表单动作">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/15/jQuery表单事件/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/30/mongoose操作mongoDB/"/>
 
 
 
 
 
-  <title>jQuery表单事件 | Anson 笔记</title>
+  <title>Node工具操作MongoDB | Anson 笔记</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -321,7 +306,7 @@ submit事件监听下提交表单动作">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/15/jQuery表单事件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/30/mongoose操作mongoDB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anson Zheng">
@@ -342,7 +327,7 @@ submit事件监听下提交表单动作">
             
             
               
-                jQuery表单事件
+                Node工具操作MongoDB
               
             
           </h1>
@@ -357,8 +342,8 @@ submit事件监听下提交表单动作">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-15T18:41:43+08:00">
-                2017-02-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-30T17:01:34+08:00">
+                2017-05-30
               </time>
             
 
@@ -391,8 +376,8 @@ submit事件监听下提交表单动作">
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/jQuery/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery</span>
+                  <a href="/categories/前端/Node-Js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.Js</span>
                   </a>
                 </span>
 
@@ -425,14 +410,16 @@ submit事件监听下提交表单动作">
       
 
       
-        <ul>
-<li><h4 id=""><a href="#" class="headerlink" title=""></a><a href="/2017/02/15/focusin事件/" title="focusin事件">focusin事件</a></h4>监听聚焦事件</li>
-<li><h4 id="-1"><a href="#-1" class="headerlink" title=""></a><a href="/2017/02/15/focusout事件/" title="focusout事件">focusout事件</a></h4>监听失焦事件</li>
-<li><h4 id="-2"><a href="#-2" class="headerlink" title=""></a><a href="/2017/02/15/blur与focus事件/" title="blur与focus事件">blur与focus事件</a></h4>监听表单焦点(聚焦|失焦)</li>
-<li><h4 id="-3"><a href="#-3" class="headerlink" title=""></a><a href="/2017/02/15/change事件/" title="change事件">change事件</a></h4>监听输入域动作</li>
-<li><h4 id="-4"><a href="#-4" class="headerlink" title=""></a><a href="/2017/02/16/select事件/" title="select事件">select事件</a></h4>监听鼠标选中事件</li>
-<li><h4 id="-5"><a href="#-5" class="headerlink" title=""></a><a href="/2017/02/16/submit事件/" title="submit事件">submit事件</a></h4>监听下提交表单动作</li>
-</ul>
+        <p>使用<code>Node工具</code>操作 MongoDB 数据库<br><a id="more"></a><br><a href="https://robomongo.org/download" target="_blank" rel="external">MongoDB可视化工具</a><br><a href="https://automattic.github.io/monk/" target="_blank" rel="external">monk</a></p>
+<h2 id="monk"><a href="#monk" class="headerlink" title="monk"></a>monk</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i monk</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//连接mydb数据库</span></div><div class="line"><span class="keyword">const</span> db = <span class="built_in">require</span>(<span class="string">'monk'</span>)(<span class="string">'localhost/mydb'</span>)</div><div class="line">db.then(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'Connected correctly to server'</span>))</div><div class="line"><span class="comment">//获取数据表</span></div><div class="line"><span class="keyword">const</span> users = db.get(<span class="string">'document'</span>)</div><div class="line"></div><div class="line"><span class="comment">//添加数据</span></div><div class="line">users.insert(&#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">"zhiyu"</span>,</div><div class="line">  <span class="attr">password</span>: <span class="string">'123'</span></div><div class="line">&#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'Yes'</span>)).catch(<span class="function">(<span class="params">err</span>)=&gt;</span><span class="built_in">console</span>.log(err))</div><div class="line"></div><div class="line"><span class="comment">//更新数据</span></div><div class="line"><span class="keyword">let</span> old_date = &#123;<span class="attr">name</span>: <span class="string">"zhiyu"</span>,<span class="attr">password</span>: <span class="string">'123'</span>&#125;,</div><div class="line">    up_date= &#123;<span class="attr">name</span>: <span class="string">"zhiyu"</span>,<span class="attr">password</span>: <span class="string">'789'</span>&#125;</div><div class="line">  users.update(old_date,up_date)</div><div class="line">       .then(<span class="function">(<span class="params">res</span>)=&gt;</span><span class="built_in">console</span>.log(<span class="string">'OK'</span>))</div><div class="line">       .catch(<span class="function">(<span class="params">err</span>)=&gt;</span><span class="built_in">console</span>.log(err))</div><div class="line"></div><div class="line"><span class="comment">//删除数据</span></div><div class="line"><span class="keyword">let</span> del_date = &#123;<span class="attr">name</span>: <span class="string">"anson"</span>,<span class="attr">password</span>: <span class="string">'789'</span>&#125;</div><div class="line">  users.remove(del_date)</div><div class="line">       .then(<span class="function">(<span class="params">res</span>)=&gt;</span><span class="built_in">console</span>.log(<span class="string">'OK'</span>))</div><div class="line">       .catch(<span class="function">(<span class="params">err</span>)=&gt;</span><span class="built_in">console</span>.log(err))</div><div class="line"></div><div class="line"><span class="comment">//查找数据</span></div><div class="line"><span class="keyword">let</span> find_date = &#123;<span class="attr">password</span>: <span class="string">'789'</span>&#125;</div><div class="line">  users.find(find_date)</div><div class="line">       .then(<span class="function">(<span class="params">res</span>)=&gt;</span><span class="built_in">console</span>.log(res))</div><div class="line">       .catch(<span class="function">(<span class="params">err</span>)=&gt;</span><span class="built_in">console</span>.log(err))</div></pre></td></tr></table></figure>
+<h2 id="mongoose"><a href="#mongoose" class="headerlink" title="mongoose"></a>mongoose</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i mongoose</div></pre></td></tr></table></figure>
+<p><a href="http://www.nodeclass.com/api/mongoose.html#quick_start" target="_blank" rel="external">mongoose官网</a><br><a href="http://www.cnblogs.com/zhongweiv/p/mongoose.html#mg_op" target="_blank" rel="external">mongoose教程-1</a><br><a href="http://www.tuicool.com/articles/BBnYR3B" target="_blank" rel="external">mongoose教程-2</a><br><a href="http://cnodejs.org/topic/504b4924e2b84515770103dd" target="_blank" rel="external">mongoose教程-3</a></p>
+<h3 id="db-js-连接数据库"><a href="#db-js-连接数据库" class="headerlink" title="db.js - 连接数据库"></a>db.js - 连接数据库</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</div><div class="line"><span class="comment">//连接test数据库 如果没有则新建</span></div><div class="line">mongoose.connect(<span class="string">'mongodb://localhost/test'</span>);</div><div class="line"></div><div class="line"><span class="keyword">const</span> db = mongoose.connection;</div><div class="line"></div><div class="line">db.on(<span class="string">'error'</span>, <span class="built_in">console</span>.error.bind(<span class="built_in">console</span>, <span class="string">'connection error:'</span>));</div><div class="line">db.once(<span class="string">'open'</span>, (callback) =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'OK: 数据库已连接'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//建立数据模型</span></div><div class="line"><span class="keyword">const</span> mySchema = <span class="keyword">new</span> mongoose.Schema(&#123;</div><div class="line">  <span class="attr">name</span>: <span class="built_in">String</span>,</div><div class="line">  <span class="attr">password</span>: <span class="built_in">String</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// mongoose.model('表名', 数据模型)</span></div><div class="line"><span class="built_in">module</span>.exports = mongoose.model(<span class="string">'User'</span>, mySchema);</div></pre></td></tr></table></figure>
+<h3 id="User-js-插入数据"><a href="#User-js-插入数据" class="headerlink" title="User.js - 插入数据"></a>User.js - 插入数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> User = <span class="built_in">require</span>(<span class="string">'./db'</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">insert</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">//创建模型实例    </span></div><div class="line">  <span class="keyword">let</span> user = <span class="keyword">new</span> User(&#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'zhyu'</span>,</div><div class="line">    <span class="attr">password</span>: <span class="string">'123456'</span></div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  <span class="comment">//插入数据  </span></div><div class="line">  user.save(<span class="function">(<span class="params">err, res</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (res) &#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'OK:'</span> + res);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'ERR:'</span> + err);</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line">insert();</div></pre></td></tr></table></figure>
+<h3 id="upUser-js-更新数据"><a href="#upUser-js-更新数据" class="headerlink" title="upUser.js - 更新数据"></a>upUser.js - 更新数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">update</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">let</span> name = &#123;<span class="attr">name</span>:<span class="string">'zhyu'</span>&#125;;</div><div class="line">    <span class="keyword">let</span> uppassword = &#123;<span class="attr">password</span>:<span class="string">"123"</span>&#125;;</div><div class="line">    <span class="comment">//直接作用在引入的User</span></div><div class="line">    User.update(name,uppassword,(err,res)=&gt;&#123;</div><div class="line">        <span class="keyword">if</span>(res)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'OK:'</span> + res);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'ERR:'</span>+ err);</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">update();</div></pre></td></tr></table></figure>
+<h3 id="delUser-js-删除数据"><a href="#delUser-js-删除数据" class="headerlink" title="delUser.js - 删除数据"></a>delUser.js - 删除数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">deldate</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> del_name = &#123;<span class="attr">name</span>: <span class="string">'zhyu'</span>&#125;;</div><div class="line">    <span class="comment">//直接作用在引入的User    </span></div><div class="line">    User.remove(del_name, (err, res) =&gt; &#123;</div><div class="line">      <span class="keyword">if</span> (res) &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'OK:'</span> + res);</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'ERR:'</span> + err);</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line">deldate();</div></pre></td></tr></table></figure>
+<h3 id="getUser-js-查找数据"><a href="#getUser-js-查找数据" class="headerlink" title="getUser.js -查找数据"></a>getUser.js -查找数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">let</span> get_name  = &#123;<span class="string">'name'</span> : <span class="string">'zhyu'</span>&#125;;</div><div class="line">    <span class="comment">//直接作用在引入的User        </span></div><div class="line">    User.find(get_name, <span class="function"><span class="keyword">function</span>(<span class="params">err, res</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (res) &#123;</div><div class="line">            <span class="keyword">if</span>(res === get_name.name)&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">'Yes'</span>)</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">'No'</span>)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"Error:"</span> + err);            </div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">getName();</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -462,7 +449,9 @@ submit事件监听下提交表单动作">
       
         <div class="post-tags">
           
-            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
+            <a href="/tags/Node-Js/" rel="tag"># Node.Js</a>
+          
+            <a href="/tags/MongoDB/" rel="tag"># MongoDB</a>
           
         </div>
       
@@ -475,8 +464,8 @@ submit事件监听下提交表单动作">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/15/focusout事件/" rel="next" title="focusout事件">
-                <i class="fa fa-chevron-left"></i> focusout事件
+              <a href="/2017/05/28/Node框架Koa处理URL/" rel="next" title="Node框架Koa处理URL">
+                <i class="fa fa-chevron-left"></i> Node框架Koa处理URL
               </a>
             
           </div>
@@ -484,10 +473,6 @@ submit事件监听下提交表单动作">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/15/blur与focus事件/" rel="prev" title="blur与focus事件">
-                blur与focus事件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -639,7 +624,7 @@ submit事件监听下提交表单动作">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">focusin事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#-1"><span class="nav-number">2.</span> <span class="nav-text">focusout事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#-2"><span class="nav-number">3.</span> <span class="nav-text">blur与focus事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#-3"><span class="nav-number">4.</span> <span class="nav-text">change事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#-4"><span class="nav-number">5.</span> <span class="nav-text">select事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#-5"><span class="nav-number">6.</span> <span class="nav-text">submit事件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#monk"><span class="nav-number">1.</span> <span class="nav-text">monk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mongoose"><span class="nav-number">2.</span> <span class="nav-text">mongoose</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#db-js-连接数据库"><span class="nav-number">2.1.</span> <span class="nav-text">db.js - 连接数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#User-js-插入数据"><span class="nav-number">2.2.</span> <span class="nav-text">User.js - 插入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#upUser-js-更新数据"><span class="nav-number">2.3.</span> <span class="nav-text">upUser.js - 更新数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#delUser-js-删除数据"><span class="nav-number">2.4.</span> <span class="nav-text">delUser.js - 删除数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getUser-js-查找数据"><span class="nav-number">2.5.</span> <span class="nav-text">getUser.js -查找数据</span></a></li></ol></li></ol></div>
             
 
           </div>
