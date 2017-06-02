@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Node.Js,Koa," />
 
 
 
@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="toggle用于切换显示或隐藏匹配元素">
+<meta name="description" content="重在积累">
 <meta property="og:type" content="article">
-<meta property="og:title" content="显示与隐藏切换toggle方法">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/显示与隐藏切换toggle方法/index.html">
+<meta property="og:title" content="Koa参看资料">
+<meta property="og:url" content="http://yoursite.com/2017/06/02/Koa参考资料/index.html">
 <meta property="og:site_name" content="Anson 笔记">
-<meta property="og:description" content="toggle用于切换显示或隐藏匹配元素">
-<meta property="og:updated_time" content="2017-02-16T05:56:16.318Z">
+<meta property="og:description" content="重在积累">
+<meta property="og:updated_time" content="2017-06-02T07:27:28.935Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="显示与隐藏切换toggle方法">
-<meta name="twitter:description" content="toggle用于切换显示或隐藏匹配元素">
+<meta name="twitter:title" content="Koa参看资料">
+<meta name="twitter:description" content="重在积累">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/显示与隐藏切换toggle方法/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/02/Koa参考资料/"/>
 
 
 
 
 
-  <title>显示与隐藏切换toggle方法 | Anson 笔记</title>
+  <title>Koa参看资料 | Anson 笔记</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -306,7 +306,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/显示与隐藏切换toggle方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/02/Koa参考资料/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anson Zheng">
@@ -327,7 +327,7 @@
             
             
               
-                显示与隐藏切换toggle方法
+                Koa参看资料
               
             
           </h1>
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-16T13:45:33+08:00">
-                2017-02-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-02T15:24:15+08:00">
+                2017-06-02
               </time>
             
 
@@ -365,8 +365,30 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/jQuery仓库/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery仓库</span>
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Node-Js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.Js</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Node-Js/Koa/" itemprop="url" rel="index">
+                    <span itemprop="name">Koa</span>
                   </a>
                 </span>
 
@@ -399,13 +421,7 @@
       
 
       
-        <p>toggle用于切换显示或隐藏匹配元素<br><a id="more"></a></p>
-<h4 id="基本的操作：-toggle"><a href="#基本的操作：-toggle" class="headerlink" title="基本的操作：.toggle()"></a>基本的操作：.toggle()</h4><ul>
-<li>如果元素是最初显示，它会被隐藏</li>
-<li>如果隐藏的，它会显示出来<h4 id="提供参数：-toggle-duration-complete"><a href="#提供参数：-toggle-duration-complete" class="headerlink" title="提供参数：.toggle( [duration ] [complete ] )"></a>提供参数：.toggle( [duration ] [complete ] )</h4><h4 id="直接定位：-toggle-display"><a href="#直接定位：-toggle-display" class="headerlink" title="直接定位：.toggle(display)"></a>直接定位：.toggle(display)</h4>直接提供一个参数，指定要改变的元素的最终效果<br>其实就是确定是使用show还是hide方法<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> ( display === <span class="literal">true</span> ) &#123;</div><div class="line">  $( <span class="string">"elem"</span> ).show();</div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> ( display === <span class="literal">false</span> ) &#123;</div><div class="line">  $( <span class="string">"elem"</span> ).hide();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>).toggle(<span class="number">3000</span>)</div><div class="line"><span class="comment">//3000毫秒后隐藏</span></div></pre></td></tr></table></figure></p>
+        <p>重在积累<br><a id="more"></a><br><a href="https://cnodejs.org/topic/56936889c2289f51658f0926" target="_blank" rel="external">Koa基本用法参考</a></p>
 
       
     </div>
@@ -433,6 +449,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Node-Js/" rel="tag"># Node.Js</a>
+          
+            <a href="/tags/Koa/" rel="tag"># Koa</a>
+          
+        </div>
+      
 
       
         
@@ -442,8 +466,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/16/显示元素的show方法/" rel="next" title="显示元素的show方法">
-                <i class="fa fa-chevron-left"></i> 显示元素的show方法
+              <a href="/2017/06/01/Node和图灵机器人/" rel="next" title="Node和图灵机器人">
+                <i class="fa fa-chevron-left"></i> Node和图灵机器人
               </a>
             
           </div>
@@ -451,10 +475,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/16/下拉动画slideDown/" rel="prev" title="下拉动画slideDown">
-                下拉动画slideDown <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -524,17 +544,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/h.png"
@@ -596,22 +607,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本的操作：-toggle"><span class="nav-number">1.</span> <span class="nav-text">基本的操作：.toggle()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提供参数：-toggle-duration-complete"><span class="nav-number">2.</span> <span class="nav-text">提供参数：.toggle( [duration ] [complete ] )</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#直接定位：-toggle-display"><span class="nav-number">3.</span> <span class="nav-text">直接定位：.toggle(display)</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
