@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Markdown编辑器]]></title>
+      <url>%2F2017%2F06%2F04%2FMarkdown%E7%BC%96%E8%BE%91%E5%99%A8%2F</url>
+      <content type="text"><![CDATA[多学一点总是没错的Markdown编辑器：SimpleMDEMarkdown语法解析：marked代码语法高亮：highlight 实例：引入样式：12&lt;link rel="stylesheet" href="./dist/simplemde.min.css"&gt;&lt;link rel="stylesheet" href="./highlight/styles/default.css"&gt; 引入js：123&lt;script src="./dist/simplemde.min.js"&gt;&lt;/script&gt;&lt;script src="./node_modules/marked/lib/marked.js"&gt;&lt;/script&gt;&lt;script src="./highlight/highlight.pack.js"&gt;&lt;/script&gt; html：123&lt;input type="textarea " name="" id="mde" value=""&gt;&lt;button type="" id="sub"&gt;show&lt;/button&gt;&lt;div id="content"&gt;&lt;/div&gt; JavaScript:1234567891011121314151617181920212223242526 let simplemde = new SimpleMDE(&#123; element: document.getElementById('mde') &#125;); let renderer = new marked.Renderer(); marked.setOptions(&#123; renderer: renderer, gfm: true, pedantic: false, sanitize: false, tables: true, breaks: true, smartLists: true, smartypants: true, highlight: function (code) &#123; return hljs.highlightAuto(code).value; &#125; &#125;); document.getElementById('sub').addEventListener('click', function () &#123; console.log(simplemde.value()); document.getElementById('content').innerHTML = marked(simplemde.value()); &#125;); hljs.initHighlightingOnLoad();&lt;/script&gt;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Koa参看资料]]></title>
       <url>%2F2017%2F06%2F02%2FKoa%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99%2F</url>
       <content type="text"><![CDATA[重在积累Koa基本用法参考]]></content>
@@ -304,16 +311,16 @@
 
     
     <entry>
-      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
-      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
+      <title><![CDATA[患得患失 小起小落]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
+      <content type="text"></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[患得患失 小起小落]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
-      <content type="text"></content>
+      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
+      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
     </entry>
 
     
