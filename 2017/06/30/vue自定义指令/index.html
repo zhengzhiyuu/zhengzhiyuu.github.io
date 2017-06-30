@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Vue," />
 
 
 
@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="将元素用其他元素包裹起来，也就是给它增加一个父元素，针对这样的处理，JQuery提供了一个wrap方法">
+<meta name="description" content="自定义指令一定要写在vue实例之前">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DOM包裹wrap()方法">
-<meta property="og:url" content="http://yoursite.com/2017/02/15/DOM包裹wrap-方法/index.html">
+<meta property="og:title" content="Vue自定义指令">
+<meta property="og:url" content="http://yoursite.com/2017/06/30/vue自定义指令/index.html">
 <meta property="og:site_name" content="Anson 笔记">
-<meta property="og:description" content="将元素用其他元素包裹起来，也就是给它增加一个父元素，针对这样的处理，JQuery提供了一个wrap方法">
-<meta property="og:updated_time" content="2017-02-15T01:12:40.356Z">
+<meta property="og:description" content="自定义指令一定要写在vue实例之前">
+<meta property="og:updated_time" content="2017-06-30T07:42:10.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DOM包裹wrap()方法">
-<meta name="twitter:description" content="将元素用其他元素包裹起来，也就是给它增加一个父元素，针对这样的处理，JQuery提供了一个wrap方法">
+<meta name="twitter:title" content="Vue自定义指令">
+<meta name="twitter:description" content="自定义指令一定要写在vue实例之前">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/15/DOM包裹wrap-方法/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/30/vue自定义指令/"/>
 
 
 
 
 
-  <title>DOM包裹wrap()方法 | Anson 笔记</title>
+  <title>Vue自定义指令 | Anson 笔记</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -306,7 +306,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/15/DOM包裹wrap-方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/30/vue自定义指令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Anson Zheng">
@@ -327,7 +327,7 @@
             
             
               
-                DOM包裹wrap()方法
+                Vue自定义指令
               
             
           </h1>
@@ -342,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-15T09:02:17+08:00">
-                2017-02-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-30T12:00:00+08:00">
+                2017-06-30
               </time>
             
 
@@ -365,8 +365,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/jQuery仓库/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery仓库</span>
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
                   </a>
                 </span>
 
@@ -399,13 +410,8 @@
       
 
       
-        <p>将元素用其他元素包裹起来，也就是给它增加一个父元素，针对这样的处理，JQuery提供了一个wrap方法<br><a id="more"></a></p>
-<h4 id="wrap-wrappingElement-："><a href="#wrap-wrappingElement-：" class="headerlink" title=".wrap( wrappingElement )："></a>.wrap( wrappingElement )：</h4><p>在集合中匹配的每个元素周围包裹一个HTML结构<br>p元素<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>p元素<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>给p元素增加一个div包裹<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'p'</span>).wrap(<span class="string">'&lt;div&gt;&lt;/div&gt;'</span>)</div></pre></td></tr></table></figure></p>
-<p>最后的结构，p元素增加了一个父div的结构<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p元素<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h4 id="wrap-function-："><a href="#wrap-function-：" class="headerlink" title=".wrap( function ) ："></a>.wrap( function ) ：</h4><p>一个回调函数，返回用于包裹匹配元素的 HTML 内容或 jQuery 对象<br>使用后的效果与直接传递参数是一样，只不过可以把代码写在函数体内部，写法不同而已<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'p'</span>).wrap(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'&lt;div&gt;&lt;/div&gt;'</span>;  </div><div class="line">   <span class="comment">//与第一种类似，只是写法不一样</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>.wrap()函数可以接受任何字符串或对象，可以传递给$()工厂函数来指定一个DOM结构。这种结构可以嵌套了好几层深，但应该只包含一个核心的元素。每个匹配的元素都会被这种结构包裹。该方法返回原始的元素集，以便之后使用链式方法。</p>
-
+        <p>自定义指令一定要写在vue实例之前<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">Vue.directive(<span class="string">'drag'</span>, &#123;</div><div class="line">    <span class="attr">inserted</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el,binding</span>) </span>&#123;</div><div class="line">        el.style.position = <span class="string">'absolute'</span>;</div><div class="line">        el.style.left = <span class="string">`<span class="subst">$&#123;binding.value.left&#125;</span>px`</span>;</div><div class="line">        el.style.top = <span class="string">`<span class="subst">$&#123;binding.value.top&#125;</span>px`</span>;</div><div class="line">        el.onmousedown = <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</div><div class="line">            <span class="keyword">let</span> disX = ev.clientX - el.offsetLeft;</div><div class="line">            <span class="keyword">let</span> disY = ev.clientY - el.offsetTop;</div><div class="line">            <span class="built_in">document</span>.onmousemove = <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</div><div class="line">                <span class="keyword">let</span> left = ev.clientX - disX;</div><div class="line">                <span class="keyword">let</span> top = ev.clientY - disY;</div><div class="line">                el.style.left = <span class="string">`<span class="subst">$&#123;left&#125;</span>px`</span>;</div><div class="line">                el.style.top = <span class="string">`<span class="subst">$&#123;top&#125;</span>px`</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="built_in">document</span>.onmouseup = <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</div><div class="line">                <span class="built_in">document</span>.onmousemove = <span class="literal">null</span>;</div><div class="line">                <span class="built_in">document</span>.onmouseup = <span class="literal">null</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span> <span class="attr">v-drag</span>=<span class="string">"&#123;left:0,top:200&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span> <span class="attr">v-drag</span>=<span class="string">"&#123;left:500,top:200&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -432,6 +438,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
+          
+        </div>
+      
 
       
         
@@ -441,8 +453,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/14/Vue开始之旅/" rel="next" title="Vue开始之旅">
-                <i class="fa fa-chevron-left"></i> Vue开始之旅
+              <a href="/2017/06/04/Markdown编辑器/" rel="next" title="Markdown编辑器">
+                <i class="fa fa-chevron-left"></i> Markdown编辑器
               </a>
             
           </div>
@@ -450,10 +462,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/15/DOM删除包裹unwrap-方法/" rel="prev" title="DOM删除包裹unwrap()方法">
-                DOM删除包裹unwrap()方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -523,17 +531,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/h.png"
@@ -595,22 +594,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#wrap-wrappingElement-："><span class="nav-number">1.</span> <span class="nav-text">.wrap( wrappingElement )：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wrap-function-："><span class="nav-number">2.</span> <span class="nav-text">.wrap( function ) ：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意："><span class="nav-number">3.</span> <span class="nav-text">注意：</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
