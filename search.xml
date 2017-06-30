@@ -311,16 +311,16 @@
 
     
     <entry>
-      <title><![CDATA[患得患失 小起小落]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
-      <content type="text"></content>
+      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
+      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
-      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
+      <title><![CDATA[患得患失 小起小落]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
+      <content type="text"></content>
     </entry>
 
     
@@ -832,6 +832,13 @@
       <title><![CDATA[DOM包裹wrap()方法]]></title>
       <url>%2F2017%2F02%2F15%2FDOM%E5%8C%85%E8%A3%B9wrap-%E6%96%B9%E6%B3%95%2F</url>
       <content type="text"><![CDATA[将元素用其他元素包裹起来，也就是给它增加一个父元素，针对这样的处理，JQuery提供了一个wrap方法 .wrap( wrappingElement )：在集合中匹配的每个元素周围包裹一个HTML结构p元素1&lt;p&gt;p元素&lt;/p&gt; 给p元素增加一个div包裹1$('p').wrap('&lt;div&gt;&lt;/div&gt;') 最后的结构，p元素增加了一个父div的结构123&lt;div&gt; &lt;p&gt;p元素&lt;/p&gt;&lt;/div&gt; .wrap( function ) ：一个回调函数，返回用于包裹匹配元素的 HTML 内容或 jQuery 对象使用后的效果与直接传递参数是一样，只不过可以把代码写在函数体内部，写法不同而已1234$('p').wrap(function() &#123; return '&lt;div&gt;&lt;/div&gt;'; //与第一种类似，只是写法不一样&#125;) 注意：.wrap()函数可以接受任何字符串或对象，可以传递给$()工厂函数来指定一个DOM结构。这种结构可以嵌套了好几层深，但应该只包含一个核心的元素。每个匹配的元素都会被这种结构包裹。该方法返回原始的元素集，以便之后使用链式方法。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Vue自定义指令]]></title>
+      <url>%2F2017%2F02%2F14%2F%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%2F</url>
+      <content type="text"><![CDATA[自定义指令一定要写在vue实例之前123456789101112131415161718192021Vue.directive('drag', &#123; inserted: function (el,binding) &#123; el.style.position = 'absolute'; el.style.left = `$&#123;binding.value.left&#125;px`; el.style.top = `$&#123;binding.value.top&#125;px`; el.onmousedown = function (ev) &#123; let disX = ev.clientX - el.offsetLeft; let disY = ev.clientY - el.offsetTop; document.onmousemove = function (ev) &#123; let left = ev.clientX - disX; let top = ev.clientY - disY; el.style.left = `$&#123;left&#125;px`; el.style.top = `$&#123;top&#125;px`; &#125; document.onmouseup = function (ev) &#123; document.onmousemove = null; document.onmouseup = null; &#125; &#125; &#125;&#125;) 12&lt;div class="box" v-drag="&#123;left:0,top:200&#125;"&gt;&lt;/div&gt;&lt;div class="box" v-drag="&#123;left:500,top:200&#125;"&gt;&lt;/div&gt;]]></content>
     </entry>
 
     
