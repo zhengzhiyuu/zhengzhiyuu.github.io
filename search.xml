@@ -3,9 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[vue组件]]></title>
+      <url>%2F2017%2F07%2F02%2Fvue%E7%BB%84%E4%BB%B6%2F</url>
+      <content type="text"><![CDATA[必须在vue实例之前创建 全局组件123&lt;div id="example"&gt; &lt;my-conponent&gt;&lt;/my-conponent&gt;&lt;/div&gt; 12345678&lt;script&gt; Vue.component("my-conponent", &#123; template: `&lt;div&gt;这是一个全局组件&lt;/div&gt;` &#125;) new Vue(&#123; el:'#example', &#125;) 局部组件12345678910111213141516171819202122232425&lt;div id="example"&gt; &lt;my-conponent-b&gt;&lt;/my-conponent-b&gt;&lt;/div&gt;```html```js&lt;script&gt;const Child = &#123; template: `&lt;div&gt;这是一个局部组件&lt;/div&gt;`&#125;new Vue(&#123; el: '#example', components: &#123; 'my-conponent-b': Child &#125;&#125;)&lt;/script&gt;``` ### 动态组件```html&lt;div id="example"&gt; &lt;button type="botton" @click="isa()"&gt;组件a&lt;/button&gt; &lt;button type="botton" @click="isb()"&gt;组件b&lt;/button&gt; &lt;component :is="isis"&gt;&lt;/component&gt;&lt;/div&gt; 1234567891011121314151617181920212223Vue.component("my-conponent-a", &#123; template: `&lt;div"&gt;组件a&lt;/div&gt;`&#125;)Vue.component("my-conponent-b", &#123; template: `&lt;div"&gt;组件b&lt;/div&gt;`&#125;)new Vue(&#123; el: '#example', data() &#123; return &#123; isis: 'my-conponent-a' &#125; &#125;, methods: &#123; isa() &#123; this.isis = 'my-conponent-a' &#125;, isb() &#123; this.isis = 'my-conponent-b' &#125; &#125;&#125;) x-templatevue似乎不推荐这莫使用1234567&lt;div id="example"&gt; &lt;my-conponent-a&gt;&lt;/my-conponent-a&gt;&lt;/div&gt;&lt;template id="my-conponent-a"&gt; &lt;div&gt;这是一个组件&lt;/div&gt;&lt;/template&gt; 1234567Vue.component("my-conponent-a", &#123; template: '#my-conponent-a'&#125;)new Vue(&#123; el: '#example'&#125;) 组件通信父组件向子组件传值1.在父组件中给子组件标签绑定父组件数据1&lt;my-conponent-a-b :data="counter"&gt;&lt;/my-conponent-a-b&gt; 2.在子组件中使用props: [String]接受值3.在子组件中使用绑定的属性名称123&lt;div id="example"&gt; &lt;my-conponent-a&gt;&lt;/my-conponent-a&gt;&lt;/div&gt; 12345678910111213141516171819202122232425Vue.component("my-conponent-a", &#123; template: ` &lt;div @click="counter+=1"&gt; &lt;p&gt;这是一个父组件 -&gt; &#123;&#123;counter&#125;&#125;&lt;/p&gt; &lt;my-conponent-a-b :data="counter"&gt;&lt;/my-conponent-a-b&gt; &lt;/div&gt; `, components: &#123; 'my-conponent-a-b': &#123; props: ['data'], template: ` &lt;p&gt;这是一个子组件 -&gt; &#123;&#123;data&#125;&#125;&lt;/p&gt; ` &#125; &#125;, data() &#123; return &#123; counter: 0 &#125; &#125;&#125;)new Vue(&#123; el: '#example'&#125;)]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Vue自定义指令]]></title>
       <url>%2F2017%2F06%2F30%2Fvue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4%2F</url>
-      <content type="text"><![CDATA[自定义指令一定要写在vue实例之前123456789101112131415161718192021Vue.directive('drag', &#123; inserted: function (el,binding) &#123; el.style.position = 'absolute'; el.style.left = `$&#123;binding.value.left&#125;px`; el.style.top = `$&#123;binding.value.top&#125;px`; el.onmousedown = function (ev) &#123; let disX = ev.clientX - el.offsetLeft; let disY = ev.clientY - el.offsetTop; document.onmousemove = function (ev) &#123; let left = ev.clientX - disX; let top = ev.clientY - disY; el.style.left = `$&#123;left&#125;px`; el.style.top = `$&#123;top&#125;px`; &#125; document.onmouseup = function (ev) &#123; document.onmousemove = null; document.onmouseup = null; &#125; &#125; &#125;&#125;) 12&lt;div class="box" v-drag="&#123;left:0,top:200&#125;"&gt;&lt;/div&gt;&lt;div class="box" v-drag="&#123;left:500,top:200&#125;"&gt;&lt;/div&gt;]]></content>
+      <content type="text"><![CDATA[自定义过滤器和自定义指令一定要写在vue实例之前 自定义过滤器123Vue.filter('a', input =&gt; &#123; return '$'+input;&#125;) 1&lt;li v-for="v in myData"&gt;&#123;&#123;v | a&#125;&#125;&lt;/li&gt; 自定义指令：实现拖拽功能123456789101112131415161718192021Vue.directive('drag', &#123; inserted: function (el,binding) &#123; el.style.position = 'absolute'; el.style.left = `$&#123;binding.value.left&#125;px`; el.style.top = `$&#123;binding.value.top&#125;px`; el.onmousedown = function (ev) &#123; let disX = ev.clientX - el.offsetLeft; let disY = ev.clientY - el.offsetTop; document.onmousemove = function (ev) &#123; let left = ev.clientX - disX; let top = ev.clientY - disY; el.style.left = `$&#123;left&#125;px`; el.style.top = `$&#123;top&#125;px`; &#125; document.onmouseup = function (ev) &#123; document.onmousemove = null; document.onmouseup = null; &#125; &#125; &#125;&#125;) 12&lt;div class="box" v-drag="&#123;left:0,top:200&#125;"&gt;&lt;/div&gt;&lt;div class="box" v-drag="&#123;left:500,top:200&#125;"&gt;&lt;/div&gt;]]></content>
     </entry>
 
     
@@ -318,16 +325,16 @@
 
     
     <entry>
-      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
-      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
+      <title><![CDATA[患得患失 小起小落]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
+      <content type="text"></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[患得患失 小起小落]]></title>
-      <url>%2F2017%2F02%2F28%2F%E5%A4%AA%E5%B9%B4%E8%BD%BB%2F</url>
-      <content type="text"></content>
+      <title><![CDATA[广积粮，高筑墙，缓称王]]></title>
+      <url>%2F2017%2F02%2F28%2F%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E4%BC%9A%2F</url>
+      <content type="text"><![CDATA[急功好利，太过浮夸，没有坚持的决心，今天重新认识到缺点。目标：看完犀牛书，学好基础知识]]></content>
     </entry>
 
     
