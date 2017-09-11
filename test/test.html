@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>look-look</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            width: 300px;
+        }
+
+        input {
+            margin: 10px;
+        }
+        .text{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" class="input">
+        <input type="button" value="提交奥" class="btn">
+        <p class="text">输入学号</p>
+        <img src="" alt="" class="img">
+        <br>
+        <input type="button" value="上一个" class="prev">
+        <input type="button" value="下一个" class="next">
+
+    </div>
+
+    <script>
+        const input = document.querySelector('.input')
+        const btn = document.querySelector('.btn')
+        const text = document.querySelector('.text')
+        const img = document.querySelector('.img')
+        const prev = document.querySelector('.prev')
+        const next = document.querySelector('.next')
+        let inputVal, numIndex, newInputVAl, index
+
+        btn.addEventListener('click', () => {
+            inputVal = input.value
+            newInputVAl = inputVal.slice(0, inputVal.length - 2) + ''
+            let indexSrt = inputVal.slice(inputVal.length - 2, inputVal.length)
+            numIndex = parseInt(indexSrt)
+
+            const val = 'http://odc.neusoft.edu.cn/odc/file/fileload.do?fileid=' + newInputVAl + indexSrt
+            text.innerHTML = val
+            // img.src = val
+            img.setAttribute('src',val)
+        })
+
+        input.addEventListener('keydown', e => {
+            inputVal = input.value
+            newInputVAl = inputVal.slice(0, inputVal.length - 2) + ''
+            let indexSrt = inputVal.slice(inputVal.length - 2, inputVal.length)
+            numIndex = parseFloat(indexSrt)
+
+            const val = 'http://odc.neusoft.edu.cn/odc/file/fileload.do?fileid=' + newInputVAl + indexSrt
+            text.innerHTML = val
+            img.src = val
+        })
+
+        prev.addEventListener('click', () => {
+            if (index <= 1) {
+                index = 1
+            } else {
+                index = numIndex -= 1
+            }
+            console.log(index)
+            let indexSrt
+            if (index <= 9) {
+                indexSrt = '0' + index
+            } else {
+                indexSrt = index + ''
+            }
+            const val = 'http://odc.neusoft.edu.cn/odc/file/fileload.do?fileid=' + newInputVAl + indexSrt
+            text.innerHTML = val
+            img.src = val
+            input.value = newInputVAl + indexSrt
+        })
+        next.addEventListener('click', () => {
+            if (index >= 30) {
+                index = 30
+            } else {
+                index = numIndex += 1
+            }
+            if (index > 30) {
+                index = 30
+            }
+            console.log(index)
+            let indexSrt
+            if (index <= 9) {
+                indexSrt = '0' + index
+            } else {
+                indexSrt = index + ''
+            }
+            const val = 'http://odc.neusoft.edu.cn/odc/file/fileload.do?fileid=' + newInputVAl + indexSrt
+            text.innerHTML = val
+            img.src = val
+            input.value = newInputVAl + indexSrt
+        })
+    </script>
+</body>
+
+</html>
