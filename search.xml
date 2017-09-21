@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[url拼接]]></title>
+      <url>%2F2017%2F09%2F21%2Furl%E6%8B%BC%E6%8E%A5%2F</url>
+      <content type="text"><![CDATA[jsonp url拼接12345678910url += (url.indexOf('?') &lt; 0 ? '?' : '&amp;') + param(data)function param(data) &#123; let url = '' for (var k in data) &#123; let value = data[k] !== undefined ? data[k] : '' url += '&amp;' + k + '=' + encodeURIComponent(value) &#125; return url ? url.substring(1) : ''&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[unix时间转换]]></title>
       <url>%2F2017%2F09%2F19%2Funix%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%2F</url>
       <content type="text"><![CDATA[1234567891011121314151617181920212223242526272829303132let http = require('http'), url = require('url')let server = http.createServer((request, response) =&gt; &#123; console.log(`$&#123;request.method&#125; : $&#123;request.url&#125;`); let path = url.parse(request.url).pathname.slice(1) let parseUnix = new Date(path * 1000) let month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] let unix = &#123;&#125; let reg = /^\d*$/ if (reg.test(path)) &#123; unix = &#123; "unix": path, "natural": `$&#123;month[parseUnix.getMonth()]&#125; $&#123;parseUnix.getDate()&#125;, $&#123;parseUnix.getFullYear()&#125;` &#125; &#125; else &#123; unix = &#123; "unix": new Date(decodeURI(path)).getTime() / 1000, "natural": decodeURI(path) &#125; &#125; response.writeHead(200, &#123; 'Content-Type': 'text/json' &#125;) response.end(JSON.stringify(unix))&#125;)server.listen(8080)console.log('Server is running at http://127.0.0.1:8080/')]]></content>
