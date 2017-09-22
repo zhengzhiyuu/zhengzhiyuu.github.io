@@ -90,19 +90,16 @@
 
 
 
-<meta name="description" content="启动：php artisan serve
-Migration创建一个迁移数据表： php artisan make:migration create_name_table --create=name根据迁移生成数据表：php artisan migrate撤销返回上一步： php artisan migrate:rollbackMigration数据表：123456789public functi">
+<meta name="description" content="php框架laravel的基本用法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="laravel">
 <meta property="og:url" content="http://yoursite.com/2017/08/31/laravel/index.html">
 <meta property="og:site_name" content="日常笔记">
-<meta property="og:description" content="启动：php artisan serve
-Migration创建一个迁移数据表： php artisan make:migration create_name_table --create=name根据迁移生成数据表：php artisan migrate撤销返回上一步： php artisan migrate:rollbackMigration数据表：123456789public functi">
-<meta property="og:updated_time" content="2017-09-03T10:35:04.421Z">
+<meta property="og:description" content="php框架laravel的基本用法">
+<meta property="og:updated_time" content="2017-09-21T06:22:16.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="laravel">
-<meta name="twitter:description" content="启动：php artisan serve
-Migration创建一个迁移数据表： php artisan make:migration create_name_table --create=name根据迁移生成数据表：php artisan migrate撤销返回上一步： php artisan migrate:rollbackMigration数据表：123456789public functi">
+<meta name="twitter:description" content="php框架laravel的基本用法">
 
 
 
@@ -402,7 +399,8 @@ Migration创建一个迁移数据表： php artisan make:migration create_name_t
       
 
       
-        <p>启动：php artisan serve</p>
+        <p>php框架laravel的基本用法<br><a id="more"></a></p>
+<p>启动：php artisan serve</p>
 <h3 id="Migration"><a href="#Migration" class="headerlink" title="Migration"></a>Migration</h3><p>创建一个迁移数据表： <code>php artisan make:migration create_name_table --create=name</code><br>根据迁移生成数据表：<code>php artisan migrate</code><br>撤销返回上一步： <code>php artisan migrate:rollback</code><br>Migration数据表：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">up</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    Schema::create(<span class="string">'name'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(Blueprint $table)</span> </span>&#123;</div><div class="line">        $table-&gt;increments(<span class="string">'id'</span>);</div><div class="line">        $table-&gt;string(<span class="string">'name'</span>);            </div><div class="line">        $table-&gt;test(<span class="string">'content'</span>);            </div><div class="line">        $table-&gt;timestamps();</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="Elopuent"><a href="#Elopuent" class="headerlink" title="Elopuent"></a>Elopuent</h3><p>生成model: <code>php artisan make:model Name</code><br>创建的model与创建的表名相同，可以与表相关联</p>
 <h4 id="插入数据："><a href="#插入数据：" class="headerlink" title="插入数据："></a>插入数据：</h4><p>打开一个命令行： <code>php artisan tinker</code><br>然后：<code>$name = new App\Name</code><br>然后：<code>$name-&gt;name=&#39;zhiyu&#39;</code>  // name来源于表结构<br>或者：<code>$name::create([&#39;name&#39;=&gt;&#39;zhiyu&#39;]);</code><br>然后写入数据库：<code>$name-&gt;save();</code><br>toArray():<code>$name-&gt;toArray();</code> //返回一个数组<br>find():<code>$name-&gt;find(1)</code> //查找id为1的数据<br>更新数据：<code>$name-&gt;name=&#39;Anson&#39;</code> -&gt; 再执行 <code>$name-&gt;toArray();</code></p>
@@ -573,7 +571,7 @@ Migration创建一个迁移数据表： php artisan make:migration create_name_t
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">160</span>
+                <span class="site-state-item-count">161</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -584,7 +582,7 @@ Migration创建一个迁移数据表： php artisan make:migration create_name_t
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
