@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="日常笔记">
 <meta property="og:description" content="重写于17年7月7/8/10日">
 <meta property="og:image" content="http://i1.piimg.com/1949/bd44ab308862d587.png">
-<meta property="og:updated_time" content="2017-09-22T09:04:26.015Z">
+<meta property="og:updated_time" content="2017-09-26T11:34:08.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue+Koa+MongoDB">
 <meta name="twitter:description" content="重写于17年7月7/8/10日">
@@ -440,6 +440,7 @@
 <p>2.将打包文件<code>index.html</code>复制到<code>views</code>下<br>  将<code>ststic</code>文件夹下的<code>文件夹</code>复制到<code>public</code>下<br>3.修改<code>index.html</code>的<code>js</code>和<code>css</code>文件路径，如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">/static/css/app.813a0c4380ae8d8063d6247ed0985f66.css</span> <span class="attr">rel</span>=<span class="string">stylesheet</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>修改为：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">css/app.813a0c4380ae8d8063d6247ed0985f66.css</span> <span class="attr">rel</span>=<span class="string">stylesheet</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>4.运行命令，启动服务：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm start</div></pre></td></tr></table></figure></p>
+<p>5.如果开启<code>history</code>模式则不能正确跳转，需要服务端配置支持<code>HTML5 History Mode</code><br>6.使用pm2：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm prd</div></pre></td></tr></table></figure></p>
 <h3 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h3><p>使用vue官方推荐的axios<br>1.下载axios和vue-axios<br>2.在main.js中注册使用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// scr/main.js</span></div><div class="line"><span class="keyword">import</span> VueAxios <span class="keyword">from</span> <span class="string">'vue-axios'</span></div><div class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span></div><div class="line"></div><div class="line">Vue.use(VueAxios,axios)</div></pre></td></tr></table></figure></p>
 <p>3.使用方法：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.</span></div><div class="line"><span class="keyword">this</span>.$http.get().then().catch</div><div class="line"><span class="comment">// 2.</span></div><div class="line"><span class="keyword">this</span>.axios.get().then().catch</div></pre></td></tr></table></figure></p>
 <p><code>不推荐</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vue.prototype.$http = Axios</div></pre></td></tr></table></figure></p>
@@ -519,8 +520,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/30/mongoose操作mongoDB/" rel="next" title="Node工具操作MongoDB">
-                <i class="fa fa-chevron-left"></i> Node工具操作MongoDB
+              <a href="/2017/05/28/Node框架Koa处理URL/" rel="next" title="Node框架Koa处理URL">
+                <i class="fa fa-chevron-left"></i> Node框架Koa处理URL
               </a>
             
           </div>
