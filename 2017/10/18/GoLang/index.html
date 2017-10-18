@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="golang的图标超级萌">
+<meta name="description" content="golang图标超级萌">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GoLang">
 <meta property="og:url" content="http://yoursite.com/2017/10/18/GoLang/index.html">
-<meta property="og:site_name" content="日常笔记">
-<meta property="og:description" content="golang的图标超级萌">
-<meta property="og:updated_time" content="2017-10-18T07:13:52.540Z">
+<meta property="og:site_name" content="YuAndFeng">
+<meta property="og:description" content="golang图标超级萌">
+<meta property="og:updated_time" content="2017-10-18T09:18:44.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GoLang">
-<meta name="twitter:description" content="golang的图标超级萌">
+<meta name="twitter:description" content="golang图标超级萌">
 
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <title>GoLang | 日常笔记</title>
+  <title>GoLang | YuAndFeng</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -169,7 +169,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">日常笔记</span>
+        <span class="site-title">YuAndFeng</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -315,7 +315,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="日常笔记">
+      <meta itemprop="name" content="YuAndFeng">
     </span>
 
     
@@ -377,9 +377,10 @@
       
 
       
-        <p>golang的图标超级萌<br><a id="more"></a></p>
+        <p>golang图标超级萌<br><a id="more"></a></p>
+<h3 id="golang-web服务器"><a href="#golang-web服务器" class="headerlink" title="golang web服务器"></a>golang web服务器</h3><p><a href="http://blog.csdn.net/chenxun_2010/article/details/52076482" target="_blank" rel="external">参看0</a><br><a href="http://blog.csdn.net/xingwangc2014/article/details/51623157" target="_blank" rel="external">参看1</a><br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> main</div><div class="line"></div><div class="line"><span class="keyword">import</span> (</div><div class="line">	<span class="string">"fmt"</span></div><div class="line">	<span class="string">"net/http"</span></div><div class="line">	<span class="string">"log"</span></div><div class="line">	<span class="string">"gopkg.in/mgo.v2"</span></div><div class="line">	<span class="string">"gopkg.in/mgo.v2/bson"</span></div><div class="line">	<span class="string">"encoding/json"</span></div><div class="line">)</div><div class="line"></div><div class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</div><div class="line">	Name  <span class="keyword">string</span></div><div class="line">	Phone <span class="keyword">string</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayhelloName</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</div><div class="line">	fmt.Fprintf(w, <span class="string">"Hello astaxie!"</span>) <span class="comment">//这个写入到w的是输出到客户端的</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayLoveYou</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</div><div class="line">	fmt.Fprintf(w, <span class="string">"love you!"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">getdata</span><span class="params">(w http.ResponseWriter,r *http.Request)</span></span> &#123;</div><div class="line">	session, err := mgo.Dial(<span class="string">"localhost:27017"</span>)</div><div class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line">		<span class="built_in">panic</span>(err)</div><div class="line">	&#125;</div><div class="line">	session.SetMode(mgo.Monotonic, <span class="literal">true</span>)</div><div class="line"></div><div class="line">	c := session.DB(<span class="string">"test"</span>).C(<span class="string">"people"</span>)</div><div class="line"></div><div class="line">	resust := Person&#123;&#125;</div><div class="line">	c.Find(bson.M&#123;<span class="string">"name"</span>: <span class="string">"Anson"</span>&#125;).One(&amp;resust)</div><div class="line">	<span class="comment">//fmt.Fprintf(w, resust.Name)</span></div><div class="line"></div><div class="line">	<span class="comment">// return json</span></div><div class="line">	user := Person&#123;</div><div class="line">		resust.Name,</div><div class="line">		resust.Phone,</div><div class="line">	&#125;</div><div class="line">	json.NewEncoder(w).Encode(user)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">	http.HandleFunc(<span class="string">"/"</span>, sayhelloName) <span class="comment">//设置访问的路由</span></div><div class="line">	http.HandleFunc(<span class="string">"/love"</span>, sayLoveYou)</div><div class="line">	http.HandleFunc(<span class="string">"/get"</span>,getdata)</div><div class="line">	err := http.ListenAndServe(<span class="string">":9090"</span>, <span class="literal">nil</span>) <span class="comment">//设置监听的端口</span></div><div class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line">		log.Fatal(<span class="string">"ListenAndServe: "</span>, err)</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="连接mongodb数据库"><a href="#连接mongodb数据库" class="headerlink" title="连接mongodb数据库"></a>连接mongodb数据库</h3><ol>
-<li><p>获取mgo，mgo是MongoDB的Go语言驱动</p>
+<li><p>获取mgo，mgo是MongoDB的Go语言驱动<br><a href="https://my.oschina.net/ffs/blog/300148" target="_blank" rel="external">mgo使用指南</a><br><a href="https://godoc.org/gopkg.in/mgo.v2" target="_blank" rel="external">官方文档</a><br><a href="http://blog.csdn.net/wangshubo1989/article/details/75105397?locationNum=4&amp;fps=1" target="_blank" rel="external">golang中使用MongoDB</a>    </p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">go</span> get gopkg.in/mgo.v2</div></pre></td></tr></table></figure>
 </li>
 <li><p>连接mongodb</p>
@@ -398,7 +399,7 @@
 <figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">c.Insert(&amp;Person&#123;<span class="string">"Anson"</span>, <span class="string">"1555555555"</span>&#125;)</div></pre></td></tr></table></figure>
 </li>
 <li><p>查询数据</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">result := Person&#123;&#125;</div><div class="line">c.Find(bson.M&#123;<span class="string">"name"</span>: <span class="string">"Anson"</span>&#125;).One(&amp;result)</div><div class="line"></div><div class="line"><span class="comment">//result代理查询结果</span></div><div class="line">fmt.Println(<span class="string">"Phone:"</span>, result.Phone)</div></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">result := Person&#123;&#125;</div><div class="line">c.Find(bson.M&#123;<span class="string">"name"</span>: <span class="string">"Anson"</span>&#125;).One(&amp;result)</div><div class="line"><span class="comment">//result代理查询结果</span></div><div class="line">fmt.Println(<span class="string">"Phone:"</span>, result.Phone)</div></pre></td></tr></table></figure>
 </li>
 <li><p>查询所有数据</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Person 为数据模型</span></div><div class="line"><span class="keyword">var</span> result []Person</div><div class="line">c.Find(bson.M&#123;&#125;).All(&amp;result)</div><div class="line">fmt.Println(<span class="string">"Phone:"</span>, result[<span class="number">0</span>])</div></pre></td></tr></table></figure>
@@ -407,7 +408,7 @@
 <figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">c.Update(bson.M&#123;<span class="string">"name"</span>:<span class="string">"Anson"</span>&#125;, &amp;Person&#123;<span class="string">"zhiyu"</span>,<span class="string">"1666666666"</span>&#125;)</div></pre></td></tr></table></figure>
 </li>
 <li><p>更新所有数据</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">暂无</div></pre></td></tr></table></figure>
 </li>
 <li><p>删除数据</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">c.Remove(bson.M&#123;<span class="string">"name"</span>:<span class="string">"Anson2"</span>&#125;)</div></pre></td></tr></table></figure>
@@ -616,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#连接mongodb数据库"><span class="nav-number">1.</span> <span class="nav-text">连接mongodb数据库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#golang-web服务器"><span class="nav-number">1.</span> <span class="nav-text">golang web服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接mongodb数据库"><span class="nav-number">2.</span> <span class="nav-text">连接mongodb数据库</span></a></li></ol></div>
             
 
           </div>
