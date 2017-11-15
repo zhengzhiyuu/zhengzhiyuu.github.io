@@ -3,9 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[Vue获取图片]]></title>
+      <url>%2F2017%2F11%2F15%2FVue%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87%2F</url>
+      <content type="text"><![CDATA[12&lt;input type="file" ref="file"&gt;&lt;button @click="getFile()"&gt;获取&lt;/button&gt; 12345678910111213getImg()&#123; //获取文件 let file = this.$refs.file.files[0] //创建读取文件 let reader = new FileReader() let img //读文件 reader.onload = e =&gt; &#123; img = e.target.result console.log(img) &#125; reader.readAsDataURL(file)&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Vue+Codrova混合App开发]]></title>
       <url>%2F2017%2F10%2F25%2FVue-Codrova%E6%B7%B7%E5%90%88App%E5%BC%80%E5%8F%91%2F</url>
-      <content type="text"><![CDATA[Cordova插件在Vue中使用： 安装Cordova插件(手机状态栏-沉浸模式)参考 1cordova plugin add cordova-plugin-statusbar 安装Vue-Cordova插件 1npm install --save vue-cordova 123456789import Vue from 'vue'import VueCordova from 'vue-cordova'Vue.use(VueCordova)Vue.cordova.on('deviceready', () =&gt; &#123; // Cordova插件使用 if (cordova.platformId == 'android') &#123; StatusBar.backgroundColorByHexString("#333"); &#125;&#125;);]]></content>
+      <content type="text"><![CDATA[Cordova插件在Vue中使用： 安装Cordova插件(手机状态栏-沉浸模式)参考 1cordova plugin add cordova-plugin-statusbar 安装Vue-Cordova插件 1npm install --save vue-cordova 123456789import Vue from 'vue'import VueCordova from 'vue-cordova'Vue.use(VueCordova)Vue.cordova.on('deviceready', () =&gt; &#123; // Cordova插件使用 if (cordova.platformId == 'android') &#123; StatusBar.backgroundColorByHexString("#333"); &#125;&#125;); 如果插件不好用 需要在index.html中加上：1&lt;script type=text/javascript src="cordova.js"&gt;&lt;/script&gt; backbutton事件,app退出消息弹出框插件：文档app1cordova plugin add cordova-plugin-x-toast 123456789101112131415161718Vue.cordova.on('deviceready', () =&gt; &#123; Vue.cordova.on('backbutton', eventBackButton) let backEventCount = 0 function eventBackButton() &#123; if (backEventCount === 0) &#123; backEventCount += 1 window.plugins.toast.showLongCenter('再点击一次退出') document.removeEventListener('backbutton', eventBackButton) setTimeout(() =&gt; &#123; backEventCount = 0 &#125;, 2000) &#125; else if (backEventCount === 1) &#123; navigator.app.exitApp() &#125; &#125;&#125;)]]></content>
     </entry>
 
     

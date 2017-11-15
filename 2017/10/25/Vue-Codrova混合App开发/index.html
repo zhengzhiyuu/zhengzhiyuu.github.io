@@ -112,7 +112,7 @@
 
 
 123456789import Vue from &apos;vue&apos;import VueCordova from &apos;vue-co">
-<meta property="og:updated_time" content="2017-10-25T07:18:09.554Z">
+<meta property="og:updated_time" content="2017-10-25T12:01:30.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue+Codrova混合App开发">
 <meta name="twitter:description" content="Cordova插件在Vue中使用：
@@ -410,6 +410,9 @@
 </li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> VueCordova <span class="keyword">from</span> <span class="string">'vue-cordova'</span></div><div class="line">Vue.use(VueCordova)</div><div class="line">Vue.cordova.on(<span class="string">'deviceready'</span>, () =&gt; &#123;</div><div class="line">  <span class="comment">// Cordova插件使用</span></div><div class="line">  <span class="keyword">if</span> (cordova.platformId == <span class="string">'android'</span>) &#123;</div><div class="line">    StatusBar.backgroundColorByHexString(<span class="string">"#333"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>如果插件不好用 需要在index.html中加上：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">text/javascript</span> <span class="attr">src</span>=<span class="string">"cordova.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h3 id="backbutton事件-app退出"><a href="#backbutton事件-app退出" class="headerlink" title="backbutton事件,app退出"></a>backbutton事件,app退出</h3><p>消息弹出框插件：<br><a href="https://www.npmjs.com/package/cordova-plugin-x-toast" target="_blank" rel="external">文档</a><br><a href="http://www.cnblogs.com/suiyueshentou/p/6600449.html" target="_blank" rel="external">app</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cordova plugin add cordova-plugin-x-toast</div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Vue.cordova.on(<span class="string">'deviceready'</span>, () =&gt; &#123;</div><div class="line">  Vue.cordova.on(<span class="string">'backbutton'</span>, eventBackButton)</div><div class="line"></div><div class="line">  <span class="keyword">let</span> backEventCount = <span class="number">0</span></div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">eventBackButton</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (backEventCount === <span class="number">0</span>) &#123;</div><div class="line">      backEventCount += <span class="number">1</span></div><div class="line">      <span class="built_in">window</span>.plugins.toast.showLongCenter(<span class="string">'再点击一次退出'</span>)</div><div class="line">      <span class="built_in">document</span>.removeEventListener(<span class="string">'backbutton'</span>, eventBackButton)</div><div class="line">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        backEventCount = <span class="number">0</span></div><div class="line">      &#125;, <span class="number">2000</span>)</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (backEventCount === <span class="number">1</span>) &#123;</div><div class="line">      navigator.app.exitApp()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -465,6 +468,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/15/Vue获取图片/" rel="prev" title="Vue获取图片">
+                Vue获取图片 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -559,7 +566,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">165</span>
+                <span class="site-state-item-count">166</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -616,7 +623,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cordova插件在Vue中使用："><span class="nav-number">1.</span> <span class="nav-text">Cordova插件在Vue中使用：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cordova插件在Vue中使用："><span class="nav-number">1.</span> <span class="nav-text">Cordova插件在Vue中使用：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#backbutton事件-app退出"><span class="nav-number">2.</span> <span class="nav-text">backbutton事件,app退出</span></a></li></ol></div>
             
 
           </div>
