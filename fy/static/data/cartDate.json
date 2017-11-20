@@ -1,0 +1,16 @@
+{
+    "zhiyu": [
+        {
+            "imgUrl": "./../../../../static/images/sf-2.jpg",
+            "goodsName": "家居",
+            "goodsPrice": "26999",
+            "goodsNumber": 1
+        },
+        {
+            "imgUrl": "./../../../../static/images/sf-2.jpg",
+            "goodsName": "家居",
+            "goodsPrice": "26999",
+            "goodsNumber": 1
+        }
+    ]
+}
