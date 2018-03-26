@@ -10,16 +10,23 @@
     position: relative;
 }
 
-.work-swiper-container{
+.work-swiper-container {
     width: 1120px;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.return-list{
+.return-list {
     position: fixed;
     bottom: 325px;
     right: 8px;
     display: none;
     cursor: pointer;
+}
+
+.work-title-en {
+    font-size: 12px;
+    color: #8a8989;
+    text-align: center;
+    margin-top: 10px;
 }

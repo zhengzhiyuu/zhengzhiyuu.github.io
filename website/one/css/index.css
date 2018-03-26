@@ -50,7 +50,7 @@
     float: left;
     position: relative;
     left: 50%;
-    font-family: Ikeasans;    
+    /* font-family: Ikeasans;     */
 }
 
 .info-img-title {
@@ -62,9 +62,8 @@
     text-align: center;
 }
 
-.info-img-title-left {
-    font-family: Ikeasans;
-}
+/* .info-img-title-left {
+} */
 
 .info-img-title-en {
     position: relative;
@@ -73,7 +72,6 @@
     color: #8a8989;
     text-align: center;
     margin-top: 10px;
-    font-family: Ikeasans;
 }
 
 .info-more {
