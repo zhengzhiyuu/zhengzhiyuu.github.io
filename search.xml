@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[git基本使用]]></title>
+      <url>%2F2018%2F03%2F26%2Fgit%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
+      <content type="text"><![CDATA[向远程仓库提交文件git push -u origin master]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[不限宽居中]]></title>
       <url>%2F2018%2F03%2F26%2F%E4%B8%8D%E9%99%90%E5%AE%BD%E5%B1%85%E4%B8%AD%2F</url>
       <content type="text"><![CDATA[123&lt;div class="wrap"&gt; &lt;div class="inner"&gt;html ： 让 inner 居中&lt;/div&gt;&lt;/div&gt; 123456789.wrap &#123; float: left; /* 自适应内容宽度 */ position: relative; left: 50%; &#125;.inner &#123; position: relative; left: -50%; &#125;]]></content>
