@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[git基本使用]]></title>
       <url>%2F2018%2F03%2F26%2Fgit%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
-      <content type="text"><![CDATA[添加文件暂存区git add -A commit文件git commit -m &quot;msg&quot; 向远程仓库提交文件git push -u origin master]]></content>
+      <content type="text"><![CDATA[初始化Git文件夹(新建空白文件夹，进入文件夹)git init 添加到缓存区,使用如下命令:git add -A 实际提交改动commit文件:git commit -m &quot;msg&quot; 添加远程仓库(如果没有):git remote add origin &lt;server&gt;git remote add origin git@github.com:zhengzhiyuu/MD_backups.git 向远程仓库推送改动:git push -u origin master]]></content>
     </entry>
 
     
