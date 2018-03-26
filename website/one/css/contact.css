@@ -1,0 +1,58 @@
+.contact {
+    margin-top: 26px;
+}
+
+.contact-title {
+    color: #5bbeb3;
+    text-align: center;
+    font-family: '微软雅黑';
+}
+
+.contact-title h3 {
+    font-size: 31px;
+}
+
+.contact-title p {
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.contact-title img {
+    margin-top: 15px;
+}
+
+#map-container {
+    width: 1200px;
+    height: 600px;
+    margin: 25px auto 0;
+}
+
+.anchorBL {
+    display: none;
+}
+
+.map-text {
+    width: 1200px;
+    margin: 30px auto 255px;
+    font-size: 16px;
+    color: #5a5a5a;
+}
+
+.map-text p span {
+    margin-right: 46px;
+}
+
+.map-text p span:last-child {
+    margin-right: 0;
+}
+
+/* .BMap_center{
+    background: #d51f43;
+}
+
+.BMap_bubble_content{
+    background: #d51f43;
+    color: #ffffff;
+    text-align: center;
+    font-size: 36px;
+} */

@@ -1,0 +1,284 @@
+/* @font-face {
+    font-family: Ikeasans;
+    src: url('./../font/Ikeasans/IKEASans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    background: #efefef;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Microsoft YaHei'
+}
+
+.header-container {
+    height: 139px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.header {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    /* margin-left: 360px; */
+    margin-top: 73px;
+}
+
+.phone {
+    float: right;
+    margin-top: 89px;
+}
+
+.decade {
+    float: right;
+    margin-top: 89px;
+    margin-right: 7px;
+}
+
+.nav {
+    width: 1200px;
+    height: 84px;
+    box-sizing: border-box;
+    padding: 30px 0 0 0;
+    margin: 0 auto;
+    clear: both;
+}
+
+.nav ul li {
+    float: left;
+    width: 150px;
+    margin-right: 60px;
+    text-align: center;
+}
+
+.nav ul li:first-child {
+    text-align: left;
+}
+
+.nav ul li:last-child {
+    text-align: right;
+}
+
+.nav ul li:last-child {
+    margin-right: 0px;
+}
+
+.hidden-el {
+    display: none
+}
+
+.nav ul li:hover .hover-el {
+    display: none;
+}
+
+.nav ul li:hover .hidden-el {
+    display: block;
+    color: #37b6a9;
+    font-weight: 500; 
+}
+
+.nav ul li:hover .hover-scope {
+    display: block;
+}
+
+.nav ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #4a4a4a;
+    /* font-weight: 600; */
+    /* font-family: Ikeasans; */
+}
+
+#change {
+    color: #37b6a9;
+    font-weight: 500;
+}
+
+.swiper-slide img {
+    width: 100%;
+    /* height: 560px; */
+}
+
+.footer {
+    float: left;
+    /* margin-top: 44px; */
+    height: 320px;
+    width: 100%;
+    background: #1f2225;
+}
+
+.footer-container {
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 78px;
+}
+
+.footer-left {
+    float: left;
+}
+
+.footer-left img:first-child {
+    margin-bottom: 25px;
+}
+
+.footer-center {
+    width: 267px;
+    margin-left: 202px;
+    margin-right: 216px;
+    float: left;
+}
+
+.footer-title {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.footer-text {
+    font-size: 15px;
+    color: #ffffff;
+    margin-top: 24px;
+}
+
+.footer-text-en {
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 17px;
+}
+
+.footer-text-em {
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 33px;
+}
+
+.top {
+    position: fixed;
+    bottom: 325px;
+    right: 8px;
+    display: none;
+    cursor: pointer;
+}
+
+.top img {
+    cursor: pointer;
+}
+
+.hover-scope {
+    display: none;
+}
+
+.s {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 22px solid rgba(0, 0, 0, .7);
+    z-index: 10;
+    position: relative;
+    top: 6.5px;
+    left: 68px;
+}
+
+.work-hover {
+    position: absolute;
+    left: 0;
+    top: 225px;
+    background: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 267px;
+    z-index: 10;
+}
+
+.work-itme-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.work-hover-itme {
+    float: left;
+    margin-right: 57px;
+    margin-top: 38px;
+}
+
+.work-itme-content {
+    position: relative;
+}
+
+.work-hover-itme:last-child {
+    margin-right: 0;
+}
+
+.img-filter {
+    width: 257px;
+    height: 127px;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+}
+
+.work-add {
+    position: absolute;
+    top: 45px;
+    left: 109px;
+    display: none;
+}
+
+.wirk-itme-text {
+    /* font-family: Ikeasans; */
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.wirk-itme-text h3 {
+    font-size: 18px;
+}
+
+.wirk-itme-text p {
+    font-size: 12px;
+    text-transform: uppercase;
+    transform: scale(0.75);
+}
+
+.work-itme-content:hover .img-filter {
+    display: none;
+}
+
+.work-itme-content:hover .work-add {
+    display: block;
+}
+
+.work-itme-content:hover+.wirk-itme-text {
+    color: #37b6a9;
+}
+
+.img-filter:first-child {
+    display: none;
+}
+
+.work-add:first-child {
+    display: block;
+}
+
+.wirk-itme-text:first-child {
+    color: #37b6a9;
+}
+
+.swiper-bg {
+    background-image: url('./../images/carousel-1.png');
+    background-position: center;
+    height: 563px;
+}

@@ -1,0 +1,25 @@
+.work-banner {
+    width: 1200px;
+    margin-top: 7px;
+}
+
+.work-carousel {
+    width: 1200px;
+    /* height: 106px; */
+    margin: 13px auto 50px;
+    position: relative;
+}
+
+.work-swiper-container{
+    width: 1120px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.return-list{
+    position: fixed;
+    bottom: 325px;
+    right: 8px;
+    display: none;
+    cursor: pointer;
+}

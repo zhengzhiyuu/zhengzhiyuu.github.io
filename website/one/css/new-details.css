@@ -1,0 +1,18 @@
+.new-details-title{
+    font-size: 25px;
+    color: #5bbeb3;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.new-details-text{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #5a5a5a;
+    line-height: 28px;
+}
+
+.new-details-text p{
+    margin-bottom: 30px;
+}
