@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[git基本使用]]></title>
       <url>%2F2018%2F03%2F26%2Fgit%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
-      <content type="text"><![CDATA[向远程仓库提交文件git push -u origin master]]></content>
+      <content type="text"><![CDATA[添加文件暂存区git add -A commit文件git commit -m &quot;msg&quot; 向远程仓库提交文件git push -u origin master]]></content>
     </entry>
 
     
