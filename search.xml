@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[不限宽居中]]></title>
+      <url>%2F2018%2F03%2F26%2F%E4%B8%8D%E9%99%90%E5%AE%BD%E5%B1%85%E4%B8%AD%2F</url>
+      <content type="text"><![CDATA[123&lt;div class="wrap"&gt; &lt;div class="inner"&gt;html ： 让 inner 居中&lt;/div&gt;&lt;/div&gt; 123456789.wrap &#123; float: left; /* 自适应内容宽度 */ position: relative; left: 50%; &#125;.inner &#123; position: relative; left: -50%; &#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[获取浏览器名称和版本]]></title>
+      <url>%2F2018%2F03%2F26%2F%E8%8E%B7%E5%8F%96%E6%B5%8F%E8%A7%88%E5%99%A8%E5%90%8D%E7%A7%B0%E5%92%8C%E7%89%88%E6%9C%AC%2F</url>
+      <content type="text"><![CDATA[123456789101112131415161718192021function getBroswer()&#123; var sys = &#123;&#125;; var ua = navigator.userAgent.toLowerCase(); var s; (s = ua.match(/edge\/([\d.]+)/)) ? sys.edge = s[1] : (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? sys.ie = s[1] : (s = ua.match(/msie ([\d.]+)/)) ? sys.ie = s[1] : (s = ua.match(/firefox\/([\d.]+)/)) ? sys.firefox = s[1] : (s = ua.match(/chrome\/([\d.]+)/)) ? sys.chrome = s[1] : (s = ua.match(/opera.([\d.]+)/)) ? sys.opera = s[1] : (s = ua.match(/version\/([\d.]+).*safari/)) ? sys.safari = s[1] : 0; if (sys.edge) return &#123; broswer : "Edge", version : sys.edge &#125;; if (sys.ie) return &#123; broswer : "IE", version : sys.ie &#125;; if (sys.firefox) return &#123; broswer : "Firefox", version : sys.firefox &#125;; if (sys.chrome) return &#123; broswer : "Chrome", version : sys.chrome &#125;; if (sys.opera) return &#123; broswer : "Opera", version : sys.opera &#125;; if (sys.safari) return &#123; broswer : "Safari", version : sys.safari &#125;; return &#123; broswer : "", version : "0" &#125;;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Vue获取图片]]></title>
       <url>%2F2017%2F11%2F15%2FVue%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87%2F</url>
       <content type="text"><![CDATA[12&lt;input type="file" ref="file"&gt;&lt;button @click="getFile()"&gt;获取&lt;/button&gt; 12345678910111213getImg()&#123; //获取文件 let file = this.$refs.file.files[0] //创建读取文件 let reader = new FileReader() let img //读文件 reader.onload = e =&gt; &#123; img = e.target.result console.log(img) &#125; reader.readAsDataURL(file)&#125;]]></content>
