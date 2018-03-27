@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <style>
+        h3 {
+            width: 500px;
+            height: 30px;
+            margin: 20px auto 20px;            
+            line-height: 30px;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, .7);            
+        }
+
+        .app_container {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .app_container_itme{
+            width: 33.33%;
+            height: 33.33%;
+            box-sizing: border-box;
+            border: 1px solid;
+            font-size: 100px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .reset{
+            width: 500px;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            margin: 20px auto 0;
+            text-align: center;
+            background: brown;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <h3 v-text="msg"></h3>
+        <div class="app_container">
+            <div class="app_container_itme" v-for="(itme, index) of itmes" v-text="itme.msg" @click="bn(index)"></div>
+            <div class="reset" @click="reset()">重新开始</div>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script> -->
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    msg: 'x 先下',
+                    itmes: [{msg:''}, {msg:''}, {msg:''}, {msg:''}, {msg:''}, {msg:''}, {msg:''}, {msg:''}, {msg:''}],
+                    xo: ['x', 'o'],
+                    state: 0,
+                    winName: '',
+                    number: 0,
+                    nextName: '',
+                    itmeNum: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+                }
+            },
+            methods: {
+                bn(index) {
+                    if(this.state > 1) this.state = 0
+                    if(this.itmes[index].msg !== '') return
+                    this.judge_function() === true ? this.itmes[index].msg = '' : this.itmes[index].msg = this.xo[this.state]
+                    this.nextName = this.xo[this.state] === 'x' ? 'o' : 'x'
+                    this.msg = `现在是 ${this.xo[this.state]}，下一步是 ${this.nextName}`     
+                            
+                    this.state += 1
+                    this.judge_function(index)
+                    this.number += 1
+                    this.itmeNum.splice(index, 1)
+                    this.Ai(index)
+                },
+                judge_function(index) {
+                    if(this.itmes[0].msg === this.itmes[4].msg && this.itmes[4].msg === this.itmes[8].msg && this.itmes[8].msg !== '') {
+                        this.winName = this.itmes[0].msg
+                        this.win_function(index)                        
+                        return true    
+                    }
+                    if(this.itmes[2].msg === this.itmes[4].msg && this.itmes[4].msg === this.itmes[6].msg && this.itmes[6].msg !== '') {
+                        this.winName = this.itmes[2].msg  
+                        this.win_function(index)                                              
+                        return true    
+                    }
+                    if(this.itmes[1].msg === this.itmes[4].msg && this.itmes[4].msg === this.itmes[7].msg && this.itmes[7].msg !== '') {
+                        this.winName = this.itmes[1].msg 
+                        this.win_function(index)                        
+                        return true    
+                    }
+                    if(this.itmes[3].msg === this.itmes[4].msg && this.itmes[4].msg === this.itmes[5].msg && this.itmes[5].msg !== '') {
+                        this.winName = this.itmes[3].msg 
+                        this.win_function(index)                        
+                        return true    
+                    }
+                    if(this.itmes[0].msg === this.itmes[1].msg && this.itmes[1].msg === this.itmes[2].msg && this.itmes[2].msg !== '') {
+                        this.winName = this.itmes[0].msg 
+                        this.win_function(index)                        
+                        return true    
+                    }
+                    if(this.itmes[6].msg === this.itmes[7].msg && this.itmes[7].msg === this.itmes[8].msg && this.itmes[8].msg !== '') {
+                        this.winName = this.itmes[6].msg 
+                        this.win_function(index)                        
+                        return true    
+                    }
+                    if(this.itmes[0].msg === this.itmes[3].msg && this.itmes[3].msg === this.itmes[6].msg && this.itmes[6].msg !== '') {
+                        this.winName = this.itmes[0].msg 
+                        this.win_function(index)                        
+                        return true    
+                    }
+                    if(this.itmes[2].msg === this.itmes[5].msg && this.itmes[5].msg === this.itmes[8].msg && this.itmes[8].msg !== '') {
+                        this.winName = this.itmes[2].msg 
+                        this.win_function(index)                        
+                        return true                   
+                    }
+                    if(this.number >= 8) this.msg = '平局'
+                },
+                win_function(index) {
+                    this.msg = `${this.winName} Win!! `
+                },
+                reset() {
+                    this.msg = 'test!!',
+                    this.itmes = [{msg:''}, {msg:''}, {msg:''}, {msg:''}, {msg:''}, {msg:''}, {msg:''}, {msg:''}, {msg:''}],
+                    this.xo = ['x', 'o'],
+                    this.state = 0,
+                    this.winName = '',
+                    this.number = 0
+                },
+                Ai(index) {
+                    // if(this.itmes[4].msg === '') {
+                    //     this.itmes[4].msg = 'o'
+                    //     this.itmeNum.splice(this.itmeNum.indexOf(4), 1)
+                    // }else{
+                    //     console.log(this.itmeNum)
+                    //     this.itmes[this.itmeNum[0]].msg = this.nextName
+                    //     if(this.itmes[this.itmeNum[0]].msg !== '') alert(1)
+                    //     this.itmeNum.splice(0, 1)                           
+                    // }
+                    // this.number += 1                    
+                    // console.log(this.itmeNum) 
+                    // this.judge_function(index)
+                    // console.log(this.number) 
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
