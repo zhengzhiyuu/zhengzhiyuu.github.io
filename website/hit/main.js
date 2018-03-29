@@ -71,14 +71,14 @@ hero._this.ontouchstart = e => {
             touchMoveX = heroLeft
             touchMoveY = e.targetTouches[0].pageY
         } else if (e.targetTouches[0].pageX >= myGame.getContainerWAndH().width - hero.getWidth() / 2) {
-            touchMoveX = myGame.getContainerWAndH().width - 
-        } else if (e.targetTouches[0].pageY <= heroTop) {hero.getWidth() / 2
+            touchMoveX = myGame.getContainerWAndH().width - hero.getWidth() / 2 + 11
             touchMoveY = e.targetTouches[0].pageY
+        } else if (e.targetTouches[0].pageY <= heroTop) {
             touchMoveX = e.targetTouches[0].pageX
             touchMoveY = heroTop
         } else if (e.targetTouches[0].pageY >= myGame.getContainerWAndH().height - hero.getHeight() / 2) {
             touchMoveX = e.targetTouches[0].pageX
-            touchMoveY = myGame.getContainerWAndH().height - hero.getHeight() / 2
+            touchMoveY = myGame.getContainerWAndH().height - hero.getHeight() / 2 - 10
         } else {
             touchMoveX = e.targetTouches[0].pageX
             touchMoveY = e.targetTouches[0].pageY
