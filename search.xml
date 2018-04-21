@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[Linux]]></title>
+      <url>%2F2018%2F04%2F21%2FLinux%2F</url>
+      <content type="text"><![CDATA[ssh连接服务器win10安装ubuntu子系统，安装ubuntu下ssh工具使用方法：ssh -p 22 root@ip 安装控制面板-宝塔Linux然后集成安装lamp环境 安装winscp 本地向服务器传输文件]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[pixj.js基础语法]]></title>
+      <url>%2F2018%2F03%2F28%2Fpixj-js%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%2F</url>
+      <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970//命名别名let Application = PIXI.Application,// 创建应用函数 loader = PIXI.loader,//图片加载 resources = PIXI.loader.resources,//图片加载资源 Sprite = PIXI.Sprite,//图片精灵 Rectangle = PIXI.Rectangle;//let app = new Application(&#123; // 创建应用 width: 256, height: 256, antialias: true, transparent: false,&#125;)let stage = app.stage, renderer = app.renderer;document.body.appendChild(app.view) // 添加到视图renderer.backgroundColor = 0x4B0082; // 添加背景颜色renderer.view.style.position = "absolute"; //平铺页面renderer.view.style.display = "block";//平铺页面renderer.autoResize = true;//平铺页面renderer.resize(window.innerWidth, window.innerHeight);//平铺页面loader // 加载图片 .add('./images/09.png') .load(setup);function setup() &#123; // let cat = new Sprite(resources["./images/cat.png"].texture); // cat.x = 96 // cat.y = 96 // // cat.width = 80 // // cat.height = 120 // cat.scale.set(0.5, 0.5) // app.stage.addChild(cat); // cat.rotation = 0.5 // cat.anchor.x = 0.5; // cat.anchor.y = 0.5; let texture = PIXI.utils.TextureCache["./images/09.png"]; //Create a rectangle object that defines the position and //size of the sub-image you want to extract from the texture //(`Rectangle` is an alias for `PIXI.Rectangle`) let rectangle = new Rectangle(128, 85, 42, 42); //Tell the texture to use that rectangular section texture.frame = rectangle; //Create the sprite from the texture let rocket = new Sprite(texture); //Position the rocket sprite on the canvas rocket.x = 32; rocket.y = 32; //Add the rocket to the stage stage.addChild(rocket); //Render the stage renderer.render(stage);&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[JavaScript并归排序]]></title>
       <url>%2F2018%2F03%2F27%2FJavaScript%E5%B9%B6%E5%BD%92%E6%8E%92%E5%BA%8F%2F</url>
       <content type="text"><![CDATA[归并排序：其基本思想是分治策略，先进行划分，然后再进行合并。测试比快速排序速度还要快一些 123456789101112131415161718192021222324252627function merge(left = [], right = []) &#123; let result = []; while (left.length &gt; 0 &amp;&amp; right.length &gt; 0) &#123; if (left[0] &gt; right[0]) &#123; result.push(right.shift()); &#125; else &#123; result.push(left.shift()); &#125; &#125; // 当左右长度不等返回... return result.concat(left).concat(right)&#125;function mergeSort(arr = []) &#123; let len = arr.length, index = 0, arr_left = [], arr_right = []; if (len &lt;= 1) return arr; index = Math.floor(len / 2); arr_left = arr.slice(0, index); //分割数组 arr_right = arr.slice(index); //分割数组 // 递归调用 return merge(mergeSort(arr_left), mergeSort(arr_right));&#125;]]></content>
