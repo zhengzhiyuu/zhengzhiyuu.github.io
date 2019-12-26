@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>彩虹小马</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Overpass");
+
+  .st0,
+  .st2,
+  .st3,
+  .st5,
+  .st6 {
+    stroke: #000000;
+    stroke-miterlimit: 10;
+  }
+
+  .st4 {
+    stroke: #a5a5a5;
+    stroke-miterlimit: 10;
+  }
+
+  body {
+    font-family: "Overpass";
+    line-height: 1.5;
+  }
+
+  #app {
+    display: flex;
+    width: 100%;
+  }
+
+  .section,
+  .section--unicorn,
+  .section--settings {
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2em;
+  }
+
+  .section--unicorn {
+    text-align: center;
+  }
+
+  .section--settings {
+    background: #333;
+    color: white;
+  }
+
+  .vuenicorn:hover {
+    animation: shake-shake 1s 3 ease-in-out;
+  }
+
+  label,
+  input {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .settings-container {
+    max-width: 400px;
+    margin: 1em auto;
+  }
+
+  @keyframes shake-shake {
+    10% {
+      transform: rotate(10deg);
+    }
+
+    30% {
+      transform: rotate(-30deg);
+    }
+
+    50% {
+      transform: rotate(10deg);
+    }
+
+    70% {
+      transform: rotate(-20deg);
+    }
+
+    90% {
+      transform: rotate(10deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  /*# sourceMappingURL=output.css.map */
+</style>
+
+<body>
+  <div id="app">
+    <div class="section--unicorn">
+      <div class="unicorn-container">
+        <svg class="vuenicorn" x="0px" y="0px" width="300px" height="400px" viewBox="0 0 127.9 142.5"
+          style="enable-background:new 0 0 127.9 142.5;" xml:space="preserve">
+          <g>
+            <path class="st0" :style="{ fill: mainColor }" d="M38.9,91.5c0,0,0-19-6.8-28.3c-4.8-6.6-15.8-5.2-19.8-4s-10.8,8-10.8,8s6.8-1.5,9.2,0.2s-5.5,25.8,5.5,28
+          s20.1,0.8,20.1,0.8L38.9,91.5z" />
+            <path class="st0" :style="{ fill: mainColor }"
+              d="M70.3,25c0,0-25.4,19.8-12.3,42.8s59.6,29.8,59.6,29.8s-17.4-16.8-14.2-23.8C106.6,66.8,70.3,25,70.3,25z" />
+            <path class="st0" :style="{ fill: mainColor }" d="M78.5,21.4c0,0,15.3-16.2,26.9-1.6c7.3,9.2,9.7,13.5,13.7,10.5s4.8-5.9,4.8-5.9s9.7,21.5-4.3,25.2
+          c-14,3.8-34.2-12-37.9-19.4S77.9,23,78.5,21.4z" />
+          </g>
+          <g>
+            <path class="st1" :style="{ fill: tailAccentColor }" d="M1.6,67.2c0,0,5.5-3.2,10.2-2.6s6.7,10.6,5.8,14.9c-1.6,7.2,4.7,16.6,19.2,14.8l2.1-2.8c0,0-6.8-1.5-6.9-7.4
+          s1.6-8.8-1.8-14.6C27.9,65.6,19.7,55.1,1.6,67.2z" />
+            <path class="st1" :style="{ fill: tailAccentColor }" d="M75,27.2c0,0,7.3-3.2,5.6,1.1c-1.8,4.5-9,19.7-7.2,22.9c3.7,6.3,44.1,46.2,44.1,46.2S88.8,85.4,88.3,85.2
+          S37.8,48.3,75,27.2z" />
+            <path class="st1" :style="{ fill: tailAccentColor }" d="M80.6,25.7c0,0,11-10.5,17.5-5.1s11.7,14.4,15,13.5c3.3-0.8,11-5.5,10.7-9.6c0,0,3.2,11.9-2.7,15.2
+          s-30.3-0.8-43-12.2S80.6,25.7,80.6,25.7z" />
+          </g>
+          <path class="st2" :style="{ fill: bodyColor }"
+            d="M100.4,85c0,0-10.5-3.7-5.5-13.8c0,0,6.4,15.1,14.6,17.2C109.4,88.4,103.9,86.9,100.4,85z" />
+          <g>
+            <path class="st2" :style="{ fill: bodyColor }" d="M103.4,29.1c0,0,5-10.6,10.5-9.1c0,0,4.9,7.2-2.3,14.5" />
+            <path class="st2" :style="{ fill: bodyColor }"
+              d="M86.3,98.9c0,0,24,3.3,28.7,3.3c4.7,0,4.5,10.1,1,11.7c-3.5,1.5-34.3-7-34.3-7" />
+            <path class="st2" :style="{ fill: bodyColor }"
+              d="M45,112.2c0,0-17.3,18.3-17.3,22.7c0,4.3,6,10.7,11,4.7L58,107.9L45,112.2z" />
+            <path class="st2" :style="{ fill: bodyColor }" d="M72.2,38.6c0,0,1.5,30-8,35.2s-38.8,14.2-23.5,35.2c-22.3,11.6-18.5,10.7-19.7,11.7c-3.8,3.1,0,10,5,10.3
+          c5,0.3,23.3-17,23.3-17S69,125.6,86,105.2c0,0,6.2-12.2,6.6-24.5c0,0,20.4,13.2,28.4,7.2s8-12.7,3-20s-8.7-18-9.3-29.3
+          S76,19.9,72.2,38.6z" />
+            <path class="st2" :style="{ fill: bodyColor }"
+              d="M76,107.9c0,0,22.3,13.7,28,13.7c5.7,0,10-6.1,6-10.3s-27-9-27-9" />
+            <path class="st2" :style="{ fill: bodyColor }" d="M73.4,42.5c0,0-7.9-15.8,1.4-24.2c0,0,6.8,2.8,6.8,14.8" />
+            <path class="st2" :style="{ fill: bodyColor }"
+              d="M94.5,52.9c0,0,0.8-4.6-3.1-6.9c-3.3-1.9-4.9,2.6-4.9,2.6c-0.5,2-0.6,4.1-0.6,4.1s1.7,0.6-1.7,0.1" />
+            <path class="st2" :style="{ fill: bodyColor }"
+              d="M119.1,77.7c0,0-2.7-0.6-1.5-1.9c2.5-2.7,1.9,0.8,1.9,0.8" />
+          </g>
+          <g>
+
+            <ellipse transform="matrix(0.4488 -0.8936 0.8936 0.4488 -104.3321 105.4183)" class="st3"
+              :style="{ fill: footColor }" cx="33.3" cy="137.3" rx="4.4" ry="5.9" />
+            <ellipse transform="matrix(0.9868 -0.162 0.162 0.9868 -19.93 5.5342)" class="st3"
+              :style="{ fill: footColor }" cx="24" cy="125" rx="4.5" ry="6.3" />
+            <ellipse transform="matrix(0.5594 -0.8289 0.8289 0.5594 -49.2297 139.2562)" class="st3"
+              :style="{ fill: footColor }" cx="106.4" cy="115.9" rx="5.9" ry="4.4" />
+            <ellipse transform="matrix(0.1444 -0.9895 0.9895 0.1444 -9.0074 206.8203)" class="st3"
+              :style="{ fill: footColor }" cx="115.1" cy="108.6" rx="5.9" ry="4.4" />
+          </g>
+          <g>
+            <path class="st4" :style="{ fill: wingColor }" d="M60.5,78.6c0,0-6.3-14.4-9-16.8c-2.7-2.4-8-4.6-7.8-2.2c0.1,2.4,3,3.4,3,3.4s-3.4-0.5-3.3,1.1
+          c0.1,1.6,3.8,2.3,3.8,2.3s-3.8,2-1.9,3.5c1,0.8,3.1-0.4,3.1-0.4l9.6,10.1C57.9,79.6,59.3,81.3,60.5,78.6z" />
+            <path class="st4" :style="{ fill: wingColor }" d="M61.2,78.1c0,0-10.9-11.3-14.3-12.6c-3.3-1.3-9.1-1.5-8.1,0.7c1,2.2,4,2.2,4,2.2s-3.3,0.7-2.7,2.2
+          c0.7,1.5,4.3,0.8,4.3,0.8s-2.8,3.2-0.6,3.9c1.2,0.4,2.7-1.4,2.7-1.4l12.5,6.1C59.2,79.8,61,81,61.2,78.1z" />
+          </g>
+          <path class="st5" :style="{ fill: hornColor }"
+            d="M94.8,30.4c0,0,6.4,5.9,8.5,2.9c4.2-5.8,14.8-32.8,12.1-32.8C115.5,0.5,96.1,19.5,94.8,30.4z" />
+          <path class="st2" style="fill:white"
+            d="M97.4,84c0,0-10.5-3.7-5.5-13.8c0,0,6.4,15.1,14.6,17.2C106.4,87.4,100.9,85.9,97.4,84z" />
+          <path class="st6" :style="{ fill: hornColor }" d="M107.8,8.8c0,0-4.3,6.4-1.4,10.2" />
+          <path class="st6" :style="{ fill: hornColor }" d="M100.5,18.2c0,0-4.1,3.8-1.5,8.9" />
+        </svg>
+        <h2>{{ name }}</h2>
+      </div>
+    </div>
+
+    <div class="section--settings">
+      <div class="settings-container">
+        <label for="name">Name</label>
+        <input id="name" type="text" v-model="name">
+        <label for="bodyColor">Body Color</label>
+        <input id="bodyColor" type="color" v-model="bodyColor">
+        <label for="tailColor2">Tail Base Color</label>
+        <input id="tailColor2" type="color" v-model="mainColor">
+        <label for="tailColor">Tail Accent Color</label>
+        <input id="tailColor" type="color" v-model="tailAccentColor">
+        <label for="footColor">Foot Color</label>
+        <input id="footColor" type="color" v-model="footColor">
+        <label for="wingColor">Wing Color</label>
+        <input id="wingColor" type="color" v-model="wingColor">
+        <label for="hornColor">Horn Color</label>
+        <input id="hornColor" type="color" v-model="hornColor">
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      name: '彩虹小马',
+      mainColor: '#662d91',
+      tailAccentColor: '#36c1d9',
+      bodyColor: '#efe2B4',
+      footColor: '#05f1CD',
+      wingColor: '#fff',
+      hornColor: '#c69'
+    }
+  })
+</script>
+
+</html>
