@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body,
+    html {
+        margin: 0px;
+        padding: 0px;
+        position: fixed;
+        background: rgb(30, 30, 30);
+    }
+
+    canvas {}
+</style>
+<script>
+    window.requestAnimFrame = (function () {
+        return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback);
+            }
+        );
+    });
+
+    function init(elemid) {
+        let canvas = document.getElementById(elemid),
+            c = canvas.getContext("2d"),
+            w = (canvas.width = window.innerWidth),
+            h = (canvas.height = window.innerHeight);
+        c.fillStyle = "rgba(30,30,30,1)";
+        c.fillRect(0, 0, w, h);
+        return {
+            c: c,
+            canvas: canvas
+        };
+    }
+</script>
+
+
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        window.onload = function () {
+            let c = init("canvas").c,
+                canvas = init("canvas").canvas,
+                w = (canvas.width = window.innerWidth),
+                h = (canvas.height = window.innerHeight),
+                mouse = {
+                    x: w / 2,
+                    y: h / 2
+                },
+                last_mouse = {};
+
+            //initiation
+            let date = new Date(),
+                H = date.getHours() % 12,
+                M = date.getMinutes(),
+                s = date.getSeconds(),
+                m = date.getMilliseconds() / 1000,
+                htime = s + M * 60 + H * 60 * 60 + m,
+                mtime = s + M * 60 + m,
+                stime = s + m,
+                mstime = m,
+                hang = 2 * Math.PI / (12 * 60 * 60 / htime),
+                mang = 2 * Math.PI / (60 * 60 / mtime),
+                sang = 2 * Math.PI / (60 / stime),
+                msang = 2 * Math.PI / (1 / mstime),
+                tstring = "" + H + ":" + M + ":" + s,
+                ch = 0,
+                cM = 90,
+                cs = 180,
+                cms = 270,
+                harr = [],
+                sc = 10,
+                maxit = 6,
+                gr = 2 / (1 + Math.sqrt(5));
+
+            function showdate(x, y, l, b, a, it, color, al) {
+
+                c.globalAlpha = al;
+                c.beginPath();
+                c.arc(x + l * Math.cos(a), y + l * Math.sin(a), b, 0, 2 * Math.PI);
+                c.fillStyle = color;
+                c.fill();
+
+                c.beginPath();
+                c.lineTo(x, y);
+                c.lineTo(x + l * Math.cos(a), y + l * Math.sin(a));
+                c.strokeStyle = color;
+                c.lineWidth = gr * b;
+                c.stroke();
+                c.lineCap = "round";
+                c.globalAlpha = 1;
+                if (it < maxit) {
+                    showdate(x + l * Math.cos(a), y + l * Math.sin(a), gr * l, gr * b, a + hang, it + 1, "hsla(" +
+                        ch +
+                        ",100%,50%," + (1 - (it) * 1 / maxit) + ")", al);
+                    showdate(x + l * Math.cos(a), y + l * Math.sin(a), gr * l, gr * b, a + mang, it + 1, "hsla(" +
+                        cM +
+                        ",100%,50%," + (1 - (it) * 1 / maxit) + ")", al);
+                    showdate(x + l * Math.cos(a), y + l * Math.sin(a), gr * l, gr * b, a + sang, it + 1, "hsla(" +
+                        cs +
+                        ",100%,50%," + (1 - (it) * 1 / maxit) + ")", al);
+                    //showdate(x+l*Math.cos(a),y+l*Math.sin(a),gr*l,gr*b,a+msang,it+1,"hsla("+cms+",100%,0%,"+(1-(it)*1/maxit)+")",gr*al);
+                }
+            }
+
+            function updatedate() {
+                date = new Date();
+                H = date.getHours() % 12;
+                M = date.getMinutes();
+                s = date.getSeconds();
+                m = date.getMilliseconds() / 1000;
+                htime = s + M * 60 + H * 60 * 60 + m;
+                mtime = s + M * 60 + m;
+                stime = s + m;
+                mstime = m;
+                hang = 2 * Math.PI / (12 * 60 * 60 / htime);
+                mang = 2 * Math.PI / (60 * 60 / mtime);
+                sang = 2 * Math.PI / (60 / stime);
+                msang = 2 * Math.PI / (1 / mstime);
+                tstring = "" + H + ":" + M + ":" + s;
+            }
+
+            for (let i = 0; i < 60; i++) {
+                harr.push(i * 2 * Math.PI / 60);
+            }
+
+            function draw() {
+                //animation
+
+                c.beginPath();
+                c.lineTo(w / 2, h / 2);
+                c.lineTo(w / 2 + h / 6 * Math.cos(hang - Math.PI / 2), h / 2 + h / 6 * Math.sin(hang - Math.PI /
+                    2));
+                c.strokeStyle = "hsl(" + ch + ",100%,50%)";
+                c.lineWidth = gr * sc;
+                c.stroke();
+
+                c.beginPath();
+                c.lineTo(w / 2, h / 2);
+                c.lineTo(w / 2 + h / 6 * Math.cos(mang - Math.PI / 2), h / 2 + h / 6 * Math.sin(mang - Math.PI /
+                    2));
+                c.strokeStyle = "hsl(" + cM + ",100%,50%)";
+                c.lineWidth = gr * sc;
+                c.stroke();
+
+                c.beginPath();
+                c.lineTo(w / 2, h / 2);
+                c.lineTo(w / 2 + h / 6 * Math.cos(sang - Math.PI / 2), h / 2 + h / 6 * Math.sin(sang - Math.PI /
+                    2));
+                c.strokeStyle = "hsl(" + cs + ",100%,50%)";
+                c.lineWidth = gr * sc;
+                c.stroke();
+
+                c.beginPath();
+                c.arc(w / 2 + h / 6 * Math.cos(hang - Math.PI / 2), h / 2 + h / 6 * Math.sin(hang - Math.PI / 2),
+                    sc, 0,
+                    2 * Math.PI);
+                c.fillStyle = "hsl(" + ch + ",100%,50%)";
+                c.fill();
+
+                c.beginPath();
+                c.arc(w / 2 + h / 6 * Math.cos(mang - Math.PI / 2), h / 2 + h / 6 * Math.sin(mang - Math.PI / 2),
+                    sc, 0,
+                    2 * Math.PI);
+                c.fillStyle = "hsl(" + cM + ",100%,50%)";
+                c.fill();
+
+                c.beginPath();
+                c.arc(w / 2 + h / 6 * Math.cos(sang - Math.PI / 2), h / 2 + h / 6 * Math.sin(sang - Math.PI / 2),
+                    sc, 0,
+                    2 * Math.PI);
+                c.fillStyle = "hsl(" + cs + ",100%,50%)";
+                c.fill();
+
+                c.beginPath();
+                c.arc(w / 2 + h / 6 * Math.cos(msang - Math.PI / 2), h / 2 + h / 6 * Math.sin(msang - Math.PI / 2),
+                    sc,
+                    0, 2 * Math.PI);
+                c.fillStyle = "hsl(" + cms + ",100%,0%)";
+                c.fill();
+
+                //showdate(w/2,h/2,h/6,sc,hang-Math.PI/2,0,"hsl("+ch+",100%,50%)",1);
+                showdate(w / 2, h / 2, h / 6, sc, mang - Math.PI / 2, 0, "hsl(" + cM + ",100%,50%)", 1);
+                showdate(w / 2, h / 2, h / 6, sc, sang - Math.PI / 2, 0, "hsl(" + cs + ",100%,50%)", 1);
+                //showdate(w/2,h/2,h/6,sc,msang-Math.PI/2,0,"hsl("+cms+",100%,0%)",1);
+
+                c.beginPath();
+                c.arc(w / 2, h / 2, h / 6, 0, 2 * Math.PI);
+                c.strokeStyle = "white";
+                c.lineWidth = 0.5;
+                c.stroke();
+
+                for (i = 0; i < 60; i++) {
+                    c.beginPath();
+                    if (i % 5 == 0) {
+                        c.arc(w / 2 + h / 6 * Math.cos(harr[i]), h / 2 + h / 6 * Math.sin(harr[i]), 4, 0, 2 * Math
+                            .PI);
+                        c.fillStyle = "white";
+                        c.fill();
+                    } else {
+                        c.lineTo(w / 2 + (h / 6 - 4) * Math.cos(harr[i]), h / 2 + (h / 6 - 4) * Math.sin(harr[i]));
+                        c.lineTo(w / 2 + (h / 6 + 4) * Math.cos(harr[i]), h / 2 + (h / 6 + 4) * Math.sin(harr[i]));
+                        c.strokeStyle = "white";
+                        c.stroke();
+                    }
+                }
+
+                c.font = "40px verdana";
+                c.strokeStyle = "rgb(30,30,30)";
+                c.lineWidth = 10;
+                c.textAlign = "center";
+
+                c.fillStyle = "hsl(" + ch + ",100%,50%)";
+                c.strokeText(H, w / 2 - 72 - 50, h - 100);
+                c.fillText(H, w / 2 - 72 - 50, h - 100);
+
+                c.fillStyle = "white";
+                c.fillText(":", w / 2 - 38 - 50, h - 100);
+
+                c.fillStyle = "hsl(" + cM + ",100%,50%)";
+                c.strokeText(M, w / 2 - 2 - 50, h - 100);
+                c.fillText(M, w / 2 - 2 - 50, h - 100);
+
+                c.fillStyle = "white";
+                c.fillText(":", w / 2 + 32 - 50, h - 100);
+
+                c.fillStyle = "hsl(" + cs + ",100%,50%)";
+                c.strokeText(s, w / 2 + 66 - 50, h - 100);
+                c.fillText(s, w / 2 + 66 - 50, h - 100);
+
+                c.fillStyle = "white";
+                c.fillText(".", w / 2 + 100 - 50, h - 100);
+
+                c.fillStyle = "hsl(" + cms + ",100%,0%)";
+                c.strokeText(m * 1000, w / 2 + 151 - 50, h - 100);
+                c.fillText(m * 1000, w / 2 + 151 - 50, h - 100);
+
+                updatedate();
+            }
+
+            canvas.addEventListener(
+                "mousemove",
+                function (e) {
+                    last_mouse.x = mouse.x;
+                    last_mouse.y = mouse.y;
+
+                    mouse.x = e.pageX - this.offsetLeft;
+                    mouse.y = e.pageY - this.offsetTop;
+                },
+                false
+            );
+
+            function loop() {
+                window.requestAnimFrame(loop);
+                c.clearRect(0, 0, w, h);
+                draw();
+            }
+
+            window.addEventListener("resize", function () {
+                (w = canvas.width = window.innerWidth),
+                (h = canvas.height = window.innerHeight);
+                loop();
+            });
+
+            loop();
+            setInterval(loop, 1000 / 1000);
+        }
+    </script>
+</body>
+
+</html>
